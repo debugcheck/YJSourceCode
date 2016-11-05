@@ -5,7 +5,6 @@
 //  Created by chupeng on 13-12-5.
 //  Copyright (c) 2013年 suning. All rights reserved.
 //
-
 #import "ScreenShotView.h"
 #import <QuartzCore/QuartzCore.h>
 #import "AppDelegate.h"
