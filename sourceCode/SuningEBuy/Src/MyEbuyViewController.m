@@ -214,14 +214,6 @@
 @synthesize jifengLab = _jifengLab;
 @synthesize quanLab = _quanLab;
 @synthesize jifenValBt = _jifenValBt;
-#pragma mark -系统方法
-- (void)dealloc
-{
-
-
-    [[NSNotificationCenter defaultCenter]removeObserver:self];
-    
-}
 
 - (id)init {
     
@@ -261,14 +253,7 @@
 
 - (void)viewDidLoad{
     [super viewDidLoad];
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(gotoTestViewControler)];
-
 }
-
-- (void)gotoTestViewControler{
-    
-}
-
 
 - (void)loadView{
     
