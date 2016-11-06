@@ -539,9 +539,7 @@
             [_moreView.groupTableView reloadData];
         }
             break;
-        case 2:{
-            
-            [self clearImageMemory:nil];
+        case 2:{// 清除缓存
         }
             break;
         case 3:{
@@ -712,28 +710,6 @@
     [self.groupTableView reloadData];
 }
 
-//add by wangjiaxing 清除缓存图片
-- (void)clearImageMemory:(id)sender
-{
-    BBAlertView *alertView = [[BBAlertView alloc] initWithTitle:nil message:L(@"If Clear Image Cache") delegate:self cancelButtonTitle:L(@"Cancel") otherButtonTitles:L(@"Ok")];
-    [alertView setConfirmBlock:^{
-        
-        [self displayOverFlowActivityView:L(@"More_Clear_Mem_Loading")];
-        
-        SNImageCacheClearWithCompletion(^{
-            
-            [self clearMemoryDidOk];
-        });
-        
-    }];
-    [alertView show];
-}
-
-- (void)clearMemoryDidOk
-{
-    [self removeOverFlowActivityView];
-    [self presentSheet:L(@"More_Clear_Mem_Success")];
-}
 
 - (void)defaultCityDidChange:(NSNotification *)notification
 {

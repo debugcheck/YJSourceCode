@@ -21,6 +21,7 @@ void SNImageCacheConfig(void)
     });
 }
 
+/** 清除缓存 */
 void SNImageCacheClearWithCompletion(dispatch_block_t completion)
 {
     [[SDImageCache sharedImageCache] clearDiskOnCompletion:completion];

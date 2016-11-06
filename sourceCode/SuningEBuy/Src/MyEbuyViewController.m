@@ -281,6 +281,7 @@
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:[self createSettingBtn]];
 }
 
+
 - (void)viewWillAppear:(BOOL)animated{
     
     [super viewWillAppear:animated];

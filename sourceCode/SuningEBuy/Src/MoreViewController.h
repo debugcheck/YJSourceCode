@@ -36,6 +36,5 @@
 @property (nonatomic,weak) id<MoreViewControllerDelegate> delegate;
 
 - (void)soundControl:(id)sender;
-- (void)clearImageMemory:(id)sender;
 
 @end
