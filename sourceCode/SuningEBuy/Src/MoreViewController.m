@@ -26,11 +26,6 @@
 
 @property (nonatomic,strong) NSMutableArray              *cellsArray;
 
-@property (nonatomic,strong) UITableView                 *messageFilterTableview;
-
-@property (nonatomic,strong) UIImage                     *messageSelectedImage;
-
-@property (nonatomic,strong) UIImage                     *messageUnselectedImage;
 
 @property (nonatomic,strong) NSMutableArray              *selectedCellArray;
 
@@ -42,24 +37,15 @@
 @implementation MoreViewController
 
 
-@synthesize footView = _footView;
-@synthesize logoutBtn = _logoutBtn;
 
 - (void)dealloc {
     TT_RELEASE_SAFELY(_moreView);
-    TT_RELEASE_SAFELY(_footView);
-    TT_RELEASE_SAFELY(_logoutBtn);
     TT_RELEASE_SAFELY(_selectMark);
-    TT_RELEASE_SAFELY(_messageFilterTableview);
     TT_RELEASE_SAFELY(_selectedCellArray);
-    TT_RELEASE_SAFELY(_cellsArray);
     
     _moreView.owner = nil;
     _moreView.groupTableView.delegate = nil;
     _moreView.groupTableView.dataSource = nil;
-    
-    _messageFilterTableview.delegate = nil;
-    _messageFilterTableview.dataSource =nil;
     
     if (_queue) {
 //        dispatch_release(_queue); //YJ 4.23
@@ -95,8 +81,6 @@
                       selector:@selector(defaultCityDidChange:)
                           name:DEFAULT_CITY_CHANGE_NOTIFICATION
                         object:nil];
-    
-    [defaultCenter addObserver:self selector:@selector(lgoutOK:) name:LOGOUT_OK_NOTIFICATION object:nil];
 }
 #pragma mark -
 #pragma mark view life cycle
@@ -122,11 +106,6 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    
-    if ([UserCenter defaultCenter].isLogined)
-    {
-        _moreView.groupTableView.tableFooterView = self.footView;
-    }
     
     [self.moreView.groupTableView reloadData];
 }
@@ -194,11 +173,7 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    if (tableView.tag == 0) {
-        return 4;
-    }else{
-        return 1;
-    }
+    return 2;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -211,19 +186,10 @@
                 break;
             case 1:
                 return 3;
-            case 2:
-                return 1;
-                break;
-            case 3:
-                return 1;
-                break;
             default:
                 break;
         }
-    }else {
-        return 3;
     }
-    
     return 0;
 }
 
@@ -231,53 +197,11 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
     if (tableView.tag == 0) {
-        if (1 == section) {
-            return 30;
-        }
         return 10;
     }
     return 0;
 }
 
-- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
-{
-    if (tableView.tag == 0) {
-        if (section == 1) {
-            UIView *headView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 30)];
-            headView.backgroundColor = self.view.backgroundColor;
-            
-            UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(15, 10, 160, 20)];
-            titleLabel.text = L(@"Image quality");
-            titleLabel.textColor = [UIColor dark_Gray_Color];
-            titleLabel.font = [UIFont boldSystemFontOfSize:15.0];
-            titleLabel.textAlignment = UITextAlignmentLeft;
-            titleLabel.backgroundColor = [UIColor clearColor];
-            
-            [headView addSubview:titleLabel];
-            
-            return headView;
-        }
-        UIView *v = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 0.0001)];
-        v.backgroundColor = [UIColor clearColor];
-        return v;
-    }
-    return nil;
-}
-
-- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
-{
-    if (tableView.tag == 0) {
-        if (section == 5
-            && [UserCenter defaultCenter].isLogined)
-        {
-            return self.footView;
-        }
-        UIView *v = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 0.0001)];
-        v.backgroundColor = [UIColor redColor];
-        return v;
-    }
-    return nil;
-}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -364,160 +288,9 @@
                 
             }
                 break;
-            case 2:
-            {
-                if (indexPath.row == 0) {
-                    cell.textLabel.text=L(@"Image Cache");
-                    //cell.accessoryView = _moreView.imageMemoryLabel;
-                    
-                    //chupeng 2014.3.31 不再提示缓存大小
-                    //[cell.contentView addSubview:_moreView.imageMemoryLabel];
-                    //cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-                    cell.accessoryView = arrow;
-                }
-                
-                break;
-            }
-            case 3:
-            {
-                if (indexPath.row == 0) {
-                    
-                    cell.textLabel.text= L(@"Message settings");
-                    
-                    cell.accessoryView = arrow;
-                }
-                
-                break;
-            }
-            case 4:
-            {
-                switch (indexPath.row) {
-                    case 2:
-                    {
-                        cell.textLabel.text=L(@"Share to friends");
-                        cell.accessoryType = UITableViewCellAccessoryNone;
-                    }
-                        break;
-                    case 0:
-                    {
-                        cell.textLabel.text = L(@"SuningFamily·SuningEBuy");
-                        
-                    }
-                        break;
-                    case 1:
-                    {
-                        cell.textLabel.text = L(@"CheckUpdate");
-                        
-                        [cell.contentView addSubview:_moreView.versionLabel];
-                    }
-                        break;
-                        
-                    case 3:
-                    {
-                        cell.textLabel.text = L(@"CommentEBuy");
-                    }
-                        break;
-                        
-                        
-                    default:
-                        break;
-                }
-                break;
-            }
             default:
                 break;
         }
-        return cell;
-    }else{
-        static NSString *messageFilterCellIdentifier = @"messageFilterCellIdentifier";
-        
-        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:messageFilterCellIdentifier];
-        
-        if (cell == nil)
-        {
-            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
-                                          reuseIdentifier:messageFilterCellIdentifier];
-            
-            cell.selectionStyle = UITableViewCellSelectionStyleNone;
-            
-            cell.textLabel.textColor = [UIColor light_Black_Color];
-            
-            cell.textLabel.font = [UIFont boldSystemFontOfSize:15.0f];
-            
-            UIImageView *MessageFilterSelectMark = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 14, 14)];
-            
-            MessageFilterSelectMark.image = self.messageUnselectedImage;
-            
-            cell.accessoryView = MessageFilterSelectMark;
-        }
-        
-        switch (indexPath.row) {
-            case 0:
-            {
-                cell.textLabel.text = L(@"Push message screening");
-                
-                if (selecteType == MessageFilterSelectAll)
-                {
-                    UIImageView *imageView = (UIImageView*)cell.accessoryView;
-                    
-                    imageView.image = self.messageSelectedImage;
-                    
-                    [_selectedCellArray addObject:cell];
-                }
-                
-                break;
-            }
-            case 1:
-            {
-                cell.textLabel.text = L(@"Promotional messages");
-                
-                if (selecteType == MessageFilterSelectAll||selecteType == MessageFilterSelectSalesPromotion||selecteType == MessageFilterSelectSalesPromotionAndLogistic||selecteType == MessageFilterSelectSalesPromotionAndPersonality)
-                {
-                    UIImageView *imageView = (UIImageView*)cell.accessoryView;
-                    
-                    imageView.image = self.messageSelectedImage;
-                    
-                    [_selectedCellArray addObject:cell];
-                }
-                
-                break;
-            }
-            case 2:
-            {
-                cell.textLabel.text = L(@"Personalized recommendation");
-                
-                if (selecteType == MessageFilterSelectAll||selecteType == MessageFilterSelectPersonality||selecteType == MessageFilterSelectPersonalityAndLogistic||selecteType == MessageFilterSelectSalesPromotionAndPersonality)
-                {
-                    UIImageView *imageView = (UIImageView*)cell.accessoryView;
-                    
-                    imageView.image = self.messageSelectedImage;
-                    
-                    [_selectedCellArray addObject:cell];
-                }
-                
-                break;
-            }
-            /*case 3:
-            {
-                cell.textLabel.text = @"物流消息";
-                
-                if (selecteType == MessageFilterSelectAll||selecteType == MessageFilterSelectLogistic||selecteType == MessageFilterSelectPersonalityAndLogistic||selecteType == MessageFilterSelectSalesPromotionAndLogistic)
-                {
-                    UIImageView *imageView = (UIImageView*)cell.accessoryView;
-                    
-                    imageView.image = [UIImage imageNamed:@"MessageFilterCheck"];
-                    
-                    [_selectedCellArray addObject:cell];
-                }
-                
-                break;
-            }*/
-            default:
-                break;
-        }
-        
-        [_cellsArray addObject:cell];
-        
         return cell;
     }
     return nil;
@@ -542,142 +315,15 @@
         case 2:{// 清除缓存
         }
             break;
-        case 3:{
-            
-            BBAlertView *messageFilterAlert = [[BBAlertView alloc]initWithStyle:BBAlertViewStyleMessageFilter Title:nil message:nil customView:self.messageFilterTableview delegate:self cancelButtonTitle:L(@"Cancel") otherButtonTitles:L(@"Ok")];
-            
-            
-            [messageFilterAlert show];
-            
+        case 3:{ // 精准营销 推送消息的筛选
             break;
         }
             default:
             break;
-    }
-}
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (tableView.tag == 1) {
-        
-        UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-        
-        UIImageView *imageView = (UIImageView*)cell.accessoryView;
-        
-        switch (indexPath.row) {
-            case 0:
-            {
-                [_selectedCellArray removeAllObjects];
-                
-                if (imageView.image == self.messageSelectedImage)
-                {
-                    for (UITableViewCell *item in _cellsArray)
-                    {
-                        UIImageView *itemImageView = (UIImageView*)item.accessoryView;
-                        
-                        itemImageView.image = self.messageUnselectedImage;
-                    }
-                }else{
-                    for (UITableViewCell *item in _cellsArray)
-                    {
-                        UIImageView *itemImageView = (UIImageView*)item.accessoryView;
-                        
-                        itemImageView.image = self.messageSelectedImage;
-                        
-                        [_selectedCellArray addObject:item];
-                    }
-                }
-                
-                break;
-            }
-            default:
-            {
-                if (imageView.image == self.messageSelectedImage)
-                {
-                    imageView.image = self.messageUnselectedImage;
-                    
-                    if ([_selectedCellArray containsObject:[_cellsArray objectAtIndex:0]])
-                    {
-                        [_selectedCellArray removeObject:[_cellsArray objectAtIndex:0]];
-                        
-                        UITableViewCell *firstCell = (UITableViewCell*)[_cellsArray objectAtIndex:0];
-                        
-                        UIImageView *itemImageView = (UIImageView*)firstCell.accessoryView;
-                        
-                        itemImageView.image = self.messageUnselectedImage;
-                    }
-                    
-                    [_selectedCellArray removeObject:cell];
-                    
-                }else{
-                    imageView.image = self.messageSelectedImage;
-                    
-                    [_selectedCellArray addObject:cell];
-                }
-                
-                break;
-            }
-        }
-        
-        if ([_selectedCellArray count] == 2)
-        {
-            cell = [_cellsArray objectAtIndex:0];
-            
-            UIImageView *imageView = (UIImageView*)cell.accessoryView;
-            
-            imageView.image = self.messageSelectedImage;
-            
-            [_selectedCellArray addObject:cell];
-        }
     }
 }
 
 #pragma mark -
-#pragma mark actions
-                                       
--(UITableView*)messageFilterTableview
-{
-    if (!_messageFilterTableview)
-    {
-        _cellsArray = [[NSMutableArray alloc] init];
-        
-        _selectedCellArray = [[NSMutableArray alloc]init];
-        
-        selecteType = [[Config currentConfig].messageFilter intValue];
-        
-        _messageFilterTableview = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, 280, 132) style:UITableViewStylePlain];
-        
-        _messageFilterTableview.scrollEnabled = NO;
-        
-        _messageFilterTableview.delegate = self;
-        
-        _messageFilterTableview.dataSource = self;
-        
-        _messageFilterTableview.tag = 1;
-        
-    }
-    return _messageFilterTableview;
-}
-
--(UIImage*)messageSelectedImage
-{
-    if (!_messageSelectedImage)
-    {
-        _messageSelectedImage = [UIImage imageNamed:@"MessageFilterCheck"];
-    }
-    
-    return _messageSelectedImage;
-}
-
--(UIImage*)messageUnselectedImage
-{
-    if (!_messageUnselectedImage)
-    {
-        _messageUnselectedImage = [UIImage imageNamed:@"TuisongFilterUnselected"];
-    }
-    
-    return _messageUnselectedImage;
-}
 
 -(void)gotoRuler{
     
@@ -730,14 +376,6 @@
     
 }
 
-- (UIView *)footView{
-    if (_footView == nil) {
-        _footView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 320, 60)];
-        [_footView addSubview:self.logoutBtn];        
-    }
-    return  _footView;
-}
-
 - (UIImageView *)selectMark{
     if (_selectMark == nil) {
         _selectMark = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 12, 9)];
@@ -747,103 +385,8 @@
     return  _selectMark;
 }
 
-- (UIButton *)logoutBtn
-{
-    if (_logoutBtn == nil) {
-        _logoutBtn = [[UIButton alloc] initWithFrame:CGRectMake(10, 10, 300, 40)];
-        _logoutBtn.titleLabel.font = [UIFont boldSystemFontOfSize:15];
-        [_logoutBtn setBackgroundImage:[UIImage streImageNamed:@"orange_button.png"] forState:UIControlStateNormal];
-        [_logoutBtn setBackgroundImage:[UIImage streImageNamed:@"orange_button_clicked.png"] forState:UIControlStateHighlighted];
-        [_logoutBtn setTitle:L(@"LogoutTitle") forState:UIControlStateNormal];
-        [_logoutBtn addTarget:self action:@selector(loginLogoutAction) forControlEvents:UIControlEventTouchUpInside];
-        _logoutBtn.backgroundColor = [UIColor clearColor];
-    }
-    return _logoutBtn;
-}
-
-- (void)loginLogoutAction{
-    
-    if ([UserCenter defaultCenter].isLogined) {
-        
-        BBAlertView *alertView = [[BBAlertView alloc] initWithStyle:BBAlertViewStyleDefault
-                                                              Title:L(@"Logout System")
-                                                            message:L(@"Logout Confirm")
-                                                         customView:nil
-                                                           delegate:nil
-                                                  cancelButtonTitle:L(@"Cancel")
-                                                  otherButtonTitles:L(@"Ok")];
-        
-        MoreViewController *__weak weakSelf = self;
-        
-        [alertView setConfirmBlock:^{
-            
-            [weakSelf displayOverFlowActivityView];
-            
-            LogOutCommand *logOutCmd = [LogOutCommand command];
-            [CommandManage excuteCommand:logOutCmd completeBlock:^(id<Command> cmd){
-                // xzoscar 2014-07-24 modify
-                // Desc : 要求注销后 进入登录页面
-                [weakSelf removeOverFlowActivityView];
-                
-                if (nil != weakSelf.delegate
-                    && [weakSelf.delegate respondsToSelector:@selector(delegate_moreViewController_logout)]) {
-                    [weakSelf.delegate delegate_moreViewController_logout];
-                }
-            }];
-            
-        }];
-        
-        [alertView show];
-        
-        TT_RELEASE_SAFELY(alertView);
-        
-        
-    }else{
-        
-        LoginViewController *loginVC = [[LoginViewController alloc] init];
-        
-        loginVC.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
-        
-        AuthManagerNavViewController *authorController = [[AuthManagerNavViewController alloc] initWithRootViewController:loginVC];
-        
-        [self presentModalViewController:authorController animated:YES];
-        
-        TT_RELEASE_SAFELY(loginVC);
-        
-        TT_RELEASE_SAFELY(authorController);
-        
-    }
-    
-}
-
 #pragma mark - Tapped Action Methods
 #pragma mark   点击事件的相应处理
-
-//注销操作结束的通知处理逻辑。
-- (void)lgoutOK:(NSNotification *)notification{
-    [self removeOverFlowActivityView];
-    if (![UserCenter defaultCenter].isLogined) {
-        //注销成功
-        
-        //去首页
-        [self.navigationController popViewControllerAnimated:NO];
-        
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"lgoutOK" object:nil];
-        
-    }else{
-        //注销失败
-        
-        NSDictionary *dic = notification.userInfo;
-        
-        NSString *errorDesc = [dic objectForKey:@"errorDesc"];
-        
-        [self presentSheet:errorDesc];
-        
-    }
-    
-    //    [self changeUserStatus];
-        
-}
 
 - (void)alertView:(BBAlertView *)alertView willDismissWithButtonIndex:(NSInteger)buttonIndex
 {
@@ -913,15 +456,10 @@
     
     NSLog(@"acceptType is %@",[Config currentConfig].messageFilter);
     
-    self.messageFilterTableview = nil;
-    
     self.cellsArray = nil;
     
     self.selectedCellArray = nil;
     
-    self.messageSelectedImage = nil;
-    
-    self.messageUnselectedImage = nil;
     
 }
 

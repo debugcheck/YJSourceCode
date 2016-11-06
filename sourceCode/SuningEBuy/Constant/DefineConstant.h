@@ -145,7 +145,7 @@ typedef enum{
     
 }ImageQuailty;
 
-
+//推送消息设置选择全部
 typedef enum {
     MessageFilterSelectAll,                                       //推送消息设置选择全部
     MessageFilterSelectSalesPromotion,                            //推送消息设置选择促销消息

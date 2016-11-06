@@ -23,7 +23,6 @@
 
 @implementation UserCenter
 
-@synthesize isLogined = _isLogined;
 @synthesize userInfoDTO = _userInfoDTO;
 @synthesize lastUserId = _lastUserId;
 @synthesize userDiscountInfoDTO = _userDiscountInfoDTO;
