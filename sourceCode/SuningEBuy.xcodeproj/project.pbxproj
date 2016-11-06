@@ -1151,6 +1151,7 @@
 		6373204918B3EEFF009CE469 /* PlaneRefundViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6373204818B3EEFF009CE469 /* PlaneRefundViewController.m */; };
 		6373204C18B3EFFA009CE469 /* RefundTitleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6373204B18B3EFFA009CE469 /* RefundTitleCell.m */; };
 		6373204F18B3F010009CE469 /* PlaneCallPhoneCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6373204E18B3F010009CE469 /* PlaneCallPhoneCell.m */; };
+		63C865BF1DCF3B5C009A74A9 /* YJCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C865BE1DCF3B5C009A74A9 /* YJCode.m */; };
 		63C93E201895976600708B04 /* PlaneSegement.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C93E1F1895976600708B04 /* PlaneSegement.m */; };
 		663FDCB2180FD8D800E21490 /* SellerListDTO.m in Sources */ = {isa = PBXBuildFile; fileRef = 663FDCB1180FD8D700E21490 /* SellerListDTO.m */; };
 		6653246B18126C9700BA1227 /* fengexian.png in Resources */ = {isa = PBXBuildFile; fileRef = 6653246A18126C9700BA1227 /* fengexian.png */; };
@@ -4323,6 +4324,8 @@
 		6373204B18B3EFFA009CE469 /* RefundTitleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RefundTitleCell.m; sourceTree = "<group>"; };
 		6373204D18B3F010009CE469 /* PlaneCallPhoneCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaneCallPhoneCell.h; sourceTree = "<group>"; };
 		6373204E18B3F010009CE469 /* PlaneCallPhoneCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaneCallPhoneCell.m; sourceTree = "<group>"; };
+		63C865BD1DCF3B5C009A74A9 /* YJCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJCode.h; sourceTree = "<group>"; };
+		63C865BE1DCF3B5C009A74A9 /* YJCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJCode.m; sourceTree = "<group>"; };
 		63C93E1E1895976600708B04 /* PlaneSegement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaneSegement.h; sourceTree = "<group>"; };
 		63C93E1F1895976600708B04 /* PlaneSegement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaneSegement.m; sourceTree = "<group>"; };
 		663FDCB0180FD8D700E21490 /* SellerListDTO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SellerListDTO.h; sourceTree = "<group>"; };
@@ -11875,6 +11878,8 @@
 			children = (
 				7CDAD58F19D3434900B9E90A /* NBYStickItemDTO.h */,
 				7CDAD59019D3434900B9E90A /* NBYStickItemDTO.m */,
+				63C865BD1DCF3B5C009A74A9 /* YJCode.h */,
+				63C865BE1DCF3B5C009A74A9 /* YJCode.m */,
 			);
 			path = DTO;
 			sourceTree = "<group>";
@@ -16625,6 +16630,7 @@
 				61636BF116DB7E3B00D86B55 /* GBPayModelViewController.mm in Sources */,
 				61636BF416DB7E5F00D86B55 /* GBPaySuccessViewController.m in Sources */,
 				0495289719178DA700916032 /* NSObject+JSON.m in Sources */,
+				63C865BF1DCF3B5C009A74A9 /* YJCode.m in Sources */,
 				5D04640018AE190D00B43A25 /* HotelOrderListBodyCell.m in Sources */,
 				7C0A903C19B78F1F00C17FCD /* NBNUnreadView.m in Sources */,
 				61636BF716DB7E7700D86B55 /* GBDetailTipsViewController.m in Sources */,
