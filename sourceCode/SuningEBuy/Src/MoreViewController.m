@@ -312,13 +312,7 @@
             [_moreView.groupTableView reloadData];
         }
             break;
-        case 2:{// 清除缓存
-        }
-            break;
-        case 3:{ // 精准营销 推送消息的筛选
-            break;
-        }
-            default:
+        default:
             break;
     }
 }
@@ -350,12 +344,6 @@
         [PlaySoundAndShacking playSound];
     }
 }
-
-- (void)reloadTableView
-{
-    [self.groupTableView reloadData];
-}
-
 
 - (void)defaultCityDidChange:(NSNotification *)notification
 {
