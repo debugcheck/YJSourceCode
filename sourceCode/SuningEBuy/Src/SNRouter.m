@@ -51,7 +51,6 @@
 #import "HomePage244/Controller/LianBanZhuanTiViewController.h"
 #import "SalePromotionViewController.h"
 #import "ZhuanTiService244.h"
-#import "MoreViewController.h"
 #import "NewRegisterViewController.h"
 #import "PruductList244ViewController.h"
 #import "OrderDetailViewController.h"

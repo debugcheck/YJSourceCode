@@ -109,7 +109,6 @@
 		0448654C17CD079800385726 /* PayModeDTO.m in Sources */ = {isa = PBXBuildFile; fileRef = 0448654B17CD079800385726 /* PayModeDTO.m */; };
 		0448999915ECC2D0004E0E1B /* CategoryDescPlist.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0448999615ECC2D0004E0E1B /* CategoryDescPlist.plist */; };
 		0448999C15ECC2E8004E0E1B /* CommonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0448999B15ECC2E8004E0E1B /* CommonView.m */; };
-		0448999F15ECC3AA004E0E1B /* MoreView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0448999E15ECC3AA004E0E1B /* MoreView.m */; };
 		044899A315ECC678004E0E1B /* blueButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 044899A115ECC678004E0E1B /* blueButton.png */; };
 		044899A415ECC678004E0E1B /* blueButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 044899A215ECC678004E0E1B /* blueButton@2x.png */; };
 		044899A715ECCF9C004E0E1B /* ImageManipulator.m in Sources */ = {isa = PBXBuildFile; fileRef = 044899A615ECCF9C004E0E1B /* ImageManipulator.m */; };
@@ -2637,8 +2636,6 @@
 		0448999615ECC2D0004E0E1B /* CategoryDescPlist.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = CategoryDescPlist.plist; sourceTree = "<group>"; };
 		0448999A15ECC2E8004E0E1B /* CommonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CommonView.h; path = Common/UIViewController/CommonView.h; sourceTree = "<group>"; };
 		0448999B15ECC2E8004E0E1B /* CommonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CommonView.m; path = Common/UIViewController/CommonView.m; sourceTree = "<group>"; };
-		0448999D15ECC3AA004E0E1B /* MoreView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreView.h; sourceTree = "<group>"; };
-		0448999E15ECC3AA004E0E1B /* MoreView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreView.m; sourceTree = "<group>"; };
 		044899A115ECC678004E0E1B /* blueButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blueButton.png; sourceTree = "<group>"; };
 		044899A215ECC678004E0E1B /* blueButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blueButton@2x.png"; sourceTree = "<group>"; };
 		044899A515ECCF9B004E0E1B /* ImageManipulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImageManipulator.h; path = Common/Image/ImageManipulator.h; sourceTree = "<group>"; };
@@ -8046,7 +8043,6 @@
 				0417AA0F1737AC8200D8B123 /* ShopCartV2 */,
 				04E5D3241613E012003D2DA5 /* PayFlow */,
 				04BD93B615DC887A00BA623C /* MyEBuy */,
-				04BD93B515DC887700BA623C /* More */,
 			);
 			path = Src;
 			sourceTree = "<group>";
@@ -8084,14 +8080,6 @@
 			);
 			name = "Image(Deprecated)";
 			path = Image;
-			sourceTree = "<group>";
-		};
-		04BD93B515DC887700BA623C /* More */ = {
-			isa = PBXGroup;
-			children = (
-				04F606BA15ECBAD7008EEC7B /* View */,
-			);
-			name = More;
 			sourceTree = "<group>";
 		};
 		04BD93B615DC887A00BA623C /* MyEBuy */ = {
@@ -9307,15 +9295,6 @@
 				04D08B3815F6E34500009A42 /* PromotionInfoViewController.m */,
 			);
 			name = promotion;
-			sourceTree = "<group>";
-		};
-		04F606BA15ECBAD7008EEC7B /* View */ = {
-			isa = PBXGroup;
-			children = (
-				0448999D15ECC3AA004E0E1B /* MoreView.h */,
-				0448999E15ECC3AA004E0E1B /* MoreView.m */,
-			);
-			name = View;
 			sourceTree = "<group>";
 		};
 		04F926371921240200594DAC /* WebConnect */ = {
@@ -16076,7 +16055,6 @@
 				D8399CAE1A0C59A90074B1EB /* SNProductInfoCell.m in Sources */,
 				85A3DF8619AB312E008F8DD6 /* TopCampaignService.m in Sources */,
 				7CA3C33C19D53F2600BE1864 /* LBZTTableHeaderView.m in Sources */,
-				0448999F15ECC3AA004E0E1B /* MoreView.m in Sources */,
 				044899A715ECCF9C004E0E1B /* ImageManipulator.m in Sources */,
 				04BEA27E188FB76C0080A915 /* SNUISearchBar.m in Sources */,
 				04EAEA0D15EDB3040037808E /* MyFavoriteService.m in Sources */,

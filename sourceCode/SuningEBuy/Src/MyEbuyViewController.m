@@ -32,7 +32,6 @@
 
 #import "AddressInfoListViewController.h"
 
-#import "MoreViewController.h"
 #import "EvaluationListViewController.h"
 #import "EvaluationViewController.h"
 #import "LotteryDealsViewController.h"
@@ -72,7 +71,7 @@
 #import "GetRedPackSuccessViewController.h"
 #import "SuNingSellDao.h"
 
-@interface MyEbuyViewController()<UINavigationControllerDelegate,UserDiscountServiceDelegate,EGOImageViewDelegate,OrderCenterServiceDelegate,InvitationServiceDelegate,cardServiceDelegate,CardWbSerViceDelegate,OrdersNumberServiceDelegate,NewEvalutionServiceDelegate,MoreViewControllerDelegate>
+@interface MyEbuyViewController()<UINavigationControllerDelegate,UserDiscountServiceDelegate,EGOImageViewDelegate,OrderCenterServiceDelegate,InvitationServiceDelegate,cardServiceDelegate,CardWbSerViceDelegate,OrdersNumberServiceDelegate,NewEvalutionServiceDelegate>
 {
     BOOL  isAlertOutDateCoupon;//是否已经提示用户有未使用的易购券
     BOOL isPressedActiveBtn;
@@ -1056,16 +1055,10 @@
     
 }
 
--(void)SNDataCollection:(NSString*)aStr
-{
-    [SSAIOSSNDataCollection CustomEventCollection:@"click" keyArray: [NSArray arrayWithObjects:@"clickno", nil] valueArray: [NSArray arrayWithObjects:aStr, nil]];
-}
-
 #pragma mark buttonaction
 //待支付
 -(void)waitePayBtnAction{
     
-    [self SNDataCollection:@"740401"];
     AllOrderListViewController *orderListVC = [[AllOrderListViewController alloc]init];
     
     
@@ -1075,7 +1068,6 @@
 
 //待收货
 -(void)waiteReceiveBtnAction{
-    [self SNDataCollection:@"740402"];
 //    AllOrderListViewController *orderListVC = [[AllOrderListViewController alloc]initWithData:@"C000"];
     AllOrderListViewController *orderListVC = [[AllOrderListViewController alloc]init];//@"C000" WithSelect:eProductOrderList];
     [self.navigationController pushViewController:orderListVC animated:YES];
@@ -1085,7 +1077,6 @@
 //待评论
 -(void)waiteCommentBtnAction{
     
-    [self SNDataCollection:@"740403"];
     [self gotoEvalution];
 }
 
@@ -1430,14 +1421,6 @@
 //设置
 - (void)gotoSetting
 {
-    [self SNDataCollection:@"740503"];
-    
-    MoreViewController *vc = [[MoreViewController alloc]init];
-    vc.delegate            = self;
-    
-    [self.navigationController pushViewController:vc animated:YES];
-    
-    TT_RELEASE_SAFELY(vc);
 }
 
 //我的彩票
@@ -2127,7 +2110,6 @@
 //云钻
 -(void)jifenValClick:(id)sender
 {
-    [self SNDataCollection:@"740502"];
     [self gotoIntegral];
 }
 

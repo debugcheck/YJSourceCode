@@ -6,7 +6,6 @@
 #import "SearchViewController.h"    //搜索
 #import "NewSearchViewController.h"
 #import "MyEbuyViewController.h"   // 我的易购
-#import "MoreViewController.h"
 #import "CategoryViewController.h" //分类
 #import "AllCategoryViewController.h"
 #import "UserCenter.h"
