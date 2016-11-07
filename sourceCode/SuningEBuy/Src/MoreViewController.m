@@ -374,8 +374,6 @@
 }
 
 #pragma mark - Tapped Action Methods
-#pragma mark   点击事件的相应处理
-
 - (void)alertView:(BBAlertView *)alertView willDismissWithButtonIndex:(NSInteger)buttonIndex
 {
     if (buttonIndex == 1)
