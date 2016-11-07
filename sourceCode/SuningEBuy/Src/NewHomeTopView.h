@@ -21,7 +21,6 @@
 @property (nonatomic, strong) EightBannerView           *topBannerView;       //八联版
 @property (nonatomic, strong) UIButton                  *searchBtn;
 //@property (nonatomic, retain) UISearchBar               *searchBar;
-@property (nonatomic, strong) UIButton                  *readerButton;
 @property (nonatomic, strong) SearchbarView             *searchBarView;
 
 - (void)goToSearchView:(id)sender;

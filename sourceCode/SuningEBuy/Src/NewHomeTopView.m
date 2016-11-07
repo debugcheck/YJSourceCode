@@ -15,14 +15,12 @@
 @synthesize topBannerView           = _topBannerView;
 @synthesize searchBarView           = _searchBarView;
 @synthesize searchBtn               = _searchBtn;
-@synthesize readerButton            = _readerButton;
 
 - (void)dealloc
 {
     TT_RELEASE_SAFELY(_topBannerView);
     TT_RELEASE_SAFELY(_searchBtn);
     TT_RELEASE_SAFELY(_searchBarView);
-    TT_RELEASE_SAFELY(_readerButton);
     
 }
 
@@ -41,7 +39,6 @@
         frame.size.height -= (kStatusBarHeight + kUITabBarFrameHeight + 44);
         self.tableView.frame = frame;
         [self addSubview:self.tableView];
-        [self addSubview:self.readerButton];
         
 //        [self addSubview:self.searchBarView];
 //        [self.topBannerView addSubview:self.searchBarView];
@@ -100,64 +97,10 @@
         _searchBarView.backgroundColor = [UIColor clearColor];
         _searchBarView.frame = CGRectMake(0, 0, 320, 44);
         _searchBarView.delegate = self.owner;
-        [_searchBarView addSubview:self.readerButton];
         [_searchBarView addSubview:self.cancelButton];
     }
     return _searchBarView;
 }
-
-- (UIButton *)readerButton
-{
-    if (!_readerButton)
-    {
-        _readerButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        _readerButton.backgroundColor = [UIColor clearColor];
-        
-        if (IOS7_OR_LATER) {
-            _readerButton.frame = CGRectMake(247, 0, 65, 60);
-        }else{
-            _readerButton.frame = CGRectMake(247 + ios7width, 0, 65, 60);
-        }
-        
-        [_readerButton setImage:[UIImage imageNamed:@"icon_scanCode244_default.png"] forState:UIControlStateNormal];
-        [_readerButton setImage:[UIImage imageNamed:@"icon_scanCode244_click.png"] forState:UIControlStateHighlighted];
-        [_readerButton setTitle:@"扫一扫" forState:UIControlStateNormal];
-        [_readerButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-        [_readerButton setTitleColor:[UIColor colorWithRGBHex:0xCCCCCC] forState:UIControlStateHighlighted];
-        _readerButton.titleLabel.font = [UIFont systemFontOfSize:10.0];
-        
-        [_readerButton setImageEdgeInsets:UIEdgeInsetsMake(-33, 14, 0, 0)];
-        [_readerButton setTitleEdgeInsets:UIEdgeInsetsMake(5, -20, 0, 0)];
-        
-        
-        
-        /*
-        UIImageView *image = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Newhome_QR_code"]];
-        image.userInteractionEnabled = NO;
-//        if (IOS7_OR_LATER) {
-//            image.frame = CGRectMake(18, 0, 30, 30);
-//        }else{
-//            image.frame = CGRectMake(18 + ios7width, 0, 30, 30);
-//        }
-        if (IOS7_OR_LATER) {
-            image.frame = CGRectMake(18, 0, 31, 28);
-        }else{
-            image.frame = CGRectMake(18 + ios7width, 0, 31, 28);
-        }
-        [_readerButton addSubview:image];*/
-        
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Wundeclared-selector"
-        [_readerButton addTarget:self.owner action:@selector(readerBegin) forControlEvents:UIControlEventTouchUpInside];
-#pragma clang diagnostic pop
-        
-        _readerButton.hidden = NO;
-        
-        [self addSubview:_readerButton];
-    }
-    return _readerButton;
-}
-
 
 - (UIButton *)searchBtn
 {
@@ -179,7 +122,6 @@
 - (void)showSearchBar
 {
     self.tableView.scrollEnabled = NO;
-    self.readerButton.hidden = YES;
     self.cancelButton.hidden = NO;
     self.searchBarView.wholeImageView.alpha = 1.0f;
     self.searchBarView.lineView.hidden = YES;
@@ -210,7 +152,6 @@
         self.searchBarView.searchTextField.text = @"";
     }
     self.tableView.scrollEnabled = YES;
-    self.readerButton.hidden = NO;
     self.cancelButton.hidden = YES;
     self.searchBarView.searchTypeBtn.hidden = YES;
     self.searchBarView.wholeImageView.alpha = 0.0f;
@@ -231,13 +172,11 @@
 
 - (void)showReaderButton
 {
-    self.readerButton.hidden = NO;
     self.cancelButton.hidden = YES;
 }
 
 - (void)showCancelButton
 {
-    self.readerButton.hidden = YES;
     self.cancelButton.hidden = NO;
 }
 

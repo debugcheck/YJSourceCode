@@ -277,7 +277,6 @@
     
     //self.tpTableView.tableHeaderView = [self tableHeaderView];
     //[self.userInfoImageView removeAllSubviews];
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:[self createSettingBtn]];
 }
 
 
@@ -440,22 +439,6 @@
     return _ReceiptNumber;
 }
 
--(UIButton*)createSettingBtn{
-    
-    UIButton  *buttonItem = [UIButton buttonWithType:UIButtonTypeCustom];
-    
-//    UIImage *settingImage = [UIImage imageNamed:@"New_SettingBtn.png"];
-    
-    [buttonItem setBackgroundImage:[UIImage imageNamed:@"button-shezhi.png"] forState:UIControlStateNormal];
-    //[buttonItem setImage:[UIImage imageNamed:@"ebuySetLight.png"] forState:UIControlStateHighlighted];
-    
-    [buttonItem addTarget:self action:@selector(gotoSetting) forControlEvents:UIControlEventTouchUpInside];
-    
-    buttonItem.frame = CGRectMake(266, 0, 20, 20);
-
-    return buttonItem;
-}
-
 //待支付
 -(UIButton*)waitePayBtn{
     
@@ -557,12 +540,6 @@
     }
     
     return _waiteCommentBtn;
-}
-
-//设置
-- (void)righBarClick
-{
-    [self gotoSetting];
 }
 
 //注册监听中心
@@ -1415,12 +1392,6 @@
     vc.cellType = FromEbuy;
     [self.navigationController pushViewController:vc animated:YES];
     
-}
-
-
-//设置
-- (void)gotoSetting
-{
 }
 
 //我的彩票

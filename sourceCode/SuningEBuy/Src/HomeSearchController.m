@@ -33,7 +33,6 @@
 @synthesize displayTableView = _displayTableView;
 @synthesize wordType = _wordType;
 @synthesize contentController = _contentController;
-@synthesize keywordList = _keywordList;
 @synthesize backView = _backView;
 
 

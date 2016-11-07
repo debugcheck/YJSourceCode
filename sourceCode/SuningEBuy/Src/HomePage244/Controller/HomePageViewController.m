@@ -627,7 +627,6 @@
 
 - (void)goToSearchView:(id)sender
 {
-    [SSAIOSSNDataCollection CustomEventCollection:@"click" keyArray: [NSArray arrayWithObjects:@"clickno", nil]valueArray: [NSArray arrayWithObjects:[NSString stringWithFormat:@"%@",@"111302"], nil]];
     self.homeSearchView.keywordList = nil; //add by wangjiaxing 20130603
     self.homeSearchView.keywordTypesList = nil;
     [self.homeSearchView displayView];
@@ -641,23 +640,6 @@
     [self.homeSearchView removeView];
     [_homeView hideSearchBar:nil];
 }
-
-- (void)goToBarCode:(id)sender
-{
-    [self readerBegin];
-}
-
--(void)readerBegin
-{
-    AuthManagerNavViewController *nav = (AuthManagerNavViewController *)[[AppDelegate currentAppDelegate].tabBarViewController.viewControllers objectAtIndex:1];
-    [nav popToRootViewControllerAnimated:NO];
-    NewSearchViewController *search = (NewSearchViewController *)[nav.viewControllers objectAtIndex:0];
-    
-    [search beginReaderZBar];
-    //点击扫码埋点
-    [SSAIOSSNDataCollection CustomEventCollection:@"click" keyArray: [NSArray arrayWithObjects:@"clickno", nil] valueArray:[NSArray arrayWithObjects:[NSString stringWithFormat:@"%@", @"1120003"], nil]];
-}
-
 
 #pragma -mark ButtonMethod
 - (void)showFloatingView {
@@ -957,11 +939,6 @@
 }
 
 #pragma mark - UITableViewDataSource & Delegate
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-    return 1;
-}
-
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     if (tableView == self.guessYouLikeTableView) {
