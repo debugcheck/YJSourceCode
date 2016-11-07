@@ -107,7 +107,6 @@
 		044731F3171CB2B800C96F04 /* SNCycleScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 044731F2171CB2B800C96F04 /* SNCycleScrollView.m */; };
 		0448654617CCAFF000385726 /* LocateCityCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 0448654517CCAFEF00385726 /* LocateCityCommand.m */; };
 		0448654C17CD079800385726 /* PayModeDTO.m in Sources */ = {isa = PBXBuildFile; fileRef = 0448654B17CD079800385726 /* PayModeDTO.m */; };
-		0448998D15ECC1A4004E0E1B /* MoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0448998C15ECC1A4004E0E1B /* MoreViewController.m */; };
 		0448999915ECC2D0004E0E1B /* CategoryDescPlist.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0448999615ECC2D0004E0E1B /* CategoryDescPlist.plist */; };
 		0448999C15ECC2E8004E0E1B /* CommonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0448999B15ECC2E8004E0E1B /* CommonView.m */; };
 		0448999F15ECC3AA004E0E1B /* MoreView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0448999E15ECC3AA004E0E1B /* MoreView.m */; };
@@ -2153,7 +2152,6 @@
 		BFFB67D818BB4B40000C05C9 /* productDetail_hasCollect@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BFFB67D518BB4B40000C05C9 /* productDetail_hasCollect@2x.png */; };
 		BFFB67D918BB4B40000C05C9 /* productDetail_unCollect@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BFFB67D618BB4B40000C05C9 /* productDetail_unCollect@2x.png */; };
 		C405BC881742326500E2BD64 /* DMOrderDTO.m in Sources */ = {isa = PBXBuildFile; fileRef = C405BC871742326500E2BD64 /* DMOrderDTO.m */; };
-		C430E70718ACAAEB0008CC7E /* EbuyRuleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C430E70618ACAAEB0008CC7E /* EbuyRuleViewController.m */; };
 		C4450B7B1770AFFF00C9FED4 /* trackface.png in Resources */ = {isa = PBXBuildFile; fileRef = C4450B791770AFFF00C9FED4 /* trackface.png */; };
 		C4450B7C1770AFFF00C9FED4 /* trackface@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C4450B7A1770AFFF00C9FED4 /* trackface@2x.png */; };
 		C4450B7F1770B5BF00C9FED4 /* GBRefundViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4450B7E1770B5BF00C9FED4 /* GBRefundViewController.m */; };
@@ -2636,8 +2634,6 @@
 		0448654517CCAFEF00385726 /* LocateCityCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocateCityCommand.m; sourceTree = "<group>"; };
 		0448654A17CD079800385726 /* PayModeDTO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayModeDTO.h; sourceTree = "<group>"; };
 		0448654B17CD079800385726 /* PayModeDTO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PayModeDTO.m; sourceTree = "<group>"; };
-		0448998B15ECC1A4004E0E1B /* MoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreViewController.h; sourceTree = "<group>"; };
-		0448998C15ECC1A4004E0E1B /* MoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreViewController.m; sourceTree = "<group>"; };
 		0448999615ECC2D0004E0E1B /* CategoryDescPlist.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = CategoryDescPlist.plist; sourceTree = "<group>"; };
 		0448999A15ECC2E8004E0E1B /* CommonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CommonView.h; path = Common/UIViewController/CommonView.h; sourceTree = "<group>"; };
 		0448999B15ECC2E8004E0E1B /* CommonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CommonView.m; path = Common/UIViewController/CommonView.m; sourceTree = "<group>"; };
@@ -5872,8 +5868,6 @@
 		BFFB67D618BB4B40000C05C9 /* productDetail_unCollect@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "productDetail_unCollect@2x.png"; sourceTree = "<group>"; };
 		C405BC861742326500E2BD64 /* DMOrderDTO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMOrderDTO.h; sourceTree = "<group>"; };
 		C405BC871742326500E2BD64 /* DMOrderDTO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMOrderDTO.m; sourceTree = "<group>"; };
-		C430E70518ACAAEB0008CC7E /* EbuyRuleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EbuyRuleViewController.h; sourceTree = "<group>"; };
-		C430E70618ACAAEB0008CC7E /* EbuyRuleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EbuyRuleViewController.m; sourceTree = "<group>"; };
 		C4450B791770AFFF00C9FED4 /* trackface.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trackface.png; sourceTree = "<group>"; };
 		C4450B7A1770AFFF00C9FED4 /* trackface@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "trackface@2x.png"; sourceTree = "<group>"; };
 		C4450B7D1770B5BF00C9FED4 /* GBRefundViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBRefundViewController.h; sourceTree = "<group>"; };
@@ -7012,15 +7006,6 @@
 			name = ShopCart;
 			sourceTree = "<group>";
 		};
-		0448998A15ECC169004E0E1B /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				0448998B15ECC1A4004E0E1B /* MoreViewController.h */,
-				0448998C15ECC1A4004E0E1B /* MoreViewController.m */,
-			);
-			name = Controller;
-			sourceTree = "<group>";
-		};
 		0448999215ECC2D0004E0E1B /* Media */ = {
 			isa = PBXGroup;
 			children = (
@@ -8104,9 +8089,7 @@
 		04BD93B515DC887700BA623C /* More */ = {
 			isa = PBXGroup;
 			children = (
-				04F606BB15ECBADA008EEC7B /* Model */,
 				04F606BA15ECBAD7008EEC7B /* View */,
-				0448998A15ECC169004E0E1B /* Controller */,
 			);
 			name = More;
 			sourceTree = "<group>";
@@ -9335,13 +9318,6 @@
 			name = View;
 			sourceTree = "<group>";
 		};
-		04F606BB15ECBADA008EEC7B /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Model;
-			sourceTree = "<group>";
-		};
 		04F926371921240200594DAC /* WebConnect */ = {
 			isa = PBXGroup;
 			children = (
@@ -9684,8 +9660,6 @@
 				426712D915EF0FD000E3B037 /* MyEbuyHotSaleImageView.m */,
 				426712EF15EF159800E3B037 /* MyEbuyCenterButtonsView.h */,
 				426712F015EF159900E3B037 /* MyEbuyCenterButtonsView.m */,
-				C430E70518ACAAEB0008CC7E /* EbuyRuleViewController.h */,
-				C430E70618ACAAEB0008CC7E /* EbuyRuleViewController.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -15909,7 +15883,6 @@
 				04BD930615DC7DA800BA623C /* UIView+Draw.m in Sources */,
 				04BD930915DC7DA800BA623C /* UIView+firstResponder.m in Sources */,
 				7CA3528218F397D800CF7D64 /* QYaoMoreRuleView.m in Sources */,
-				C430E70718ACAAEB0008CC7E /* EbuyRuleViewController.m in Sources */,
 				BF7E87A71A1643DE009BCE75 /* ReceiveInfoTemporaryViewController.m in Sources */,
 				BF69799B1918C4E500F5E769 /* NProDetailParameterNbookTableView.m in Sources */,
 				04BD931415DC7DA800BA623C /* ToolBarButton.m in Sources */,
@@ -16099,7 +16072,6 @@
 				04841CBF186A172F00576A32 /* NCouponItemCell.m in Sources */,
 				F03AB4A018CF66C60086E89A /* CouponUserinfoView.m in Sources */,
 				BC0FBD3219D3EF9F008FDE63 /* SalePromotionViewController.m in Sources */,
-				0448998D15ECC1A4004E0E1B /* MoreViewController.m in Sources */,
 				0448999C15ECC2E8004E0E1B /* CommonView.m in Sources */,
 				D8399CAE1A0C59A90074B1EB /* SNProductInfoCell.m in Sources */,
 				85A3DF8619AB312E008F8DD6 /* TopCampaignService.m in Sources */,
