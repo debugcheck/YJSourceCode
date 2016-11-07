@@ -7,7 +7,6 @@
 //
 
 #import "MoreViewController.h"
-#import "PlaySoundAndShacking.h"
 
 #import "LoginViewController.h"
 #import "LogOutCommand.h"
@@ -142,85 +141,10 @@
     
     if (musicSwitch.on)
     {
-        [PlaySoundAndShacking playSound];
+        // 播放声音
     }
 }
 
-#pragma mark - Tapped Action Methods
-- (void)alertView:(BBAlertView *)alertView willDismissWithButtonIndex:(NSInteger)buttonIndex
-{
-    if (buttonIndex == 1)
-    {
-        switch ([_selectedCellArray count]) {
-            case 0:
-            {
-                [Config currentConfig].messageFilter = [NSNumber numberWithInt:MessageFilterSelectNone];
-            }
-                break;
-            case 1:
-            {
-                int type = [_cellsArray indexOfObject:[_selectedCellArray objectAtIndex:0]];
-                
-                if (type == 0)
-                {
-                    selecteType = MessageFilterSelectAll;
-                    
-                }else if (type == 1)
-                {
-                    selecteType = MessageFilterSelectSalesPromotion;
-                    
-                }else if (type == 2)
-                {
-                    selecteType = MessageFilterSelectPersonality;
-                }else{
-                    
-                    selecteType = MessageFilterSelectLogistic;
-                }
-                
-                [Config currentConfig].messageFilter = [NSNumber numberWithInt:selecteType];
-                
-                break;
-            }
-            case 2:
-            {
-                int type = [_cellsArray indexOfObject:[_selectedCellArray objectAtIndex:0]];
-                
-                int type1 = [_cellsArray indexOfObject:[_selectedCellArray objectAtIndex:1]];
-                
-                if ((type == 1&&type1 == 2)||(type == 2&&type1 == 1))
-                {
-                    selecteType = MessageFilterSelectSalesPromotionAndPersonality;
-                    
-                }else if ((type == 1&&type1 == 3)||(type == 3&&type1 == 1))
-                {
-                    selecteType = MessageFilterSelectSalesPromotionAndLogistic;
-                    
-                }else
-                {
-                    selecteType = MessageFilterSelectPersonalityAndLogistic;
-                }
-                
-                [Config currentConfig].messageFilter = [NSNumber numberWithInt:selecteType];
-                break;
-            }
-            default:
-                [Config currentConfig].messageFilter = [NSNumber numberWithInt:MessageFilterSelectAll];
-                break;
-        }
-        
-        CollectDeviceTokenCommand *command = [CollectDeviceTokenCommand command];
-        
-        [command execute];
-    }
-    
-    NSLog(@"acceptType is %@",[Config currentConfig].messageFilter);
-    
-    self.cellsArray = nil;
-    
-    self.selectedCellArray = nil;
-    
-    
-}
 
 
 @end

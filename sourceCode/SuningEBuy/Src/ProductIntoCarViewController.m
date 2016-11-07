@@ -15,7 +15,6 @@
 #import "ShopCartV2ViewController.h"
 #import "ReceiveInfoViewController.h"
 #import "BuyNowCommand.h"
-#import "PlaySoundAndShacking.h"
 
 #define  ProductHeadSection   0
 #define ColorSection     1
@@ -846,8 +845,7 @@
     
     [self.productImageView.layer addAnimation:animGroup forKey:nil];
     
-    //刘坤, 12-12-10， 不播放声音
-    [PlaySoundAndShacking playSoundAndShacking:YES];
+    //刘坤, 12-12-10， 不播放声音 houmanager
 }
 
 

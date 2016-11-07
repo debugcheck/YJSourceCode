@@ -108,8 +108,6 @@
 		0448654617CCAFF000385726 /* LocateCityCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 0448654517CCAFEF00385726 /* LocateCityCommand.m */; };
 		0448654C17CD079800385726 /* PayModeDTO.m in Sources */ = {isa = PBXBuildFile; fileRef = 0448654B17CD079800385726 /* PayModeDTO.m */; };
 		0448998D15ECC1A4004E0E1B /* MoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0448998C15ECC1A4004E0E1B /* MoreViewController.m */; };
-		0448999715ECC2D0004E0E1B /* soundSucceed.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0448999315ECC2D0004E0E1B /* soundSucceed.wav */; };
-		0448999815ECC2D0004E0E1B /* Taito_Carousel.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0448999415ECC2D0004E0E1B /* Taito_Carousel.wav */; };
 		0448999915ECC2D0004E0E1B /* CategoryDescPlist.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0448999615ECC2D0004E0E1B /* CategoryDescPlist.plist */; };
 		0448999C15ECC2E8004E0E1B /* CommonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0448999B15ECC2E8004E0E1B /* CommonView.m */; };
 		0448999F15ECC3AA004E0E1B /* MoreView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0448999E15ECC3AA004E0E1B /* MoreView.m */; };
@@ -512,7 +510,6 @@
 		04E9DA0315F6E8F100B18215 /* MsgHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04E9DA0215F6E8F100B18215 /* MsgHelper.cpp */; };
 		04EAEA0D15EDB3040037808E /* MyFavoriteService.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EAEA0C15EDB3040037808E /* MyFavoriteService.m */; };
 		04F0FE74184CAAE900849647 /* OSEmoticonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F0FE73184CAAE900849647 /* OSEmoticonView.m */; };
-		04F606C115ECBD2D008EEC7B /* PlaySoundAndShacking.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F606C015ECBD2D008EEC7B /* PlaySoundAndShacking.m */; };
 		04F95DA916B19E2400BD5AD5 /* JPInfoDTO.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F95DA816B19E2400BD5AD5 /* JPInfoDTO.m */; };
 		04F95DAC16B19F4300BD5AD5 /* JPService.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F95DAB16B19F4300BD5AD5 /* JPService.m */; };
 		04FCB487194EC68600DE3B57 /* LotteryMotionControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FCB486194EC68600DE3B57 /* LotteryMotionControl.m */; };
@@ -2641,8 +2638,6 @@
 		0448654B17CD079800385726 /* PayModeDTO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PayModeDTO.m; sourceTree = "<group>"; };
 		0448998B15ECC1A4004E0E1B /* MoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreViewController.h; sourceTree = "<group>"; };
 		0448998C15ECC1A4004E0E1B /* MoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreViewController.m; sourceTree = "<group>"; };
-		0448999315ECC2D0004E0E1B /* soundSucceed.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = soundSucceed.wav; sourceTree = "<group>"; };
-		0448999415ECC2D0004E0E1B /* Taito_Carousel.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Taito_Carousel.wav; sourceTree = "<group>"; };
 		0448999615ECC2D0004E0E1B /* CategoryDescPlist.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = CategoryDescPlist.plist; sourceTree = "<group>"; };
 		0448999A15ECC2E8004E0E1B /* CommonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CommonView.h; path = Common/UIViewController/CommonView.h; sourceTree = "<group>"; };
 		0448999B15ECC2E8004E0E1B /* CommonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CommonView.m; path = Common/UIViewController/CommonView.m; sourceTree = "<group>"; };
@@ -3413,8 +3408,6 @@
 		04EAEA0C15EDB3040037808E /* MyFavoriteService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyFavoriteService.m; sourceTree = "<group>"; };
 		04F0FE72184CAAE900849647 /* OSEmoticonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSEmoticonView.h; sourceTree = "<group>"; };
 		04F0FE73184CAAE900849647 /* OSEmoticonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSEmoticonView.m; sourceTree = "<group>"; };
-		04F606BF15ECBD2D008EEC7B /* PlaySoundAndShacking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaySoundAndShacking.h; sourceTree = "<group>"; };
-		04F606C015ECBD2D008EEC7B /* PlaySoundAndShacking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaySoundAndShacking.m; sourceTree = "<group>"; };
 		04F95DA716B19E2400BD5AD5 /* JPInfoDTO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPInfoDTO.h; sourceTree = "<group>"; };
 		04F95DA816B19E2400BD5AD5 /* JPInfoDTO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPInfoDTO.m; sourceTree = "<group>"; };
 		04F95DAA16B19F4300BD5AD5 /* JPService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPService.h; sourceTree = "<group>"; };
@@ -7031,8 +7024,6 @@
 		0448999215ECC2D0004E0E1B /* Media */ = {
 			isa = PBXGroup;
 			children = (
-				0448999315ECC2D0004E0E1B /* soundSucceed.wav */,
-				0448999415ECC2D0004E0E1B /* Taito_Carousel.wav */,
 			);
 			path = Media;
 			sourceTree = "<group>";
@@ -9347,8 +9338,6 @@
 		04F606BB15ECBADA008EEC7B /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				04F606BF15ECBD2D008EEC7B /* PlaySoundAndShacking.h */,
-				04F606C015ECBD2D008EEC7B /* PlaySoundAndShacking.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -14737,8 +14726,6 @@
 				4251788B15EB666600F96D9B /* category_cellSeparatorLine.png in Resources */,
 				616726D118BCA0D000A5CA33 /* plane_person_unselected.png in Resources */,
 				4251788C15EB666600F96D9B /* category_cellSeparatorLine@2x.png in Resources */,
-				0448999715ECC2D0004E0E1B /* soundSucceed.wav in Resources */,
-				0448999815ECC2D0004E0E1B /* Taito_Carousel.wav in Resources */,
 				61B998AF19EEA05B004F5861 /* nby_reward02@2x.png in Resources */,
 				9C0D9A1619CBD18B00DDEEBC /* Search_Yu@2x.png in Resources */,
 				0448999915ECC2D0004E0E1B /* CategoryDescPlist.plist in Resources */,
@@ -16111,7 +16098,6 @@
 				4251789415EB760E00F96D9B /* ValidationService.m in Sources */,
 				04841CBF186A172F00576A32 /* NCouponItemCell.m in Sources */,
 				F03AB4A018CF66C60086E89A /* CouponUserinfoView.m in Sources */,
-				04F606C115ECBD2D008EEC7B /* PlaySoundAndShacking.m in Sources */,
 				BC0FBD3219D3EF9F008FDE63 /* SalePromotionViewController.m in Sources */,
 				0448998D15ECC1A4004E0E1B /* MoreViewController.m in Sources */,
 				0448999C15ECC2E8004E0E1B /* CommonView.m in Sources */,
