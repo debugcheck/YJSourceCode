@@ -27,7 +27,6 @@
 }
 
 @property (nonatomic, strong)               MoreView                *moreView;
-@property (nonatomic, strong)               UIImageView             *selectMark;
 
 @property (nonatomic, strong) ChooseShareWayView    *chooseShareWayView; //分享方式
 
