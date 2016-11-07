@@ -92,7 +92,6 @@ typedef enum {
 
 @end
 
-
 /*!
  @protocol       AddressInfoPickerViewDelegate
  @abstract       AddressInfoPickerView的一个代理
