@@ -11,7 +11,6 @@
 #import "UserCenter.h"
 #import "InvitationService.h"
 #import "ActiveRuleViewController.h"
-#import "InviteFriendFaceByFaceViewController.h"
 #import "GetRedPackEntryViewController.h"
 //#import "BoundPhoneViewController.h"
 //#import "ActiveEfubaoViewController.h"
@@ -443,17 +442,6 @@
             [SSAIOSSNDataCollection CustomEventCollection:@"click" keyArray: [NSArray arrayWithObjects:@"clickno", nil]valueArray: [NSArray arrayWithObjects:[NSString stringWithFormat:@"620202"], nil]];
             [self sendSms:invitaDto.smsContent];
             break;
-        case 4:{
-            [SSAIOSSNDataCollection CustomEventCollection:@"click" keyArray: [NSArray arrayWithObjects:@"clickno", nil]valueArray: [NSArray arrayWithObjects:[NSString stringWithFormat:@"620205"], nil]];
-            InviteFriendFaceByFaceViewController *facebyface = [[InviteFriendFaceByFaceViewController alloc] init];
-            facebyface.ercodeurl = invitaDto.qrCodeUrl;
-            [self.navigationController pushViewController:facebyface animated:YES];
-        }
-            break;
-        case 5:
-            [self copyText];
-            break;
-            
         default:
             break;
    
@@ -487,25 +475,5 @@
 }
 
 
-
--(void)copyText{
-    [self  presentSheet:L(@"WC_CopySuccess")];
-    [SSAIOSSNDataCollection CustomEventCollection:@"click" keyArray: [NSArray arrayWithObjects:@"clickno", nil]valueArray: [NSArray arrayWithObjects:[NSString stringWithFormat:@"620206"], nil]];
-    NSString *copynote = invitaDto.smsContent;
-    UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
-    pasteboard.string = copynote;
-    
-}
-
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

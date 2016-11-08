@@ -487,7 +487,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
 
     //更新地址
     [AddressInfoDAO isUpdateAddressOk];
@@ -526,6 +525,7 @@
 //    if(willLoadRecommendLabel){
 //        self.recommendIconUpImageView.transform = CGAffineTransformMakeRotation(0.0);
 //    }
+    [self loginOK];
 }
 
 #pragma mark -
@@ -1329,6 +1329,7 @@
         }
     }
 }
+
 
 -(void)loginOK{
     NewGetRedPackViewController *getredpack = [[NewGetRedPackViewController alloc] init];

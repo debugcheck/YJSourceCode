@@ -11,7 +11,6 @@
 #import "UserCenter.h"
 #import "InvitationService.h"
 #import "ActiveRuleViewController.h"
-#import "InviteFriendFaceByFaceViewController.h"
 #import "GetRedPackEntryViewController.h"
 //#import "BoundPhoneViewController.h"
 //#import "ActiveEfubaoViewController.h"
@@ -402,10 +401,8 @@
                 [self wexinshare];
             }
             else{
-                [SSAIOSSNDataCollection CustomEventCollection:@"click" keyArray: [NSArray arrayWithObjects:@"clickno", nil]valueArray: [NSArray arrayWithObjects:[NSString stringWithFormat:@"620205"], nil]];
-                InviteFriendFaceByFaceViewController *facebyface = [[InviteFriendFaceByFaceViewController alloc] init];
-                facebyface.ercodeurl = invitaDto.qrCodeUrl;
-                [self.navigationController pushViewController:facebyface animated:YES];
+                
+                // 当面邀请 YJ
             }
             break;
         }

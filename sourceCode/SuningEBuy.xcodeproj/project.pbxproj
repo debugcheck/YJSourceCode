@@ -1314,7 +1314,6 @@
 		6E16577218D185A600D11BC5 /* InvitationDTO.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E16576318D185A600D11BC5 /* InvitationDTO.m */; };
 		6E16577318D185A600D11BC5 /* InvitationService.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E16576518D185A600D11BC5 /* InvitationService.m */; };
 		6E16577418D185A600D11BC5 /* InviteFriendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E16576718D185A600D11BC5 /* InviteFriendCell.m */; };
-		6E16577518D185A600D11BC5 /* InviteFriendFaceByFaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E16576918D185A600D11BC5 /* InviteFriendFaceByFaceViewController.m */; };
 		6E16577618D185A600D11BC5 /* InviteFriendView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E16576B18D185A600D11BC5 /* InviteFriendView.m */; };
 		6E16577718D185A600D11BC5 /* InviteFriendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E16576D18D185A600D11BC5 /* InviteFriendViewController.m */; };
 		6E16577C18D1A70900D11BC5 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04BD923615DC7DA600BA623C /* MessageUI.framework */; };
@@ -1322,7 +1321,6 @@
 		6E78F23B18DAF69800EBF6B2 /* WeiboSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6E78F23818DAF69800EBF6B2 /* WeiboSDK.bundle */; };
 		6E78F24118DAF6A900EBF6B2 /* OWBAuthorizeWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E78F23D18DAF6A900EBF6B2 /* OWBAuthorizeWebViewController.m */; };
 		6E78F24218DAF6A900EBF6B2 /* OWBAuthorizeWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E78F23F18DAF6A900EBF6B2 /* OWBAuthorizeWebView.m */; };
-		6E78F24C18DAF6E800EBF6B2 /* invitefaceinfo.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E78F24418DAF6E800EBF6B2 /* invitefaceinfo.png */; };
 		6E78F24D18DAF6E800EBF6B2 /* messageinvite.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E78F24518DAF6E800EBF6B2 /* messageinvite.png */; };
 		6E78F24E18DAF6E800EBF6B2 /* weixininvite.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E78F24618DAF6E800EBF6B2 /* weixininvite.png */; };
 		6E78F24F18DAF6E800EBF6B2 /* sinainvite.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E78F24718DAF6E800EBF6B2 /* sinainvite.png */; };
@@ -4575,8 +4573,6 @@
 		6E16576518D185A600D11BC5 /* InvitationService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InvitationService.m; sourceTree = "<group>"; };
 		6E16576618D185A600D11BC5 /* InviteFriendCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InviteFriendCell.h; sourceTree = "<group>"; };
 		6E16576718D185A600D11BC5 /* InviteFriendCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InviteFriendCell.m; sourceTree = "<group>"; };
-		6E16576818D185A600D11BC5 /* InviteFriendFaceByFaceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InviteFriendFaceByFaceViewController.h; sourceTree = "<group>"; };
-		6E16576918D185A600D11BC5 /* InviteFriendFaceByFaceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InviteFriendFaceByFaceViewController.m; sourceTree = "<group>"; };
 		6E16576A18D185A600D11BC5 /* InviteFriendView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InviteFriendView.h; sourceTree = "<group>"; };
 		6E16576B18D185A600D11BC5 /* InviteFriendView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InviteFriendView.m; sourceTree = "<group>"; };
 		6E16576C18D185A600D11BC5 /* InviteFriendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InviteFriendViewController.h; sourceTree = "<group>"; };
@@ -4588,7 +4584,6 @@
 		6E78F23E18DAF6A900EBF6B2 /* OWBAuthorizeWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OWBAuthorizeWebViewController.h; sourceTree = "<group>"; };
 		6E78F23F18DAF6A900EBF6B2 /* OWBAuthorizeWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OWBAuthorizeWebView.m; sourceTree = "<group>"; };
 		6E78F24018DAF6A900EBF6B2 /* OWBAuthorizeWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OWBAuthorizeWebView.h; sourceTree = "<group>"; };
-		6E78F24418DAF6E800EBF6B2 /* invitefaceinfo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = invitefaceinfo.png; sourceTree = "<group>"; };
 		6E78F24518DAF6E800EBF6B2 /* messageinvite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = messageinvite.png; sourceTree = "<group>"; };
 		6E78F24618DAF6E800EBF6B2 /* weixininvite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = weixininvite.png; sourceTree = "<group>"; };
 		6E78F24718DAF6E800EBF6B2 /* sinainvite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sinainvite.png; sourceTree = "<group>"; };
@@ -11481,8 +11476,6 @@
 				6E16575F18D185A600D11BC5 /* GetRedPackSuccessViewController.m */,
 				6E16576018D185A600D11BC5 /* GetRedPackViewController.h */,
 				6E16576118D185A600D11BC5 /* GetRedPackViewController.m */,
-				6E16576818D185A600D11BC5 /* InviteFriendFaceByFaceViewController.h */,
-				6E16576918D185A600D11BC5 /* InviteFriendFaceByFaceViewController.m */,
 				6E16576C18D185A600D11BC5 /* InviteFriendViewController.h */,
 				6E16576D18D185A600D11BC5 /* InviteFriendViewController.m */,
 			);
@@ -11503,7 +11496,6 @@
 		6E78F25318DAF6EE00EBF6B2 /* cpa*cps */ = {
 			isa = PBXGroup;
 			children = (
-				6E78F24418DAF6E800EBF6B2 /* invitefaceinfo.png */,
 				6E78F24518DAF6E800EBF6B2 /* messageinvite.png */,
 				6E78F24618DAF6E800EBF6B2 /* weixininvite.png */,
 				6E78F24718DAF6E800EBF6B2 /* sinainvite.png */,
@@ -14767,7 +14759,6 @@
 				7CF606A3199C260C00F40972 /* nby_photof_6.png in Resources */,
 				7CF6066A199C260C00F40972 /* nb_dashang_nl.png in Resources */,
 				F2FE3CA719D26C2700CFA9DA /* dangmian_.png in Resources */,
-				6E78F24C18DAF6E800EBF6B2 /* invitefaceinfo.png in Resources */,
 				7CA079191991C0BD0021F135 /* icon_57.png in Resources */,
 				7C0D63E91978D18A0081B9BF /* Unicom@2x.png in Resources */,
 				84E69B821622C4D1002A80A8 /* hotel_order_text_background.png in Resources */,
@@ -16341,7 +16332,6 @@
 				F0AC2C6318D062A200D19EEC /* ConfirmBetInfoAndCouponViewController.m in Sources */,
 				9CE5E16F197FA4FA0015407D /* SearchMtsPromotionDataService.m in Sources */,
 				9CE2BFE919CFC63C00B3646E /* SBJson4StreamWriterState.m in Sources */,
-				6E16577518D185A600D11BC5 /* InviteFriendFaceByFaceViewController.m in Sources */,
 				F0AC2C7F18D0C6F800D19EEC /* CouponContectView.m in Sources */,
 				84DE3E121611484F00CEFF5F /* FlightListDetailDTO.m in Sources */,
 				7C38753019D3D63B006654ED /* HomeFloorTableViewCell.m in Sources */,
