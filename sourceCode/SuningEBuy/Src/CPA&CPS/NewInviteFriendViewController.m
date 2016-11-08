@@ -220,104 +220,6 @@
 }
 
 
-//调用短信分享API
-- (void)sendSms:(NSString *)string
-{
-    //判断是否可以发送短信
-    BOOL canSendSMS = [MFMessageComposeViewController canSendText];
-    DLog(@"can send SMS [%d]", canSendSMS);
-    if (canSendSMS) {
-        ABAddressBookRef addressBook = NULL;
-        __block BOOL accessGranted = NO;
-        
-        if (ABAddressBookGetAuthorizationStatus() == kABAuthorizationStatusDenied) {
-            BBAlertView *alert = [[BBAlertView alloc] initWithTitle:L(@"Tips")
-                                                            message:L(@"CPACPS_OpenAuthority")
-                                                           delegate:nil
-                                                  cancelButtonTitle:L(@"Ok")
-                                                  otherButtonTitles:nil];
-            [alert show];
-            
-        }
-        if (ABAddressBookRequestAccessWithCompletion != NULL) { // iOS 6
-            addressBook = ABAddressBookCreateWithOptions(NULL, NULL);
-            dispatch_semaphore_t sema = dispatch_semaphore_create(0);
-            ABAddressBookRequestAccessWithCompletion(addressBook, ^(bool granted, CFErrorRef error) {
-                accessGranted = granted;
-                dispatch_semaphore_signal(sema);
-            });
-            dispatch_semaphore_wait(sema, DISPATCH_TIME_FOREVER);
-//            dispatch_release(sema);YJ.4.23
-            
-            if (accessGranted) {
-                MFMessageComposeViewController *picker = [[MFMessageComposeViewController alloc] init];
-                picker.messageComposeDelegate = self;
-                if ([picker.navigationBar respondsToSelector:@selector(setBackgroundImage:forBarMetrics:)])
-                {
-                    [picker.navigationBar setBackgroundImage:[UIImage imageNamed:kNavigationBarBackgroundImage] forBarMetrics:UIBarMetricsDefault];
-                    picker.navigationBar.tintColor = RGBCOLOR(101, 141, 179);
-                    
-                }
-                picker.body = invitaDto.smsContent;
-                [self presentModalViewController:picker animated:YES];
-            }
-        }
-        else{
-            MFMessageComposeViewController *picker = [[MFMessageComposeViewController alloc] init];
-            picker.messageComposeDelegate = self;
-            if ([picker.navigationBar respondsToSelector:@selector(setBackgroundImage:forBarMetrics:)])
-            {
-                [picker.navigationBar setBackgroundImage:[UIImage imageNamed:kNavigationBarBackgroundImage] forBarMetrics:UIBarMetricsDefault];
-                picker.navigationBar.tintColor = RGBCOLOR(101, 141, 179);
-                
-            }
-            picker.body = invitaDto.smsContent;
-            [self presentModalViewController:picker animated:YES];
-        }
-    }else
-    {
-        BBAlertView *alert = [[BBAlertView alloc] initWithTitle:L(@"system-error")
-                                                        message:L(@"Device_Unsupport_Send_SMS")
-                                                       delegate:nil
-                                              cancelButtonTitle:L(@"Ok")
-                                              otherButtonTitles:nil];
-        [alert show];
-    }
-}
-
-//发送短信api的回调函数
-- (void)messageComposeViewController:(MFMessageComposeViewController *)controller didFinishWithResult:(MessageComposeResult)result {
-    
-    [self  dismissModalViewControllerAnimated:YES];
-    
-    switch (result) {
-        case MessageComposeResultCancelled:
-        {
-            DLog(@"cancel send message");
-            break;
-        }
-        case MessageComposeResultSent:
-        {
-            DLog(@"send message success");
-            BBAlertView *alert = [[BBAlertView alloc] initWithTitle:L(@"system-info")
-                                                            message:L(@"SMS_Share_Success")
-                                                           delegate:nil
-                                                  cancelButtonTitle:L(@"Ok")
-                                                  otherButtonTitles:nil];
-            [alert show];
-            break;
-        }
-        case MessageComposeResultFailed:
-        {
-            DLog(@"send message fail");
-            break;
-        }
-        default:
-            break;
-    }
-}
-
-
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     return 1;
@@ -437,10 +339,6 @@
         case 2:
             [SSAIOSSNDataCollection CustomEventCollection:@"click" keyArray: [NSArray arrayWithObjects:@"clickno", nil]valueArray: [NSArray arrayWithObjects:[NSString stringWithFormat:@"620209"], nil]];
             [self sendWeiXinContentWithType:1];
-            break;
-        case 3:
-            [SSAIOSSNDataCollection CustomEventCollection:@"click" keyArray: [NSArray arrayWithObjects:@"clickno", nil]valueArray: [NSArray arrayWithObjects:[NSString stringWithFormat:@"620202"], nil]];
-            [self sendSms:invitaDto.smsContent];
             break;
         default:
             break;
