@@ -25,22 +25,6 @@
     return manager;
 }
 
-- (NSString *)randomSearchPlaceholder
-{
-    return L(@"Search_SearchGoodAndStore");
-    if (self.hotWordDtoList.count > 0 && self.hotWordDtoList)
-    {
-//        int i = arc4random() % self.hotWordDtoList.count;
-//        
-//        if (i >= 0 && i < self.hotWordDtoList.count)
-//        {
-            HotWordDTO *dto = [self.hotWordDtoList objectAtIndex:0];
-            return dto.hotwordsStr;
-//        }
-    }
-    
-    return nil;
-}
 
 - (NSString *)findUrlWithWord:(NSString *)str
 {

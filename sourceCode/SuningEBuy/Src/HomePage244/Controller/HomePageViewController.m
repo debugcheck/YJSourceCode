@@ -275,7 +275,7 @@
 {
     if (isSuccess)
     {
-        _homeView.searchBarView.searchTextField.placeholder = [[DefaultKeyWordManager defaultManager] randomSearchPlaceholder];
+        _homeView.searchBarView.searchTextField.placeholder = @"随机标题";
     }
     else
     {
@@ -510,7 +510,7 @@
         [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
     }
     
-    _homeView.searchBarView.searchTextField.placeholder = [self switchSearchwords];
+    _homeView.searchBarView.searchTextField.placeholder = @"随机切换";
 }
 
 
@@ -533,13 +533,8 @@
 
 - (BOOL)searchFieldShouldBeginEditing:(UITextField *)textField{
     
-    textField.placeholder = [[DefaultKeyWordManager defaultManager] randomSearchPlaceholder];
     [_homeView showSearchBar];
-    
-//    //    if (![textField.placeholder isEqualToString:L(@"Search Product")]) {
-    //        textField.text=textField.placeholder;
-    //    }
-    
+
     [self goToSearchView:nil];
     
     return YES;
@@ -551,7 +546,7 @@
     [self.homeSearchView refreshViewWithKeyword:searchText];
     
     if ([searchText isEqualToString:@""]) {
-        searchField.placeholder = [self switchSearchwords];
+        searchField.placeholder = @"随机的--";
     }
     
 }
@@ -612,18 +607,6 @@
     //    }
     
 }
-
-
-#pragma mark - Switch Hot Keywords
--(NSString *)switchSearchwords
-{
-    //    NSString *str = [SNSwitch randomSearchPlaceholder];
-    //    NSLog(@"++++++++++++++++++++++%@", str);
-    //    return str;
-    //    return [SNSwitch randomSearchPlaceholder];
-    return [[DefaultKeyWordManager defaultManager] randomSearchPlaceholder];
-}
-
 
 - (void)goToSearchView:(id)sender
 {
@@ -873,7 +856,7 @@
                 [self.invita beginGetRedPackEntryHttpRequest];
             }
             
-            _homeView.searchBarView.searchTextField.placeholder = [self switchSearchwords];
+            _homeView.searchBarView.searchTextField.placeholder = @"随机--";
             
             //如果有启动页DM，则延迟更新版本，让版本更新的提示不显示在启动页
             NSDictionary *dmDict = [[AppDelegate currentAppDelegate] hasDownloadDm];

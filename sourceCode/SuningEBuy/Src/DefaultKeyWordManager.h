@@ -17,6 +17,5 @@
 + (DefaultKeyWordManager *)defaultManager;
 @property (nonatomic, strong) NSMutableArray *hotWordDtoList;
 
-- (NSString *)randomSearchPlaceholder;
 - (NSString *)findUrlWithWord:(NSString *)str;
 @end

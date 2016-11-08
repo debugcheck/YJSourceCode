@@ -290,7 +290,7 @@
 
 - (void)refreshDefaultWords
 {
-    self.searchBar.searchTextField.placeholder = [[DefaultKeyWordManager defaultManager] randomSearchPlaceholder];
+    self.searchBar.searchTextField.placeholder = @"随机热词--";
 }
 
 - (void)didSelectAssociationalWord:(NSString *)keyword

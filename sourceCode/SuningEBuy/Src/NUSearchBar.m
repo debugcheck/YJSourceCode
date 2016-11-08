@@ -61,7 +61,7 @@
         NSDictionary *switchMap = [GlobalDataCenter defaultCenter].activitySwitchMap;
         
         self.searchStr = [switchMap objectForKey:@"SearchTextField"];
-        NSString *strPlaceHolder = [[DefaultKeyWordManager defaultManager] randomSearchPlaceholder];
+        NSString *strPlaceHolder = @"随机的houmanager";
         if (!strPlaceHolder)
         {
             self.searchTextField.placeholder = L(@"Search Product");
@@ -105,11 +105,6 @@
     }
     
     [self.searchTypeBtn setImage:[UIImage imageNamed:@"SearchSegment_downArrowGray.png"] forState:UIControlStateNormal];
-}
-
-- (NSString *)switchSearchwords
-{
-    return [[DefaultKeyWordManager defaultManager] randomSearchPlaceholder];
 }
 
 - (UITextField *)searchTextField{
@@ -348,7 +343,7 @@
 
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField
 {
-    textField.placeholder = [[DefaultKeyWordManager defaultManager] randomSearchPlaceholder];
+    textField.placeholder = @"随机--";
     if ([_readerDelegate respondsToSelector:@selector(searchFieldShouldBeginEditing:)])
     {
         return [_readerDelegate searchFieldShouldBeginEditing:textField];
@@ -389,7 +384,7 @@
     if ([textField.text isEqualToString:textField.placeholder]) {
         textField.text = @"";
 //        textField.placeholder =  [SNSwitch randomSearchPlaceholder];
-        textField.placeholder = [[DefaultKeyWordManager defaultManager] randomSearchPlaceholder];
+        textField.placeholder = @"随机填充";
     }
     
     return YES;
@@ -408,7 +403,7 @@
 - (BOOL)textFieldShouldClear:(UITextField *)textField
 {
 //    textField.placeholder = [SNSwitch randomSearchPlaceholder];
-    textField.placeholder = [[DefaultKeyWordManager defaultManager] randomSearchPlaceholder];
+    textField.placeholder = @"随机填充";
     return YES;
 }
 

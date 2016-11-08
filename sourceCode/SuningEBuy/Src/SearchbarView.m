@@ -270,7 +270,7 @@
     if ([textField.text isEqualToString:textField.placeholder]) {
         textField.text = @"";
 //        textField.placeholder = [SNSwitch randomSearchPlaceholder];
-        textField.placeholder = [[DefaultKeyWordManager defaultManager] randomSearchPlaceholder];
+        textField.placeholder = @"随机热词";
     }
     
     return YES;
@@ -287,7 +287,7 @@
 - (BOOL)textFieldShouldClear:(UITextField *)textField
 {
 //    textField.placeholder = [SNSwitch randomSearchPlaceholder];
-    textField.placeholder = [[DefaultKeyWordManager defaultManager] randomSearchPlaceholder];
+    textField.placeholder = @"随机热词";
     return YES;
 }
 
