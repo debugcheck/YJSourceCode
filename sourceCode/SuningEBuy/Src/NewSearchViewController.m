@@ -287,7 +287,6 @@
     }
     return _keywordDisplayController;
 }
-
 - (void)refreshDefaultWords
 {
     self.searchBar.searchTextField.placeholder = @"随机热词--";
@@ -302,8 +301,7 @@
     if (searchType == 0)
     {
         [self willGoToSearchListWithKeyword:keyword];
-    }
-    else
+    }else
     {
         __weak NewSearchViewController *weakSelf = self;
         
