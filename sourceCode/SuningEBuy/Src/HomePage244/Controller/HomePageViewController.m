@@ -115,30 +115,6 @@
 }
 */
 
-
-/**
- *  获取首页楼层数据
- */
-- (void)refreshHomePageData {
-    
-    [self.homePageService queryHomePageData];
-    if (KHomePage)
-    {
-        if ([PerformanceStatistics sharePerformanceStatistics].countStatus > 0)
-        {
-            return;
-        }
-        PerformanceStatisticsData* temp = [[PerformanceStatisticsData alloc] init];
-        temp.startTime = [NSDate date];
-        temp.functionId = @"2";
-        temp.interfaceId = @"101";
-        temp.taskId = @"1001";
-        temp.count = 1;
-        [[PerformanceStatistics sharePerformanceStatistics].arrayData addObject:temp];
-    }
-
-}
-
 - (void)voiceSearchByKeyWord
 {
     if ([VoiceSearchViewController sharedVoiceSearchCtrl].from == From_NewHome)
@@ -527,33 +503,6 @@
 //    }
 }
 
-#pragma mark -
-#pragma mark SearchBarView Delegate
-
-- (BOOL)searchFieldShouldBeginEditing:(UITextField *)textField{
-    
-    [_homeView showSearchBar];
-
-    [self goToSearchView:nil];
-    
-    return YES;
-}
-
-- (void)searchBar:(UITextField *)searchField textDidChange:(NSString *)searchText{
-    
-    self.homeSearchView.keyWord = searchText;
-    [self.homeSearchView refreshViewWithKeyword:searchText];
-    
-    if ([searchText isEqualToString:@""]) {
-        searchField.placeholder = @"随机的--";
-    }
-    
-}
-
-- (BOOL)searchFieldShouldEndEditing:(UITextField *)textField{
-    [self cancelSearchBar];
-    return YES;
-}
 
 - (void)searchFieldSearchButtonClicked:(UITextField *)searchField
 {
@@ -607,21 +556,6 @@
     
 }
 
-- (void)goToSearchView:(id)sender
-{
-    self.homeSearchView.keywordList = nil; //add by wangjiaxing 20130603
-    self.homeSearchView.keywordTypesList = nil;
-    [self.homeSearchView displayView];
-    
-    self.homeSearchView.keyWord = _homeView.searchBarView.searchTextField.text;
-    [self.homeSearchView refreshViewWithKeyword:_homeView.searchBarView.searchTextField.text];
-}
-
-- (void)cancelSearchBar
-{
-    [self.homeSearchView removeView];
-    [_homeView hideSearchBar:nil];
-}
 
 #pragma -mark ButtonMethod
 - (void)showFloatingView {
@@ -630,13 +564,6 @@
         quickRegistView.hidden = NO;
         [GlobalDataCenter defaultCenter].hasShownFloatingView = YES;
     }
-}
-
-- (void)leftDescButtonClick {
-    NSLog(@"description++++");
-    
-    //点击埋点
-    [SSAIOSSNDataCollection CustomEventCollection:@"click" keyArray: [NSArray arrayWithObjects:@"clickno", nil] valueArray:[NSArray arrayWithObjects:[NSString stringWithFormat:@"1120016"], nil]];
 }
 
 - (void)quickRegistButtonClick {
@@ -816,8 +743,7 @@
 
 - (void)homeVersionServiceComplete:(HomePageService244 *)service needReGetData:(BOOL )flag {
     if (flag) {
-        //需要重新获取首页数据
-        [self refreshHomePageData];
+        //需要重新获取首页数据YJ
     }
     else{
         if (KHomePage){
@@ -839,8 +765,7 @@
  */
 - (void)homeVersionServiceComplete:(HomePageService244 *)service homeDataFlag:(BOOL )dataFlag homeSwitchFlag:(BOOL )switchFlag {
     if (dataFlag) {
-        //调用接口，获取首页楼层数据
-        [self refreshHomePageData];
+        //调用接口，获取首页楼层数据YJ
     }
     
     if (switchFlag) {

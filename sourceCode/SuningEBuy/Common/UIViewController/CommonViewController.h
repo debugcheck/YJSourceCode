@@ -27,7 +27,7 @@
 #define KPerformance  [[PerformanceStatistics sharePerformanceStatistics]isCountStatus]  //性能统计
 #define KPaySDK      0// [[PerformanceStatistics sharePerformanceStatistics]isVirtualPayment]  //水电煤话卡是否显示行VirtualPayment_i
 #define KIsPaySDK     [[PerformanceStatistics sharePerformanceStatistics]isPaySDK]?(__INT(YES)):(__INT(NO))//这个是否可以支付
-#define KHomePage       0   //首页开关的性能统计
+#define KHomePage       0   //首页的性能统计开关
 @class AuthManagerNavViewController, LoginViewController;
 extern AuthManagerNavViewController *__gNavController0;
 
