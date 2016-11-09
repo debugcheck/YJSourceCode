@@ -102,7 +102,7 @@
             HomePageViewController *homeCtrler = (HomePageViewController *)navCtrler.topViewController;
             if (nil!=homeCtrler
                 && [homeCtrler respondsToSelector:@selector(readerController)]) {
-                [homeCtrler.readerController beginReader];
+//                [homeCtrler.readerController beginReader];YJManager
             }
             
             [weakSelf removeOverFlowActivityView];

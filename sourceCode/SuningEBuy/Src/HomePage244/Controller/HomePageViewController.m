@@ -438,7 +438,7 @@
         //调用接口，获取开关数据
         [SNSwitch updateWithCallBack:^{
             if([SNSwitch shouyexinren244]!=nil || [SNSwitch lingquhongbao244]!= nil){
-                [self.invita beginGetRedPackEntryHttpRequest];
+                // 开始请求红包的数据
             }
             _homeView.searchBarView.searchTextField.placeholder = @"随机--";
             // 检查版本 YJ
@@ -459,12 +459,9 @@
         willLoadRecommendLabel = YES;
         [recommendDataArray removeAllObjects];
         recommendDataArray = dto.dataArray;
-        //获取推荐模块cell行数
-        //两个一排+最后一行提醒文字cell
-        int cellCount = [recommendDataArray count];
-        recommendCellCount = cellCount%2 == 0 ? (cellCount/2+1) : (cellCount/2+2);
         
-        [self.guessYouLikeTableView reloadData];
+        
+//        [self.guessYouLikeTableView reloadData];
         [self.tableView reloadData];
         //预加载
 //        SNImageCachePreloadImages(array);
@@ -491,56 +488,17 @@
 #pragma mark - UITableViewDataSource & Delegate
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    if (tableView == self.guessYouLikeTableView) {
-        return recommendCellCount;
+    //加载首页底部猜你喜欢（推荐）标签
+    if (willLoadRecommendLabel) {
+        return [floorDataArray count]+1;
     }
     else {
-        //加载首页底部猜你喜欢（推荐）标签
-        if (willLoadRecommendLabel) {
-            return [floorDataArray count]+1;
-        }
-        else {
-            return [floorDataArray count];
-        }
+        return [floorDataArray count];
     }
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    //猜你喜欢模块
-    if(tableView == self.guessYouLikeTableView)
-    {
-        NSString *identifier = [NSString stringWithFormat:@"GuessYouLike_View_%d",indexPath.row];
-        GuessYouLikeCell *guessYouLikeCell = [tableView dequeueReusableCellWithIdentifier:identifier];
-        if(!guessYouLikeCell)
-        {
-            guessYouLikeCell = [[GuessYouLikeCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
-            guessYouLikeCell.selectionStyle = UITableViewCellSelectionStyleNone;
-            guessYouLikeCell.backgroundColor = [UIColor clearColor];
-            guessYouLikeCell.delegate = self;
-            guessYouLikeCell.tag = indexPath.row;
-        }
-        //最后一行文字提示cell
-        if(indexPath.row == recommendCellCount-1){
-            [guessYouLikeCell.contentView addSubview:self.recommendScanEndImageView];
-            return guessYouLikeCell;
-        }
-        int row = indexPath.row;
-        GuessDataDTO *leftDto = nil;
-        GuessDataDTO *rightDto = nil;
-        int count = [recommendDataArray count];
-        if(row*2<count)
-        {
-            leftDto = [recommendDataArray safeObjectAtIndex:row*2];
-        }
-        if(row*2+1<count)
-        {
-            rightDto = [recommendDataArray safeObjectAtIndex:row*2+1];
-        }
-        [guessYouLikeCell setViewWithleftDto:(GuessDataDTO *)leftDto rightDto:(GuessDataDTO *)rightDto];
-        return guessYouLikeCell;
-    }
-    
 
     //首页数据楼层
     int row = indexPath.row;
@@ -719,16 +677,6 @@
 }*/
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    //added by gyj 猜你喜欢模块cell高度
-    if (tableView == self.guessYouLikeTableView) {
-        //最后一行提醒文字cell高度
-        if(indexPath.row == recommendCellCount-1){
-            return 44+49;
-        }
-        return 220;
-    }
-    else {
         
         //楼层table
         HomeFloorDTO *homeFloorDTO = [floorDataArray safeObjectAtIndex:indexPath.row];
@@ -752,41 +700,6 @@
             //不识别的楼层模板，高度设置为0
             return 0.0;
         }
-    }
-}
-
-
-#pragma mark - EGORegreshHeader&FooterDelegate
-- (void)refreshData
-{
-    [super refreshData];
-    
-    //下拉刷新，请求版本号接口
-    [self queryHomeVersion];
-    //added by gyj 首页刷新时，就置标志为YES表示可以请求推荐数据
-    willRequestRecommendData = YES;
-}
-
-- (void)refreshDataComplete{
-    [super refreshDataComplete];
-}
-
-//- (void)loadMoreData {
-//    [super loadMoreData];
-//
-//    NSLog(@"loadMoreData 加载更多");
-//    
-//    [self performSelector:@selector(loadMoreDataComplete) withObject:nil afterDelay:1.0f];
-//}
-
-//- (void)loadMoreDataComplete {
-//    [super loadMoreDataComplete];
-//}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 #pragma mark - EightBannerViewDelegate
@@ -798,16 +711,6 @@
 - (void)selectModuleDTO:(HomeModuleDTO *)dto {
     [self eightBannerSelectedDTO:dto];
 }
-
-
-/**
- *  客户端首页初始化时调用全局版本数据接口
- */
-- (void)queryHomeVersion {
-    
-    [self.homePageService queryHomeVersion];
-}
-
 
 - (void)goToDeliveryInstall:(id)sender
 {
@@ -950,41 +853,9 @@
         //当可见cell达到倒数第二个楼层时可以请求
         if (scrollView.tag == 0 && visibleIndex.row >= destCell) {
             if (willRequestRecommendData) {
-                [self.guessYouLikeService beginGetHomeGuessYouLikeHttpRequest];
+                // 请求你喜欢的数据
                 willRequestRecommendData = NO;
             }
-        }
-    }
-}
-
-- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
-{
-    [super scrollViewDidEndDragging:scrollView willDecelerate:decelerate];
-    
-    float contentHeight = scrollView.contentSize.height;
-    float tableViewHeight = scrollView.bounds.size.height;
-    float originY = MAX(contentHeight, tableViewHeight);
-    CGFloat showHeight = scrollView.contentOffset.y + scrollView.size.height - originY-_initScrollViewInset.bottom;
-    CGRect guessFrame = CGRectMake(0, IOS7_OR_LATER?64:44, kScreenWidth, kScreenHeight-64);
-    CGRect tableFrame = CGRectMake(0, 44, kScreenWidth, kScreenHeight-(IOS7_OR_LATER?44:(64+49)));
-    
-    if (willLoadRecommendLabel) {
-        if (scrollView.tag == 0 && showHeight>30) {
-            [UIView animateWithDuration:0.5 animations:^{
-                self.tableView.frame = CGRectMake(0, -tableFrame.size.height, tableFrame.size.width, tableFrame.size.height);
-                self.guessYouLikeTableView.frame = guessFrame;
-            }completion:^(BOOL finished){
-                sourceTitle = @"首页推荐";
-            }];
-        }
-        
-        if (scrollView.tag == 1 && scrollView.contentOffset.y < -30) {
-            [UIView animateWithDuration:0.5 animations:^{
-                self.tableView.frame = tableFrame;
-                self.guessYouLikeTableView.frame = CGRectMake(0, kScreenHeight, guessFrame.size.width, guessFrame.size.height);
-            }completion:^(BOOL finished){
-                sourceTitle = @"活动";
-            }];
         }
     }
 }

@@ -47,8 +47,6 @@
     
     //是否加载底部推荐标签
     BOOL                willLoadRecommendLabel;
-    //推荐模块cell行数
-    int                 recommendCellCount;
     
 @private
     NewHomeTopView *_homeView;

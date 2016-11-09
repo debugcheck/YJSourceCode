@@ -384,7 +384,6 @@
 //切换声波视图
 - (void)changeToVoiceView
 {
-    [self voiceBtnClick];
     PlayVoiceViewController *vc = [[PlayVoiceViewController alloc] init];
     [self.navigationController pushViewController:vc animated:YES];
 }
