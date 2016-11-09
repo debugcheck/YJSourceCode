@@ -42,9 +42,6 @@
     //存放楼层数据
     NSMutableArray *floorDataArray;
     
-    //存放推荐模块数据(猜你喜欢模块)
-    NSMutableArray      *recommendDataArray;
-    
     //是否加载底部推荐标签
     BOOL                willLoadRecommendLabel;
     
