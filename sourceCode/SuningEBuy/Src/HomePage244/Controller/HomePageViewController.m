@@ -55,8 +55,6 @@
 {
     self = [super init];
     if (self) {
-        self.title = L(@"PageTitleFirstPage");
-        self.pageTitle = L(@"PageTitleFirstPageShow");
         self.hasNav = NO;
         self.isNeedBackItem = NO;
         self.iOS7FullScreenLayout = YES;
@@ -580,13 +578,6 @@
 
 #pragma -mark
 #pragma HomeSearchControllerdelegate
-
-- (void)cancelSearch
-{
-    [_homeView hideSearchBar:_homeView.cancelButton];
-    [_homeSearchView removeView];
-}
-
 
 - (void)didSelectHotUrl:(NSString *)url bFromHomeSearchView:(BOOL)bFromHSView wordOfUrl:(NSString *)word
 {
