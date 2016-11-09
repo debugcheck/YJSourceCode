@@ -858,14 +858,7 @@
             
             _homeView.searchBarView.searchTextField.placeholder = @"随机--";
             
-            //如果有启动页DM，则延迟更新版本，让版本更新的提示不显示在启动页
-            NSDictionary *dmDict = [[AppDelegate currentAppDelegate] hasDownloadDm];
-            if (dmDict) {
-                [self performSelector:@selector(checkUpdate) withObject:nil afterDelay:3.0f];
-            }
-            else {
-                [self checkUpdate];
-            }
+            // 检查版本 YJ
         }];
     }
     
@@ -873,15 +866,6 @@
         [self refreshDataComplete];
     }
 }
-
-
-/**
- *  检查版本更新
- */
-- (void)checkUpdate {
-    [[AppDelegate currentAppDelegate] checkVersionUpdate];
-}
-
 
 #pragma mark -
 #pragma mark GuessYouLikeDelegate

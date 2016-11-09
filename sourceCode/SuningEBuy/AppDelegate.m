@@ -190,9 +190,8 @@ static char szListenTabbarViewMove[] = "listenTabViewMove";
     [CommandManage excuteCommand:cmd completeBlock:nil];
 }
 
-- (void)checkVersionUpdate
-{
-    //检查更新
+//检查更新
+- (void)checkVersionUpdate{
     if (![CheckUpdateCommand autoChecked])
     {
         return;
@@ -722,7 +721,7 @@ static char szListenTabbarViewMove[] = "listenTabViewMove";
     return NO;
 }
 
-//返回在生效期内dm的image data
+/** 返回在生效期内DM广告的image data */
 -(NSDictionary*)hasDownloadDm
 {
     NSMutableArray *dmArray = [Config currentConfig].launchDms;
