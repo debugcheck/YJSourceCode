@@ -381,46 +381,6 @@
     }
 }
 
-- (UIView *)navigationView
-{
-    if (!_navigationView){
-        if (IOS7_OR_LATER){
-            _navigationView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 70)];
-        }else{
-            _navigationView = [[UIView alloc]initWithFrame:CGRectMake(0, -20, self.view.frame.size.width, 70)];
-        }
-        UIButton *backBtn = [[UIButton alloc]initWithFrame:CGRectMake(0, 26, 46, 40)];
-        backBtn.backgroundColor = [UIColor clearColor];
-        [backBtn setImage:[UIImage imageNamed:@"home_button_back_default.png"] forState:UIControlStateNormal];
-        [backBtn setImage:[UIImage imageNamed:@"home_button_back_pressed.png"] forState:UIControlStateHighlighted];
-        [backBtn addTarget:self action:@selector(gotoBack) forControlEvents:UIControlEventTouchUpInside];
-        [_navigationView addSubview:backBtn];
-        
-        if ([SNSwitch isNearbySuningVoiceSign]) {
-            voiceBtn = [[UIButton alloc]initWithFrame:CGRectMake(self.view.frame.size.width - 48-5, 33-10, 33+20, 24+20)];
-            voiceBtn.backgroundColor = [UIColor clearColor];
-            [voiceBtn setImage:[UIImage imageNamed:@"home_button_sound_pressed.png"] forState:UIControlStateNormal];
-            [voiceBtn setImage:[UIImage imageNamed:@"home_button_sound_pressed.png"] forState:UIControlStateHighlighted];
-            [voiceBtn setImage:[UIImage imageNamed:@"home_button_sound_pressed.png"] forState:UIControlStateDisabled];
-            [voiceBtn addTarget:self action:@selector(changeToVoiceView) forControlEvents:UIControlEventTouchUpInside];
-            voiceBtn.enabled = YES;
-            myTimer = [NSTimer scheduledTimerWithTimeInterval:20 target:self selector:@selector(voiceBtnClick) userInfo:nil repeats:NO];
-            [_navigationView addSubview:voiceBtn];
-        }
-        [_navigationView addSubview:self.defaultAddressButton];
-        [_navigationView addSubview:self.placeArrowImage];
-    }
-    return _navigationView;
-}
-
--(void)voiceBtnClick{
-    [voiceBtn setImage:[UIImage imageNamed:@"home_button_sound_default.png"] forState:UIControlStateNormal];
-    if (myTimer) {
-        TT_INVALIDATE_TIMER(myTimer);
-        [self.dvVoice sectimecall];
-    }
-}
-
 //切换声波视图
 - (void)changeToVoiceView
 {

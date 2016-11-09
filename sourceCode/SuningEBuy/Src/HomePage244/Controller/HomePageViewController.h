@@ -53,28 +53,10 @@
 @private
     NewHomeTopView *_homeView;
     
-    //鉴于首页的导航栏和二级页面的导航栏背景色不一样，所以在首页使用了一个UIView来当导航栏
-    UIView *navigationView;
-    
     QuickRegistFloatingView     *quickRegistView;
 }
 
-//首页service
-@property (nonatomic, strong) HomePageService244     *homePageService;
 
-//专题service
-@property (nonatomic, strong) ZhuanTiService244      *zhuanTiService;
 
-@property (strong,nonatomic)  InvitationService *invita;
-
-@property (nonatomic, strong) SearchService                 *searchService;
-@property (nonatomic, strong) SearchService                *hotWordsService;
-
-//首页底部的猜你喜欢service
-@property (nonatomic, strong) GuessYouLikeService           *guessYouLikeService;
-
-@property (nonatomic, strong) HomeSearchController  *homeSearchView;
-
-@property (nonatomic, strong) SNReaderController            *readerController;
 - (id)init;
 @end

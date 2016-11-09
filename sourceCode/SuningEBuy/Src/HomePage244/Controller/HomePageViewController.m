@@ -16,6 +16,7 @@
 #import "NewGetRedPackViewController.h"
 #import <QuartzCore/QuartzCore.h>
 #import "GuessYouLikeCell.h"
+#import "ZhuanTiDTO.h"
 
 
 @interface HomePageViewController () {
@@ -28,31 +29,15 @@
 
 @property (nonatomic,strong) ZhuanTiDTO         *cuXiaoDto;
 @property (nonatomic,strong) UIImageView        *recommendImageView;
-@property (nonatomic,strong) UITableView        *guessYouLikeTableView;
-@property (nonatomic,strong) UIImageView        *guessRefreshHeaderView;
 @property (nonatomic,strong) UIImageView        *recommendIconUpImageView;
 @property (nonatomic,strong) UIImageView        *recommendIconDownImageView;
-@property (nonatomic,strong) UIImageView        *recommendScanEndImageView;
 
 @end
 
 @implementation HomePageViewController
 
-@synthesize homeSearchView              = _homeSearchView;
-@synthesize readerController            = _readerController;
-@synthesize recommendImageView          = _recommendImageView;
-@synthesize guessYouLikeTableView       = _guessYouLikeTableView;
-@synthesize guessRefreshHeaderView      = _guessRefreshHeaderView;
-@synthesize recommendIconDownImageView  = _recommendIconDownImageView;
-@synthesize recommendIconUpImageView    = _recommendIconUpImageView;
-@synthesize recommendScanEndImageView   = _recommendScanEndImageView;
 
-- (void)dealloc {
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
-}
-
-- (id)init
-{
+- (id)init{
     self = [super init];
     if (self) {
         self.hasNav = NO;
@@ -60,13 +45,6 @@
         self.iOS7FullScreenLayout = YES;
         self.isLastPage = YES;
         
-        
-        //为了实现在首页调整状态栏的文字颜色，取消了导航栏，使用了一个UIView
-       
-        navigationView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 64)];
-
-        navigationView.backgroundColor = [UIColor redColor];
-        [self.view addSubview:navigationView];
         
         
         /*
@@ -113,285 +91,6 @@
 }
 */
 
-- (void)voiceSearchByKeyWord
-{
-    if ([VoiceSearchViewController sharedVoiceSearchCtrl].from == From_NewHome)
-    {
-        [[VoiceSearchViewController sharedVoiceSearchCtrl] removeVoiceSearchView];
-        [self didSelectAssociationalWord:[VoiceSearchViewController sharedVoiceSearchCtrl].result];
-    }
-}
-
-- (void)didSelectAssociationalWord:(NSString *)keyword
-{
-    //    [AppDelegate currentAppDelegate].tabBarViewController.selectedIndex = 1;
-    //    AuthManagerNavViewController *nav = (AuthManagerNavViewController *)[[AppDelegate currentAppDelegate].tabBarViewController.viewControllers objectAtIndex:1];
-    //    [nav popToRootViewControllerAnimated:NO];
-    //    NewSearchViewController *search = (NewSearchViewController *)[nav.viewControllers objectAtIndex:0];
-    //    [search didSelectAssociationalWord:keyword];
-    //    search.homeKeyString = keyword;
-    [_homeView.searchBarView.searchTextField resignFirstResponder];
-    _homeView.searchBarView.searchTextField.text = nil;
-    self.homeSearchView.keywordList = nil;
-    
-    [self.homeSearchView removeView];
-    
-    [_homeView hideSearchBar:nil];
-    
-//    [self startTimer];
-    
-    if (keyword == nil || [keyword isEmptyOrWhitespace]) {
-        return;
-    }
-    
-    if (keyword.length > 0) //语音键盘默认占位符 %EF%BF%BC,此时return
-    {//efbfbc
-        NSString *str = @"%EF%BF%BC";
-        NSString *urlKeyword = [keyword stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-        NSRange range = [urlKeyword rangeOfString:str];
-        if ( range.location!= NSNotFound)
-        {
-            return;
-        }
-    }
-    
-    //reload最近搜索
-    
-    __weak HomePageViewController *weakSelf = self;
-    
-    [self.searchService addKeywordToDB:keyword completionBlock:^(NSArray *list){
-        weakSelf.homeSearchView.historyKeywordsList = list;
-        [weakSelf.homeSearchView.displayTableView reloadData];
-    }];
-    
-    self.homeSearchView.keyWord = nil;
-    
-    int searchType = [[Config currentConfig].searchType intValue];
-    if (searchType == 0) {
-        [SearchListViewController goToSearchResultWithKeyword:keyword fromNav:self.navigationController];
-    }
-    else if (searchType == 1)
-    {
-        [ShopSearchListViewController gotoShopSearchWithKeyWord:keyword fromNav:self.navigationController];
-    }
-    
-    [SSAIOSSNDataCollection CustomEventCollection:@"click" keyArray:[NSArray arrayWithObjects:@"clickno", nil] valueArray:[NSArray arrayWithObjects:[NSString stringWithFormat:@"1120002"], nil]];
-}
-
-
-- (SNReaderController *)readerController
-{
-    if (!_readerController) {
-        _readerController = [[SNReaderController alloc] initWithContentController:self];
-    }
-    return _readerController;
-}
-
-- (HomeSearchController *)homeSearchView
-{
-    if (!_homeSearchView) {
-        _homeSearchView = [[HomeSearchController alloc] initWithContentController:self];
-        
-        _homeSearchView.delegate = self;
-    }
-    return _homeSearchView;
-}
-
-- (HomePageService244 *)homePageService {
-    if (!_homePageService) {
-        _homePageService = [[HomePageService244 alloc] init];
-        _homePageService.delegate = self;
-    }
-    
-    return _homePageService;
-}
-
-- (SearchService *)searchService
-{
-    if (!_searchService) {
-        _searchService = [[SearchService alloc] init];
-        _searchService.delegate = self;
-    }
-    return _searchService;
-}
-
-
-- (SearchService *)hotWordsService
-{
-    if (!_hotWordsService) {
-        _hotWordsService = [[SearchService alloc] init];
-        _hotWordsService.delegate = self;
-    }
-    return _hotWordsService;
-}
-
-- (GuessYouLikeService *)guessYouLikeService
-{
-    if(!_guessYouLikeService){
-        _guessYouLikeService = [[GuessYouLikeService alloc] init];
-        _guessYouLikeService.delegate = self;
-    }
-    return _guessYouLikeService;
-}
-
--(InvitationService *)invita
-{
-    if (!_invita) {
-        _invita=[[InvitationService alloc]init];
-        _invita.delegate=self;
-    }
-    return _invita;
-}
-
-- (void)getHotKeywordsCompleteWithService:(SearchService *)service
-                                   Result:(BOOL)isSuccess
-                                 errorMsg:(NSString *)errorMsg
-{
-    if (isSuccess)
-    {
-        _homeView.searchBarView.searchTextField.placeholder = @"随机标题";
-    }
-    else
-    {
-        
-    }
-}
-
-- (ZhuanTiService244 *)zhuanTiService {
-    if (!_zhuanTiService) {
-        _zhuanTiService = [[ZhuanTiService244 alloc] init];
-        _zhuanTiService.delegate = self;
-    }
-    
-    return _zhuanTiService;
-}
-
-#pragma mark -
-#pragma mark GuessYouLike
-
-//added by gyj 猜你喜欢模块tableview
-- (UITableView *)guessYouLikeTableView
-{
-    if(!_guessYouLikeTableView){
-        _guessYouLikeTableView = [UITableView tableView];
-        [_guessYouLikeTableView setSeparatorStyle:UITableViewCellSeparatorStyleSingleLine];
-        [_guessYouLikeTableView setIndicatorStyle:UIScrollViewIndicatorStyleWhite];
-        _guessYouLikeTableView.scrollEnabled = YES;
-        _guessYouLikeTableView.userInteractionEnabled = YES;
-        _guessYouLikeTableView.delegate =self;
-        _guessYouLikeTableView.dataSource =self;
-        _guessYouLikeTableView.backgroundColor =[UIColor clearColor];
-    }
-    return _guessYouLikeTableView;
-}
-
-//猜你喜欢模块头部刷新
-- (UIImageView *)guessRefreshHeaderView
-{
-    if(!_guessRefreshHeaderView){
-        _guessRefreshHeaderView = [[UIImageView alloc] initWithFrame:CGRectMake(0.0f, -30, kScreenWidth, 30)];
-        _guessRefreshHeaderView.backgroundColor = [UIColor clearColor];
-        self.guessYouLikeTableView.showsVerticalScrollIndicator = YES;
-        
-        UIImageView *lineImgView1 = [[UIImageView alloc] initWithFrame:CGRectMake(8, 21, 112, 0.5)];
-        lineImgView1.backgroundColor = [UIColor colorWithRGBHex:0xcecece];
-        [_guessRefreshHeaderView addSubview:lineImgView1];
-        
-        UIImageView *lineImgView2 = [[UIImageView alloc] initWithFrame:CGRectMake(199, 21, 112, 0.5)];
-        lineImgView2.backgroundColor = [UIColor colorWithRGBHex:0xcecece];
-        [_guessRefreshHeaderView addSubview:lineImgView2];
-
-        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(143, 15, 50, 14)];
-        label.textAlignment = NSTextAlignmentCenter;
-        label.text = L(@"PushAndReturn"); // 下拉返回
-        label.font = [UIFont systemFontOfSize:12];
-        label.backgroundColor = [UIColor clearColor];
-        label.textColor = [UIColor colorWithRGBHex:0x707070];
-        [_guessRefreshHeaderView addSubview:label];
-        
-        [_guessRefreshHeaderView addSubview:self.recommendIconDownImageView];
-    }
-    return _guessRefreshHeaderView;
-}
-
-//首页底部展示一行推荐文字
-- (UIImageView *)recommendImageView
-{
-    if(!_recommendImageView){
-        _recommendImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 44)];
-        _recommendImageView.backgroundColor = [UIColor clearColor];
-        _recommendImageView.layer.masksToBounds = YES;
-        
-        UIImageView *lineImgView1 = [[UIImageView alloc] initWithFrame:CGRectMake(10, 21, 83, 0.5)];
-        lineImgView1.backgroundColor = [UIColor colorWithRGBHex:0xcecece];
-        [_recommendImageView addSubview:lineImgView1];
-        
-        UIImageView *lineImgView2 = [[UIImageView alloc] initWithFrame:CGRectMake(232, 21, 78, 0.5)];
-        lineImgView2.backgroundColor = [UIColor colorWithRGBHex:0xcecece];
-        [_recommendImageView addSubview:lineImgView2];
-        
-        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(117, 15, 110, 14)];
-        label.textAlignment = NSTextAlignmentCenter;
-        label.backgroundColor = [UIColor clearColor];
-        label.text = L(@"GiveYouLikeGoods");
-        label.font = [UIFont systemFontOfSize:12];
-        label.textColor = [UIColor colorWithRGBHex:0x707070];
-        [_recommendImageView addSubview:label];
-        
-        [_recommendImageView addSubview:self.recommendIconUpImageView];
-    }
-    return _recommendImageView;
-}
-
-- (UIImageView *)recommendScanEndImageView
-{
-    if(!_recommendScanEndImageView){
-        _recommendScanEndImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 44)];
-        _recommendScanEndImageView.backgroundColor = [UIColor clearColor];
-        _recommendScanEndImageView.layer.masksToBounds = YES;
-        
-        UIImageView *lineImgView1 = [[UIImageView alloc] initWithFrame:CGRectMake(10, 20, 90, 0.5)];
-        lineImgView1.backgroundColor = [UIColor colorWithRGBHex:0xcecece];
-        [_recommendScanEndImageView addSubview:lineImgView1];
-        
-        UIImageView *lineImgView2 = [[UIImageView alloc] initWithFrame:CGRectMake(223, 20, 87, 0.5)];
-        lineImgView2.backgroundColor = [UIColor colorWithRGBHex:0xcecece];
-        [_recommendScanEndImageView addSubview:lineImgView2];
-        
-        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(107, 15, 115, 14)];
-        label.backgroundColor = [UIColor clearColor];
-        label.text = L(@"DoneSeeLater");
-        label.font = [UIFont systemFontOfSize:12];
-        label.textColor = [UIColor colorWithRGBHex:0x707070];
-        [_recommendScanEndImageView addSubview:label];
-    }
-    return _recommendScanEndImageView;
-}
-
-- (UIImageView *)recommendIconUpImageView
-{
-    if(!_recommendIconDownImageView)
-    {
-        _recommendIconDownImageView = [[UIImageView alloc] init];
-        _recommendIconDownImageView.backgroundColor = [UIColor clearColor];
-        _recommendIconDownImageView.frame = CGRectMake(100, 16, 12, 12);
-        _recommendIconDownImageView.image = [UIImage imageNamed:@"home_recommend_up.png"];
-    }
-    return _recommendIconDownImageView;
-}
-
-- (UIImageView *)recommendIconDownImageView
-{
-    if(!_recommendIconUpImageView)
-    {
-        _recommendIconUpImageView = [[UIImageView alloc] init];
-        _recommendIconUpImageView.backgroundColor = [UIColor clearColor];
-        _recommendIconUpImageView.frame = CGRectMake(127, 16, 12, 12);
-        _recommendIconUpImageView.image = [UIImage imageNamed:@"home_recommend_down.png"];
-    }
-    return _recommendIconUpImageView;
-}
-
 #pragma mark -ViewLifeCycle
 
 - (void)loadView
@@ -409,13 +108,6 @@
         _homeView.searchBarView.frame = CGRectMake(12, 0, kScreenWidth, 44);
     }
 
-    _homeView.searchBarView.searchImgView.backgroundColor = [UIColor colorWithRGBHex:0xFF9233];
-    _homeView.searchBarView.searchImgView.layer.cornerRadius = 5.0f;
-    [_homeView.searchBarView.searchTextField setValue:[UIColor whiteColor] forKeyPath:@"_placeholderLabel.textColor"];
-    [_homeView.searchBarView.searchTextField setValue:[UIFont fontWithName:@"Arial" size:14.0] forKeyPath:@"_placeholderLabel.font"];
-    
-    
-    [navigationView addSubview:_homeView.searchBarView];
 
     //需要区分table的位置
     if (IOS7_OR_LATER) {
@@ -432,16 +124,6 @@
     self.tableView.tag = 0;
     [self.tableView addSubview:self.refreshHeaderView];
     [self.view addSubview:self.tableView];
-    
-    //猜你喜欢模块
-    CGRect frame = CGRectMake(0, IOS7_OR_LATER?64:44, kScreenWidth, kScreenHeight-(IOS7_OR_LATER?64:44));
-    frame.origin.y = [[UIScreen mainScreen] bounds].size.height;
-    self.guessYouLikeTableView.frame = frame;
-    self.guessYouLikeTableView.backgroundColor = [UIColor clearColor];
-    self.guessYouLikeTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    self.guessYouLikeTableView.tag = 1;
-    [self.view addSubview:self.guessYouLikeTableView];
-    [self.guessYouLikeTableView addSubview:self.guessRefreshHeaderView];
     
     //第一次进首页标志置为YES，表示可以请求推荐数据
     willRequestRecommendData = YES;
@@ -611,9 +293,6 @@
     //    search.homeKeyString = keyword;
     [_homeView.searchBarView.searchTextField resignFirstResponder];
     _homeView.searchBarView.searchTextField.text = nil;
-    self.homeSearchView.keywordList = nil;
-    
-    [self.homeSearchView removeView];
     
     [_homeView hideSearchBar:nil];
     
@@ -634,10 +313,6 @@
     
     __weak HomePageViewController *weakSelf = self;
     
-    [self.searchService addKeywordToDB:keyword completionBlock:^(NSArray *list){
-        weakSelf.homeSearchView.historyKeywordsList = list;
-        [weakSelf.homeSearchView.displayTableView reloadData];
-    }];
     
     SearchParamDTO *solrParam = [[SearchParamDTO alloc] initWithSearchType:SearchTypeKeyword set:SearchSetMix];
     //    if ([core isEqualToString:@"electric"])
