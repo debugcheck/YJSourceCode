@@ -115,7 +115,7 @@
 
 - (void)viewDidAppear:(BOOL)animated
 {
-    _searchView.searchBar.searchTextField.placeholder = [_searchView.searchBar switchSearchwords];
+    _searchView.searchBar.searchTextField.placeholder = @"随机--";
     
     _searchView.searchBar.searchTextField.text=@"";
     //    if (_searchView.segment.selectIndex == 1) {
@@ -575,7 +575,7 @@
 //    DLog(@"%@",[segment description]);
     
     if ([searchBar.placeholder isEqualToString: L(@"Search Product")]) {
-        searchBar.placeholder = [_searchView.searchBar switchSearchwords];
+        searchBar.placeholder = @"随机的--";
     }
     
     [searchBar resignFirstResponder];

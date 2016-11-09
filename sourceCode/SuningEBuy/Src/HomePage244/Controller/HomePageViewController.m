@@ -525,7 +525,6 @@
 //    if(willLoadRecommendLabel){
 //        self.recommendIconUpImageView.transform = CGAffineTransformMakeRotation(0.0);
 //    }
-    [self loginOK];
 }
 
 #pragma mark -
@@ -820,18 +819,13 @@
         //需要重新获取首页数据
         [self refreshHomePageData];
     }
-    else
-    {
-        //
-        if (KHomePage)
-        {
+    else{
+        if (KHomePage){
             [PerformanceStatistics sharePerformanceStatistics].countStatus += 1;
             [[PerformanceStatistics sharePerformanceStatistics].arrayData removeAllObjects];
             
         }
-
         [self refreshDataComplete];
-        
     }
 }
 
@@ -855,9 +849,7 @@
             if([SNSwitch shouyexinren244]!=nil || [SNSwitch lingquhongbao244]!= nil){
                 [self.invita beginGetRedPackEntryHttpRequest];
             }
-            
             _homeView.searchBarView.searchTextField.placeholder = @"随机--";
-            
             // 检查版本 YJ
         }];
     }

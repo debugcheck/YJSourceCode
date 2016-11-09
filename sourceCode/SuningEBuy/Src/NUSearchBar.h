@@ -29,7 +29,7 @@
 @property (nonatomic, strong) UIImageView               *searchImgBtn;        //  搜索小图片
 @property (nonatomic, strong) UIButton                  *searchTypeBtn;       //  切换商品，店铺搜索的按钮
 @property (nonatomic, strong) VoiceSearchKeyboardView  *keyboardView;
-- (NSString *)switchSearchwords;
+
 - (void)showSearchBar;
 -(void)hideSearchBar:(UIButton *)button;
 

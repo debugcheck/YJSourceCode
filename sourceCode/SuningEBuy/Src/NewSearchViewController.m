@@ -173,7 +173,7 @@
     self.keywordDisplayController.displayTableView.frame = CGRectMake(0, 44 + 35, 320, self.view.bounds.size.height - 64 - 35);
     self.keywordDisplayController.hotwordTableView.frame = CGRectMake(0, 44 + 35, 320, self.view.bounds.size.height - 64 - 35);
 
-    self.searchBar.searchTextField.placeholder = [self.searchBar switchSearchwords];
+    self.searchBar.searchTextField.placeholder = @"随机";
     
     self.searchBar.searchTextField.text=@"";
 
@@ -647,7 +647,7 @@
 {
     
     if ([searchText isEqualToString:@""]) {
-        searchField.placeholder = [self.searchBar switchSearchwords];
+        searchField.placeholder = @"随机";
         [self.service getLatestTwentyKeywordsWithCompletionBlock:^(NSArray *list){
             self.historyKeywordList = list;
         }];
