@@ -61,69 +61,10 @@
     return self;
 }
 
-- (void)searchFieldSearchButtonClicked:(UITextField *)searchField
-{
-    [ChooseSearchTypeView hide];
-    NSString *keyword = searchField.text;
-    if (keyword == nil || [keyword isEmptyOrWhitespace]) {
-        //        if ([_homeView.searchBarView.searchTextField.placeholder isEqualToString:@"搜索商品"]) {
-        //            keyword = nil;
-        //            return;
-        //        }
-        //        else
-        //        {
-        //            keyword = _homeView.searchBarView.searchTextField.placeholder;
-        //        }
-        
-        return;
-    }
-    
-    if (keyword.length > 0) //语音键盘默认占位符 %EF%BF%BC,此时return
-    {//efbfbc
-        NSString *str = @"%EF%BF%BC";
-        NSString *urlKeyword = [keyword stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-        NSRange range = [urlKeyword rangeOfString:str];
-        if ( range.location!= NSNotFound)
-        {
-            return;
-        }
-    }
-    [searchField resignFirstResponder];
-    
-    //    NSString *url = [[DefaultKeyWordManager defaultManager] findUrlWithWord:keyword];
-    //
-    //    if (url && url.length > 0)
-    //    {
-    
-    //        @weakify(self);
-    //        [self routeWithUrl:url complete:^(BOOL isSuccess) {
-    //
-    //            @strongify(self);
-    //            if (!isSuccess) {
-    //
-    //                [self didSelectAssociationalWord:keyword];
-    //            }
-    
-    //        }];
-    //    }
-    //    else
-    //    {
-    [self didSelectAssociationalWord:keyword];
-    //    }
-    
-}
-
-
 - (void)quickRegistButtonClick {
     NewRegisterViewController *registViewController = [[NewRegisterViewController alloc] init];
     registViewController.registerDelegate = self;
-    AuthManagerNavViewController *navController = [[AuthManagerNavViewController alloc] initWithRootViewController:registViewController];
-    TT_RELEASE_SAFELY(registViewController);
-    [self presentModalViewController:navController animated:YES];
-    TT_RELEASE_SAFELY(navController);
-    
-    //点击埋点
-    [SSAIOSSNDataCollection CustomEventCollection:@"click" keyArray: [NSArray arrayWithObjects:@"clickno", nil] valueArray:[NSArray arrayWithObjects:[NSString stringWithFormat:@"1120017"], nil]];
+//    AuthManagerNavViewController *navController = [[AuthManagerNavViewController alloc] initWithRootViewController:registViewController];
 }
 
 
@@ -151,7 +92,6 @@
     }
     
     [self.navigationController pushViewController:nextViewController animated:YES];
-    TT_RELEASE_SAFELY(nextViewController);
 }
 
 
