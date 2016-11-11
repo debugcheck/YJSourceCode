@@ -108,9 +108,6 @@
 //刷新我的彩票
 #define   REFRESH_MYLOTTERY     @"REFRESH_MYLOTTERY"
 
-
-#define HOME_FIRST_LOADED_MESSAGE               @"HOME_FIRST_LOADED_MESSAGE"
-
 //找回密码成功
 #define Find_Password_Success                   @"Find_Password_Success"
 

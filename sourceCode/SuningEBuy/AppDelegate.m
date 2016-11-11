@@ -456,12 +456,9 @@ static char szListenTabbarViewMove[] = "listenTabViewMove";
 }
 #endif
 
-- (void)postNotificationOfFirstLoadHome
-{
-    [[NSNotificationCenter defaultCenter] postNotificationName:HOME_FIRST_LOADED_MESSAGE object:nil];
+- (void)postNotificationOfFirstLoadHome{
+    // 发出首页第一次启动通知YJ
 }
-
-
 
 - (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url{
     

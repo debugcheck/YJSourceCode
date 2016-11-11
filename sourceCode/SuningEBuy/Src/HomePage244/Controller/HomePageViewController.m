@@ -45,17 +45,6 @@
         self.iOS7FullScreenLayout = YES;
         self.isLastPage = YES;
         
-        /*
-        [[NSNotificationCenter defaultCenter] addObserver:self
-                                                 selector:@selector(firstLoaded) name:HOME_FIRST_LOADED_MESSAGE
-                                                   object:nil];
-        
-        [[NSNotificationCenter defaultCenter] addObserver:self
-                                                 selector:@selector(refreshHomeData)
-                                                     name:UIApplicationDidBecomeActiveNotification
-                                                   object:nil];
-         */
-        
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(voiceSearchByKeyWord) name:VOICE_SEARCH object:nil];
         
         self.bSupportPanUI = NO;
@@ -75,19 +64,6 @@
     return self;
 }
 
-
-/*
-- (void)firstLoaded
-{
-    
-}
-
-
-- (void)refreshHomeData
-{
-    
-}
-*/
 - (void)searchFieldSearchButtonClicked:(UITextField *)searchField
 {
     [ChooseSearchTypeView hide];
