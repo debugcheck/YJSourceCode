@@ -67,111 +67,13 @@
 //    AuthManagerNavViewController *navController = [[AuthManagerNavViewController alloc] initWithRootViewController:registViewController];
 }
 
-
-#pragma mark - EightBannerViewDelegate
-- (void)eightBannerSelectedDTO:(HomeModuleDTO *)moduleDTO {
-    //基类里处理
-    [self handleTargetType:moduleDTO.targetType targetURLString:moduleDTO.targetURL];
-}
-
-- (void)goToDeliveryInstall:(id)sender
-{
-    ServiceTrackListViewController *nextViewController = [[ServiceTrackListViewController alloc] init];
-    NSString *userName = [SFHFKeychainUtils getPasswordForUsername:kSuningLoginUserNameKey andServiceName:kSNKeychainServiceNameSuffix error:nil];
-    NSString *passwd = [SFHFKeychainUtils getPasswordForUsername:kSuningLoginPasswdKey andServiceName:kSNKeychainServiceNameSuffix error:nil];
-    
-    NSString *password = [PasswdUtil decryptString:passwd
-                                            forKey:kLoginPasswdParamEncodeKey
-                                              salt:kPBEDefaultSalt];
-    
-    if (![UserCenter defaultCenter].isLogined && !IsStrEmpty(userName) && !IsStrEmpty(passwd) && !IsStrEmpty(password))
-    {
-        //自动登录
-        AutoLoginCommand *loginCmd = [AutoLoginCommand command];
-        [CommandManage excuteCommand:loginCmd observer:nil];
-    }
-    
-    [self.navigationController pushViewController:nextViewController animated:YES];
-}
-
-
-#pragma mark getredpackServiceDelegate
-- (void) GetRedPackServiceEntryComplete:(GetRedPackEntryDTO *)service isSuccess:(BOOL) isSuccess{
-    if (isSuccess) {
-        if ([service.canGetRedPack isEqualToString:@"1"]) {
-            [UserCenter defaultCenter].actverule = service.redPackRule;
-            [UserCenter defaultCenter].ticketRuleUrl = service.ticketRuleUrl;
-            
-            if ([SNSwitch lingquhongbao244]) {
-                [UserCenter defaultCenter].isGetRedPack = YES;
-            }
-            getredpackstr = [[SNSwitch shouyexinren244] copy];
-            NSUserDefaults *defaults =[NSUserDefaults standardUserDefaults];
-            NSString *name = [defaults objectForKey:@"getredpack"];
-            
-            
-            if (name) {
-                if ([SNSwitch Isneedupdate]&&![name isEqualToString:@"0"]) {
-                    BBAlertView *alertView = [[BBAlertView alloc] initWithTitle:IsStrEmpty(getredpackstr)?L(@"GetYourRedPacketQuick"):getredpackstr
-                                                                        message:getredpackstr
-                                                                       delegate:nil
-                                                              cancelButtonTitle:L(@"GetNextTime")
-                                                              otherButtonTitles:L(@"GetNow")];
-                    [alertView setCancelBlock:^{
-                        //下次领取
-                        NSUserDefaults *defaults =[NSUserDefaults standardUserDefaults];
-                        NSString *name =@"getredpack";
-                        [defaults setObject:@"0" forKey:name];
-                    } ];
-                    [alertView setConfirmBlock:^{
-                        //                if ([UserCenter defaultCenter].isLogined) {
-                        [self loginOK];
-                    }];
-                    if (getredpackstr) {
-                        [alertView show];
-                    }
-                    isCanGetRedPack = YES;
-                }
-            }
-            else{
-                if ([SNSwitch Isneedupdate]) {
-                    BBAlertView *alertView = [[BBAlertView alloc] initWithTitle:IsStrEmpty(getredpackstr)?L(@"GetYourRedPacketQuick"):getredpackstr
-                                                                        message:getredpackstr
-                                                                       delegate:nil
-                                                              cancelButtonTitle:L(@"GetNextTime")
-                                                              otherButtonTitles:L(@"GetNow")];
-                    [alertView setCancelBlock:^{
-                        //下次领取
-                        NSUserDefaults *defaults =[NSUserDefaults standardUserDefaults];
-                        NSString *name =@"getredpack";
-                        [defaults setObject:@"0" forKey:name];
-                    } ];
-                    [alertView setConfirmBlock:^{
-                        //                if ([UserCenter defaultCenter].isLogined) {
-                        [self loginOK];
-                    }];
-                    
-                    if (getredpackstr) {
-                        [alertView show];
-                    }
-                    isCanGetRedPack = YES;
-                }
-            }
-        }
-    }
-}
-
-
 -(void)loginOK{
     NewGetRedPackViewController *getredpack = [[NewGetRedPackViewController alloc] init];
     getredpack.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:getredpack animated:YES];
 }
 
-
-#pragma mark -
-#pragma mark scroll delagate
-
+#pragma mark - scroll delagate
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
     //gjf 

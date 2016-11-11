@@ -12,7 +12,7 @@
 
 // PBEWITHMD5andDES算法默认盐，长度为8个字节，数据可配置，
 // 需要和服务端保持一致
-#define kPBEDefaultSalt     @"sn201209"
+#define kPBEDefaultSalt     @"sn201209" // 加盐
 
 
 @interface PasswdUtil : NSObject

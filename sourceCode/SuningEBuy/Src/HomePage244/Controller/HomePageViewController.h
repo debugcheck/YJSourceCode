@@ -35,8 +35,6 @@
 
 
 @interface HomePageViewController : PageRefreshTableViewController <EightBannerViewDelegate, HomePageService244Delegate, ZhuanTiServiceDelegate, HomeFloorTableViewCellDelegate, InvitationServiceDelegate, SearchServiceDelegate, HomeSearchControllerDelegate,GuessYouLikeServiceDelegate,GuessYouLikeCellDelegate> {
-
-    BOOL                isCanGetRedPack;
     
     //存放楼层数据
     NSMutableArray *floorDataArray;

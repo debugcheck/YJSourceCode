@@ -1112,7 +1112,6 @@ DEF_SINGLETON(SNSwitch);
     
 }
 
-
 //--------begin add by gjf cpa cps 新开关
 +(NSString *)shouyexinren244{
     NSDictionary *map =[GlobalDataCenter defaultCenter].activitySwitchMap;
