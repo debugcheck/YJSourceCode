@@ -17,7 +17,6 @@
 #import "NewHomeTopView.h"
 #import "InvitationService.h"
 #import "SearchService.h"
-#import "SearchbarView.h"
 #import "HomeSearchController.h"
 #import "SearchListViewController.h"
 #import "NewSearchViewController.h"
@@ -35,7 +34,7 @@
 #import "NewRegisterViewController.h"
 
 
-@interface HomePageViewController : PageRefreshTableViewController <EightBannerViewDelegate, HomePageService244Delegate, ZhuanTiServiceDelegate, HomeFloorTableViewCellDelegate, InvitationServiceDelegate, SearchServiceDelegate, SearchbarViewDelegate, HomeSearchControllerDelegate,GuessYouLikeServiceDelegate,GuessYouLikeCellDelegate> {
+@interface HomePageViewController : PageRefreshTableViewController <EightBannerViewDelegate, HomePageService244Delegate, ZhuanTiServiceDelegate, HomeFloorTableViewCellDelegate, InvitationServiceDelegate, SearchServiceDelegate, HomeSearchControllerDelegate,GuessYouLikeServiceDelegate,GuessYouLikeCellDelegate> {
 
     BOOL                isCanGetRedPack;
     
