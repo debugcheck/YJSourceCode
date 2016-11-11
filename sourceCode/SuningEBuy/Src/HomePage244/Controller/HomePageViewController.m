@@ -36,7 +36,6 @@
 
 @implementation HomePageViewController
 
-
 - (id)init{
     self = [super init];
     if (self) {
