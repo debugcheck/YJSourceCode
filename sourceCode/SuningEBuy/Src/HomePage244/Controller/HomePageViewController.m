@@ -45,8 +45,6 @@
         self.iOS7FullScreenLayout = YES;
         self.isLastPage = YES;
         
-        
-        
         /*
         [[NSNotificationCenter defaultCenter] addObserver:self
                                                  selector:@selector(firstLoaded) name:HOME_FIRST_LOADED_MESSAGE
@@ -90,100 +88,6 @@
     
 }
 */
-
-#pragma mark -ViewLifeCycle
-
-- (void)loadView
-{
-    [super loadView];
-    
-    _homeView = [[NewHomeTopView alloc] initWithOwner:self];
-//    self.navigationItem.titleView = _homeView.searchBarView;
-    
-//    _homeView.searchBarView.backgroundColor = [UIColor colorWithRGBHex:0xFF9233];
-    if (IOS7_OR_LATER) {
-        _homeView.searchBarView.frame = CGRectMake(12, 20, kScreenWidth, 44);
-    }
-    else {
-        _homeView.searchBarView.frame = CGRectMake(12, 0, kScreenWidth, 44);
-    }
-
-
-    //需要区分table的位置
-    if (IOS7_OR_LATER) {
-        self.tableView.frame = CGRectMake(0, 44, kScreenWidth, kScreenHeight-44);
-    }
-    else {
-        self.tableView.frame = CGRectMake(0, 44, kScreenWidth, kScreenHeight-64-49);
-    }
-
-    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    self.tableView.multipleTouchEnabled = NO;
-    self.tableView.backgroundColor = [UIColor colorWithHexString:@"#F1F1F1"];
-    //added by gyj 用tag区分首页和推荐模块（猜你喜欢）两个tableview
-    self.tableView.tag = 0;
-    [self.tableView addSubview:self.refreshHeaderView];
-    [self.view addSubview:self.tableView];
-    
-    //第一次进首页标志置为YES，表示可以请求推荐数据
-    willRequestRecommendData = YES;
-    willLoadRecommendLabel = NO;
-    
-    //快速注册楼层
-    quickRegistView = [[QuickRegistFloatingView alloc] initWithOwner:self];
-    quickRegistView.frame = CGRectMake(0, kScreenHeight-49-50, kScreenWidth, 50);
-    quickRegistView.hidden = YES;
-    [self.view addSubview:quickRegistView];
-    
-    //初始化位XXXX防止推荐－四级页－推荐时souceTitle变为"活动"
-    sourceTitle = @"XXXX";
-}
-
-
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-
-    //更新地址
-    [AddressInfoDAO isUpdateAddressOk];
-    
-    //自动登录
-    AutoLoginCommand *loginCmd = [AutoLoginCommand command];
-    [CommandManage excuteCommand:loginCmd observer:nil];
-    //快速注册浮层也暂时注释掉
-//    [CommandManage excuteCommand:loginCmd completeBlock:^(id<Command> cmd) {
-//        [self showFloatingView];
-//    }];
-}
-
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-    if([sourceTitle isEqualToString:@"XXXX"]){
-        sourceTitle = @"活动";
-    }
-    if (IOS7_OR_LATER) {
-        [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
-    }
-    
-    _homeView.searchBarView.searchTextField.placeholder = @"随机切换";
-}
-
-
-- (void)viewDidAppear:(BOOL)animated
-{
-    if (KHomePage)
-    {
-        [[PerformanceStatistics sharePerformanceStatistics].arrayData removeAllObjects];
-        [PerformanceStatistics sharePerformanceStatistics].startTimeStatus = [NSDate date];
-        [PerformanceStatistics sharePerformanceStatistics].countStatus = 0;
-    }
-    //解决从其他也页面跳回箭头角度变化的问题
-//    if(willLoadRecommendLabel){
-//        self.recommendIconUpImageView.transform = CGAffineTransformMakeRotation(0.0);
-//    }
-}
-
-
 - (void)searchFieldSearchButtonClicked:(UITextField *)searchField
 {
     [ChooseSearchTypeView hide];
@@ -236,15 +140,6 @@
     
 }
 
-
-#pragma -mark ButtonMethod
-- (void)showFloatingView {
-    if (![GlobalDataCenter defaultCenter].hasShownFloatingView && IsArrEmpty([Config currentConfig].loginHistoryList)) {
-        //展示快速注册浮层
-        quickRegistView.hidden = NO;
-        [GlobalDataCenter defaultCenter].hasShownFloatingView = YES;
-    }
-}
 
 - (void)quickRegistButtonClick {
     NewRegisterViewController *registViewController = [[NewRegisterViewController alloc] init];
