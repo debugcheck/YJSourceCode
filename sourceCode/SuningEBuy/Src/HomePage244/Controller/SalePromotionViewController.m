@@ -37,6 +37,7 @@
         self.hasNav = YES;
         self.hidesBottomBarWhenPushed = YES;
         self.whereFrom = SNRouteSourceNone;
+        //    
     }
     return self;
 }
