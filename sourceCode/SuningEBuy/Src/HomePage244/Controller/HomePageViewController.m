@@ -20,8 +20,6 @@
 
 
 @interface HomePageViewController () {
-    NSMutableArray  *tableStructureDictArray;
-    int index;
     NSString            *getredpackstr;
     //是否请求推荐数据
     BOOL                willRequestRecommendData;
@@ -47,16 +45,6 @@
         self.bSupportPanUI = NO;
         
         self.iOS7FullScreenLayout = YES;
-        
-        index = 1;
-        
-        tableStructureDictArray = [[NSMutableArray alloc] init];
-        
-        floorDataArray = [[NSMutableArray alloc] init];
-//        edit by gjf，刷新页面
-        [self refreshData];
-
-        
     }
     return self;
 }
