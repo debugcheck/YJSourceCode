@@ -7,7 +7,6 @@
 //
 
 #import "PageRefreshTableViewController.h"
-#import "EightBannerView244.h"
 #import "ShopRecommend244.h"
 #import "BrandRecommend244.h"
 #import "LianBanZhuanTiViewController.h"
@@ -34,10 +33,7 @@
 #import "NewRegisterViewController.h"
 
 
-@interface HomePageViewController : PageRefreshTableViewController <EightBannerViewDelegate, HomePageService244Delegate, ZhuanTiServiceDelegate, HomeFloorTableViewCellDelegate, InvitationServiceDelegate, SearchServiceDelegate, HomeSearchControllerDelegate,GuessYouLikeServiceDelegate,GuessYouLikeCellDelegate> {
-    
-    //存放楼层数据
-    NSMutableArray *floorDataArray;
+@interface HomePageViewController : PageRefreshTableViewController <HomePageService244Delegate, ZhuanTiServiceDelegate, HomeFloorTableViewCellDelegate, InvitationServiceDelegate, SearchServiceDelegate, HomeSearchControllerDelegate,GuessYouLikeServiceDelegate,GuessYouLikeCellDelegate> {
     
     //是否加载底部推荐标签
     BOOL                willLoadRecommendLabel;
