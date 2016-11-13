@@ -155,18 +155,8 @@
     self.tpTableView.tableHeaderView = v;
 }
 
-- (PasswordToggleView *)passwordToggleView
-{
-    if (!_passwordToggleView) {
-        _passwordToggleView = [[PasswordToggleView alloc] init];
-        [_passwordToggleView addTarget:self action:@selector(changePasswordShowState) forControlEvents:UIControlEventValueChanged];
-    }
-    return _passwordToggleView;
-}
-
 - (void)changePasswordShowState
 {
-    self.cardPassTextField.secureTextEntry = !self.passwordToggleView.isShowWords;
     [self.tpTableView reloadData];
 }
 
@@ -331,9 +321,6 @@
         }else{
             [cell.contentView removeAllSubviews];
         }
-        self.passwordToggleView.left = self.cardPassTextField.right+5;
-        self.passwordToggleView.top = 10;
-        [cell.contentView addSubview:self.passwordToggleView];
         [cell.contentView addSubview:self.cardPassLabel];
         [cell.contentView addSubview:self.cardPassTextField];
         

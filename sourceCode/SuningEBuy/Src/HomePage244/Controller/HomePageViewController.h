@@ -30,7 +30,6 @@
 #import "GuessYouLikeService.h"
 #import "GuessYouLikeCell.h"
 #import "QuickRegistFloatingView.h"
-#import "NewRegisterViewController.h"
 
 
 @interface HomePageViewController : PageRefreshTableViewController <HomePageService244Delegate, ZhuanTiServiceDelegate, HomeFloorTableViewCellDelegate, InvitationServiceDelegate, SearchServiceDelegate, HomeSearchControllerDelegate,GuessYouLikeServiceDelegate,GuessYouLikeCellDelegate> {

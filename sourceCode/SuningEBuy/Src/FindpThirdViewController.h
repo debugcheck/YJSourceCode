@@ -9,7 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "FindPasswordDTO.h"
 #import "FindPasswordService.h"
-#import "PasswordToggleView.h"
 #import "SNUITableViewCell.h"
 
 @interface FindpThirdViewController : CommonViewController<FindPasswordServiceDelegate,UITextFieldDelegate>
@@ -20,5 +19,4 @@
 @property (nonatomic, strong) NSString                  *mobileNumString;
 @property (nonatomic, strong) UITextField               *passwordTextField;
 @property (nonatomic, strong) UITextField               *rePasswordTextField;
-@property (nonatomic, strong) PasswordToggleView        *passwdToggleView;
 @end

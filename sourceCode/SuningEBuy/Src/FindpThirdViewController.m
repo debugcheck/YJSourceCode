@@ -137,8 +137,6 @@
 - (void)changePasswordShowState
 {
     
-   
-    self.passwordTextField.secureTextEntry = !(self.passwdToggleView.isShowWords);
     if ([self.passwordTextField isFirstResponder])
     {
         [self.passwordTextField resignFirstResponder];
@@ -209,11 +207,6 @@
 
         
         [cell.contentView addSubview:self.passwordTextField];
-        [cell.contentView addSubview:self.passwdToggleView];
-        _passwdToggleView.left = self.passwordTextField.right+5;
-        _passwdToggleView.top = 12;
-        _passwdToggleView.hidden = NO;
-
         
     }else if (indexPath.section == 1){
         cell.textLabel.text = L(@"confirm_password");
@@ -332,13 +325,5 @@
     return YES;
 }
 
-- (PasswordToggleView *)passwdToggleView
-{
-    if (!_passwdToggleView) {
-        _passwdToggleView = [[PasswordToggleView alloc] init];
-        _passwdToggleView.hidden = YES;
-        [_passwdToggleView addTarget:self action:@selector(changePasswordShowState) forControlEvents:UIControlEventValueChanged]; 
-    }
-    return _passwdToggleView;
-}
+
 @end

@@ -68,7 +68,6 @@
 		0422F2C418A53D9B0039875A /* login_toggle_dian@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0422F2C018A53D9B0039875A /* login_toggle_dian@2x.png */; };
 		0422F2C518A53D9B0039875A /* login_toggle_abc@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0422F2C118A53D9B0039875A /* login_toggle_abc@2x.png */; };
 		0422F2C618A53D9B0039875A /* login_toggle_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0422F2C218A53D9B0039875A /* login_toggle_bg@2x.png */; };
-		0422F2CA18A53EE80039875A /* PasswordToggleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0422F2C918A53EE80039875A /* PasswordToggleView.m */; };
 		042585EE17CF540C002C6776 /* shopcart_rush_mark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 042585E317CF540C002C6776 /* shopcart_rush_mark@2x.png */; };
 		042585EF17CF540C002C6776 /* shopcart_delete@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 042585E417CF540C002C6776 /* shopcart_delete@2x.png */; };
 		042585F017CF540C002C6776 /* shopcart_uncheck@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 042585E517CF540C002C6776 /* shopcart_uncheck@2x.png */; };
@@ -362,7 +361,6 @@
 		04BEC51915DCDD5000455261 /* AuthManagerNavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BEC51615DCDD5000455261 /* AuthManagerNavViewController.m */; };
 		04BEC51A15DCDD5000455261 /* AuthNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BEC51815DCDD5000455261 /* AuthNavigationBar.m */; };
 		04BEC52C15DCF60400455261 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BEC52B15DCF60400455261 /* LoginViewController.m */; };
-		04BEC52F15DCF65000455261 /* NewRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BEC52E15DCF64F00455261 /* NewRegisterViewController.m */; };
 		04BEC53215DCF67900455261 /* UserCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BEC53115DCF67900455261 /* UserCenter.m */; };
 		04BEC53915DCF6C400455261 /* UserLoginService.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BEC53815DCF6C400455261 /* UserLoginService.m */; };
 		04BF2E5116413B0800691FB7 /* product_energy_subsidies@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04BF2E4F16413B0800691FB7 /* product_energy_subsidies@2x.png */; };
@@ -1053,7 +1051,6 @@
 		61998E0F1894E8EA00AB48BA /* TotalPriceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 61998E0E1894E8EA00AB48BA /* TotalPriceView.m */; };
 		6199F6CA19ED42E20072A6D6 /* NBYJuBaoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6199F6C919ED42E20072A6D6 /* NBYJuBaoView.m */; };
 		6199F6CC19ED44100072A6D6 /* NBYJuBaoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6199F6CB19ED44100072A6D6 /* NBYJuBaoView.xib */; };
-		619D75091728CEF300E183BC /* NextRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 619D75081728CEF300E183BC /* NextRegisterViewController.m */; };
 		61A04978171F824500F590B5 /* message@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 61A04974171F824500F590B5 /* message@2x.png */; };
 		61A04979171F824500F590B5 /* tengxun@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 61A04975171F824500F590B5 /* tengxun@2x.png */; };
 		61A04985171FCE0E00F590B5 /* weixin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 61A04983171FCE0D00F590B5 /* weixin@2x.png */; };
@@ -2560,8 +2557,6 @@
 		0422F2C018A53D9B0039875A /* login_toggle_dian@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login_toggle_dian@2x.png"; sourceTree = "<group>"; };
 		0422F2C118A53D9B0039875A /* login_toggle_abc@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login_toggle_abc@2x.png"; sourceTree = "<group>"; };
 		0422F2C218A53D9B0039875A /* login_toggle_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login_toggle_bg@2x.png"; sourceTree = "<group>"; };
-		0422F2C818A53EE80039875A /* PasswordToggleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PasswordToggleView.h; sourceTree = "<group>"; };
-		0422F2C918A53EE80039875A /* PasswordToggleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PasswordToggleView.m; sourceTree = "<group>"; };
 		042585E317CF540C002C6776 /* shopcart_rush_mark@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shopcart_rush_mark@2x.png"; sourceTree = "<group>"; };
 		042585E417CF540C002C6776 /* shopcart_delete@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shopcart_delete@2x.png"; sourceTree = "<group>"; };
 		042585E517CF540C002C6776 /* shopcart_uncheck@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shopcart_uncheck@2x.png"; sourceTree = "<group>"; };
@@ -3099,8 +3094,6 @@
 		04BEC51815DCDD5000455261 /* AuthNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AuthNavigationBar.m; path = Common/AuthManager/AuthNavigationBar.m; sourceTree = "<group>"; };
 		04BEC52A15DCF60400455261 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		04BEC52B15DCF60400455261 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
-		04BEC52D15DCF64F00455261 /* NewRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewRegisterViewController.h; sourceTree = "<group>"; };
-		04BEC52E15DCF64F00455261 /* NewRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewRegisterViewController.m; sourceTree = "<group>"; };
 		04BEC53015DCF67900455261 /* UserCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserCenter.h; sourceTree = "<group>"; };
 		04BEC53115DCF67900455261 /* UserCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserCenter.m; sourceTree = "<group>"; };
 		04BEC53715DCF6C400455261 /* UserLoginService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserLoginService.h; sourceTree = "<group>"; };
@@ -4175,8 +4168,6 @@
 		6199F6C819ED42E20072A6D6 /* NBYJuBaoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NBYJuBaoView.h; sourceTree = "<group>"; };
 		6199F6C919ED42E20072A6D6 /* NBYJuBaoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NBYJuBaoView.m; sourceTree = "<group>"; };
 		6199F6CB19ED44100072A6D6 /* NBYJuBaoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NBYJuBaoView.xib; sourceTree = "<group>"; };
-		619D75071728CEF300E183BC /* NextRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NextRegisterViewController.h; sourceTree = "<group>"; };
-		619D75081728CEF300E183BC /* NextRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NextRegisterViewController.m; sourceTree = "<group>"; };
 		61A04974171F824500F590B5 /* message@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "message@2x.png"; sourceTree = "<group>"; };
 		61A04975171F824500F590B5 /* tengxun@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tengxun@2x.png"; sourceTree = "<group>"; };
 		61A04983171FCE0D00F590B5 /* weixin@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "weixin@2x.png"; sourceTree = "<group>"; };
@@ -8252,16 +8243,12 @@
 				61ED63C7172BD97000AEF357 /* RegisterViewController.m */,
 				04BEC52A15DCF60400455261 /* LoginViewController.h */,
 				04BEC52B15DCF60400455261 /* LoginViewController.m */,
-				04BEC52D15DCF64F00455261 /* NewRegisterViewController.h */,
-				04BEC52E15DCF64F00455261 /* NewRegisterViewController.m */,
 				04A801C615DD1D8700BC1C78 /* RetrievePasswordViewController.h */,
 				04A801C715DD1D8700BC1C78 /* RetrievePasswordViewController.m */,
 				04CB728515DEA57C004356CF /* AccountValidateViewController.h */,
 				04CB728615DEA57C004356CF /* AccountValidateViewController.m */,
 				04CB728C15DEE61E004356CF /* LinkEmailViewController.h */,
 				04CB728D15DEE620004356CF /* LinkEmailViewController.m */,
-				619D75071728CEF300E183BC /* NextRegisterViewController.h */,
-				619D75081728CEF300E183BC /* NextRegisterViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -8276,8 +8263,6 @@
 				6106A9FA17C496070070E641 /* LoginHistoryView.m */,
 				C4D451B11845924D00811437 /* SNProtocolView.h */,
 				C4D451B21845924D00811437 /* SNProtocolView.m */,
-				0422F2C818A53EE80039875A /* PasswordToggleView.h */,
-				0422F2C918A53EE80039875A /* PasswordToggleView.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -15813,7 +15798,6 @@
 				BF69799B1918C4E500F5E769 /* NProDetailParameterNbookTableView.m in Sources */,
 				04BD931415DC7DA800BA623C /* ToolBarButton.m in Sources */,
 				6E78F24218DAF6A900EBF6B2 /* OWBAuthorizeWebView.m in Sources */,
-				0422F2CA18A53EE80039875A /* PasswordToggleView.m in Sources */,
 				04BD931815DC7DA800BA623C /* UIColor-Expanded.m in Sources */,
 				04BD931B15DC7DA800BA623C /* UIColor-HSVAdditions.m in Sources */,
 				04BEA271188FB76C0080A915 /* SNUIActionSheet.m in Sources */,
@@ -15903,7 +15887,6 @@
 				04BEC51A15DCDD5000455261 /* AuthNavigationBar.m in Sources */,
 				63C93E201895976600708B04 /* PlaneSegement.m in Sources */,
 				04BEC52C15DCF60400455261 /* LoginViewController.m in Sources */,
-				04BEC52F15DCF65000455261 /* NewRegisterViewController.m in Sources */,
 				04BEC53215DCF67900455261 /* UserCenter.m in Sources */,
 				04BEC53915DCF6C400455261 /* UserLoginService.m in Sources */,
 				04A801C115DD10ED00BC1C78 /* UserNewRegisterService.m in Sources */,
@@ -16660,7 +16643,6 @@
 				11A18DD819172E6100EA3D7E /* WaterElectricGasPaymentView.m in Sources */,
 				043283DC17187E2A00F5B908 /* SNTouchView.m in Sources */,
 				044731F3171CB2B800C96F04 /* SNCycleScrollView.m in Sources */,
-				619D75091728CEF300E183BC /* NextRegisterViewController.m in Sources */,
 				D87935FE1A13645500B801B9 /* MWPhotoBrowser.m in Sources */,
 				61A7B964172A1E5D00288FD0 /* UserRegisterDTO.m in Sources */,
 				04220E041732FB3900A67070 /* CollectDeviceTokenCommand.m in Sources */,

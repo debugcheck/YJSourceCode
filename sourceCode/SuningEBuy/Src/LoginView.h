@@ -11,7 +11,6 @@
 
 #import "OHAttributedLabel.h"
 #import "NSAttributedString+Attributes.h"
-#import "PasswordToggleView.h"
 
 @protocol MatchedAccountsViewDelegate <NSObject>
 @optional
@@ -48,8 +47,6 @@
 @property (nonatomic, strong) EGOImageView *verifyCodeImageView;
 @property (nonatomic, strong) OHAttributedLabel *labelRefresh;
 @property (nonatomic, strong) UIButton *btnRefresh;   //换一换button
-
-@property (nonatomic, strong) PasswordToggleView *passwdToggleView;
 
 
 @property (nonatomic,strong) MatchedAccountsView *matchedAccView;

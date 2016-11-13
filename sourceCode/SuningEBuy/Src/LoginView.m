@@ -461,14 +461,6 @@
     return _btnRefresh;
 }
 
-- (PasswordToggleView *)passwdToggleView
-{
-    if (!_passwdToggleView) {
-        _passwdToggleView = [[PasswordToggleView alloc] init];
-        
-    }
-    return _passwdToggleView;
-}
 
 - (void)refreshVerifycode:(id)sender
 {

@@ -58,7 +58,6 @@
 #import "UIImage-Extensions.h"
 
 #import "InvitationService.h"
-#import "NewRegisterViewController.h"
 
 #define LoginTitle  L(@"LoginTitle")
 #define LogoutTitle L(@"LogoutTitle")

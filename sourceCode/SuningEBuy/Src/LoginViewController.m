@@ -7,7 +7,6 @@
 //
 
 #import "LoginViewController.h"
-#import "NewRegisterViewController.h"
 //#import "RegisterViewController.h"
 #import "RetrievePasswordViewController.h"
 #import "AuthManagerNavViewController.h"
@@ -235,7 +234,6 @@
 
 - (void)changePasswordShowState
 {
-    _loginView.passwordTextField.secureTextEntry = !_loginView.passwdToggleView.isShowWords;
     if (!IOS7_OR_LATER) {
         [_loginView.passwordTextField resignFirstResponder];
     }
@@ -1082,29 +1080,12 @@
 
 - (void)userRegister:(id)sender
 {
-    [SSAIOSSNDataCollection CustomEventCollection:@"click"
-                                         keyArray:@[@"clickno"]
-                                       valueArray:@[@"1030105"]];
-    
-    NewRegisterViewController *registViewController = [[NewRegisterViewController alloc] init];
-    registViewController.registerDelegate = self;
-    AuthManagerNavViewController *navController = [[AuthManagerNavViewController alloc] initWithRootViewController:registViewController];
-	TT_RELEASE_SAFELY(registViewController);
-    [self presentModalViewController:navController animated:YES];
-    TT_RELEASE_SAFELY(navController);
+
 }
 
 // backWayId = 1 ，注册页面直接返回到首页
 - (void)showRegisterViewController:(NSInteger)backWayId  {
-    
-    NewRegisterViewController *ctrler = [[NewRegisterViewController alloc] init];
-    ctrler.backTypeId           = backWayId;
-    ctrler.isFromSacnerRegister = YES;
-    ctrler.registerDelegate     = self;
-    AuthManagerNavViewController *navController = [[AuthManagerNavViewController alloc] initWithRootViewController:ctrler];
-	TT_RELEASE_SAFELY(ctrler);
-    [self presentModalViewController:navController animated:NO];
-    TT_RELEASE_SAFELY(navController);
+
     
 }
 

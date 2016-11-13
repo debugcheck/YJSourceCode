@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import "MemeberMergeService.h"
-#import "PasswordToggleView.h"
 #import "OHAttributedLabel.h"
 
 @interface YigouAccountViewController : CommonViewController <UITextFieldDelegate,MemeberMergeServiceDelegate>
@@ -28,7 +27,6 @@
 @property (nonatomic, strong) NSString              *cardNum;
 @property (nonatomic, strong) NSString              *cardPass;
 
-@property (nonatomic, strong) PasswordToggleView *passwdToggleView;
 
 
 @end

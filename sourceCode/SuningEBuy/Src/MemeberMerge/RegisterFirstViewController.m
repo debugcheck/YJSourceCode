@@ -225,18 +225,8 @@
 	
 }
 
-- (PasswordToggleView *)passwdToggleView
-{
-    if (!_passwdToggleView) {
-        _passwdToggleView = [[PasswordToggleView alloc] init];
-        [_passwdToggleView addTarget:self action:@selector(changePasswordShowState) forControlEvents:UIControlEventValueChanged];
-    }
-    return _passwdToggleView;
-}
-
 - (void)changePasswordShowState
 {
-    self.passwordTextField.secureTextEntry = !self.passwdToggleView.isShowWords;
     if (!IOS7_OR_LATER)
     {
         [self.passwordTextField resignFirstResponder];
@@ -346,9 +336,6 @@
             [secondCell.contentView addSubview:self.codeTextField];
             [secondCell.contentView addSubview:self.getCodeBtn];
         }else{
-            self.passwdToggleView.left = self.passwordTextField.right+5;
-            self.passwdToggleView.top = 10;
-            [secondCell.contentView addSubview:self.passwdToggleView];
             [secondCell.contentView addSubview:self.passwordTextField];
         }
     }else{
@@ -357,9 +344,6 @@
         }
         else if (indexPath.section == 1)
         {
-            self.passwdToggleView.left = self.passwordTextField.right+5;
-            self.passwdToggleView.top = 10;
-            [secondCell.contentView addSubview:self.passwdToggleView];
             [secondCell.contentView addSubview:self.passwordTextField];
         }
     }

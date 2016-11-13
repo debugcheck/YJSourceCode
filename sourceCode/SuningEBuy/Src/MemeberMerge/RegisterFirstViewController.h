@@ -11,14 +11,11 @@
 #import "keyboardNumberPadReturnTextField.h"
 #import "MergeNewAccountDTO.h"
 #import "Calculagraph.h"
-#import "PasswordToggleView.h"
 
 @interface RegisterFirstViewController : CommonViewController <UITextFieldDelegate,MemeberMergeServiceDelegate,KeyboardDoneTappedDelegate>
 
 @property (nonatomic, strong) UIButton                                      *getCodeBtn;
 @property (nonatomic, strong) keyboardNumberPadReturnTextField              *phoneNumTextField;
-
-@property (nonatomic, strong) PasswordToggleView                            *passwdToggleView;
 
 
 @property (nonatomic, strong) Calculagraph                                  *calculagraph;

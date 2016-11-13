@@ -34,11 +34,7 @@
 
 @implementation HomePageViewController
 
-- (void)quickRegistButtonClick {
-    NewRegisterViewController *registViewController = [[NewRegisterViewController alloc] init];
-    registViewController.registerDelegate = self;
-//    AuthManagerNavViewController *navController = [[AuthManagerNavViewController alloc] initWithRootViewController:registViewController];
-}
+
 
 -(void)loginOK{
     NewGetRedPackViewController *getredpack = [[NewGetRedPackViewController alloc] init];

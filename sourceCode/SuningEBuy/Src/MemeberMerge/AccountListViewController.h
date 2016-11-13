@@ -9,14 +9,12 @@
 #import <UIKit/UIKit.h>
 #import "AccountListCell.h"
 #import "MemeberMergeService.h"
-#import "PasswordToggleView.h"
 
 @interface AccountListViewController : CommonViewController<UITextFieldDelegate,MemeberMergeServiceDelegate>
 
 @property (nonatomic, strong) NSMutableArray                *accoutList;
 @property (nonatomic, strong) UILabel                       *cardPassLabel;
 @property (nonatomic, strong) UITextField                   *cardPassTextField;
-@property (nonatomic, strong) PasswordToggleView            *passwordToggleView;
 @property (nonatomic, strong) UIImageView                   *markView;
 
 @property (nonatomic, strong) MemeberMergeService           *memberMergeService;

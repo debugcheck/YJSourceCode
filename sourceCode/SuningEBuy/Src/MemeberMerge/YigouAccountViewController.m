@@ -151,18 +151,7 @@
     return _nameView;
 }
 
-- (PasswordToggleView *)passwdToggleView
-{
-    if (!_passwdToggleView) {
-        _passwdToggleView = [[PasswordToggleView alloc] init];
-        [_passwdToggleView addTarget:self action:@selector(changePasswordShowState) forControlEvents:UIControlEventValueChanged];
-    }
-    return _passwdToggleView;
-}
-
-- (void)changePasswordShowState
-{
-    self.passwordTextField.secureTextEntry = !self.passwdToggleView.isShowWords;
+- (void)changePasswordShowState{
 }
 
 #pragma mark 会员请求
@@ -336,10 +325,6 @@
             //密码图标
             UIImage *imageUserIcon = [UIImage streImageNamed:@"login_password_icon.png"];
             vIcon.image = imageUserIcon;
-            
-            self.passwdToggleView.left = self.passwordTextField.right+5;
-            self.passwdToggleView.top = 10;
-            [firstCell.contentView addSubview:self.passwdToggleView];
             
             //icon与输入框分隔线
             UIView *vVerticalSepline = [[UIView alloc] initWithFrame:CGRectMake(52, 5, 1, 30)];

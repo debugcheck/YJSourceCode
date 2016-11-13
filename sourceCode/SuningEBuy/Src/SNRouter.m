@@ -51,7 +51,6 @@
 #import "HomePage244/Controller/LianBanZhuanTiViewController.h"
 #import "SalePromotionViewController.h"
 #import "ZhuanTiService244.h"
-#import "NewRegisterViewController.h"
 #import "PruductList244ViewController.h"
 #import "OrderDetailViewController.h"
 
@@ -1804,14 +1803,15 @@
         
         [navController popToRootViewControllerAnimated:NO];
         
-        NewRegisterViewController *registViewController = [[NewRegisterViewController alloc] init];
+        // YJJJJJJJ
+//        NewRegisterViewController *registViewController = [[NewRegisterViewController alloc] init];
+//        
+//        AuthManagerNavViewController *userNav = [[AuthManagerNavViewController alloc]
+//                                                 initWithRootViewController:registViewController];
         
-        AuthManagerNavViewController *userNav = [[AuthManagerNavViewController alloc]
-                                                 initWithRootViewController:registViewController];
+//        MyEbuyViewController *ctrl = [navController.viewControllers safeObjectAtIndex:0];
         
-        MyEbuyViewController *ctrl = [navController.viewControllers safeObjectAtIndex:0];
-        
-        [ctrl presentModalViewController:userNav animated:YES];
+//        [ctrl presentModalViewController:userNav animated:YES];
         
     };
 }

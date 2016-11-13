@@ -11,8 +11,6 @@
 #import "LoginViewController.h"
 #import "AuthManagerNavViewController.h"
 
-#import "NewRegisterViewController.h"
-
 
 @interface AppHelperViewController ()
 @property (nonatomic,strong) UIButton *loginButton;     // 登录
@@ -316,13 +314,13 @@
                                              keyArray:@[@"clickno"]
                                            valueArray:@[@"1030105"]];
         
-        NewRegisterViewController *registViewController = [[NewRegisterViewController alloc] init];
-        registViewController.registerDelegate = self;
-        AuthManagerNavViewController *navController = [[AuthManagerNavViewController alloc] initWithRootViewController:registViewController];
-        [__gNavController0 presentViewController:navController animated:YES completion:^{
-            [weakSelf removeOverFlowActivityView];
-            [weakSelf goBack];
-        }];
+//        NewRegisterViewController *registViewController = [[NewRegisterViewController alloc] init];
+//        registViewController.registerDelegate = self;
+//        AuthManagerNavViewController *navController = [[AuthManagerNavViewController alloc] initWithRootViewController:registViewController];
+//        [__gNavController0 presentViewController:navController animated:YES completion:^{
+//            [weakSelf removeOverFlowActivityView];
+//            [weakSelf goBack];
+//        }]; YJJJJJJJJJ
 
 
     }
