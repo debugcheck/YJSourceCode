@@ -34,21 +34,6 @@
 
 @implementation HomePageViewController
 
-- (id)init{
-    self = [super init];
-    if (self) {
-        self.hasNav = NO;
-        self.isNeedBackItem = NO;
-        self.iOS7FullScreenLayout = YES;
-        self.isLastPage = YES;
-        
-        self.bSupportPanUI = NO;
-        
-        self.iOS7FullScreenLayout = YES;
-    }
-    return self;
-}
-
 - (void)quickRegistButtonClick {
     NewRegisterViewController *registViewController = [[NewRegisterViewController alloc] init];
     registViewController.registerDelegate = self;

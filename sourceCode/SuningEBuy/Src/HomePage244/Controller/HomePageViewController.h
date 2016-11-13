@@ -44,7 +44,4 @@
     QuickRegistFloatingView     *quickRegistView;
 }
 
-
-
-- (id)init;
 @end
