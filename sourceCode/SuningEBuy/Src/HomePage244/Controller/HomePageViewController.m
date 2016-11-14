@@ -7,12 +7,7 @@
 //
 
 #import "HomePageViewController.h"
-#import "HomeFloorDTO.h"
-#import "SNWebViewController.h"
-#import "PruductList244ViewController.h"
-#import "SalePromotionViewController.h"
 #import "AutoLoginCommand.h"
-#import "ServiceTrackListViewController.h"
 #import "NewGetRedPackViewController.h"
 #import <QuartzCore/QuartzCore.h>
 #import "GuessYouLikeCell.h"
