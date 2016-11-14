@@ -10,7 +10,6 @@
 #import "NewInviteFriendCell.h"
 #import "UserCenter.h"
 #import "InvitationService.h"
-#import "ActiveRuleViewController.h"
 #import "GetRedPackEntryViewController.h"
 //#import "BoundPhoneViewController.h"
 //#import "ActiveEfubaoViewController.h"
@@ -29,7 +28,6 @@
     InvitationDTO *invitaDto;
     NSString      *totalReward;
 }
-@property(nonatomic,strong)UIButton *activeRuleBtn;
 @property(nonatomic,strong)UIView *backView;
 @property(nonatomic,strong)QueryRewardDTO *queryRewardDTO;
 @end
@@ -56,7 +54,6 @@
     self.tableView.frame = CGRectMake(0, 0, 320, frame.size.height);
     [self.view addSubview:self.tableView];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    [self.view addSubview:self.activeRuleBtn];
     self.title=L(@"CPACPS_InviteFriendEarnMoney");
     SNUIBarButtonItem *leftButton = [SNUIBarButtonItem itemWithTitle:@""
                                                                Style:SNNavItemStyleBack
@@ -79,17 +76,6 @@
     
 }
 
--(UIButton *)activeRuleBtn{
-    if (!_activeRuleBtn) {
-        _activeRuleBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, self.view.bottom-104, self.view.frame.size.width, 40)];
-        _activeRuleBtn.backgroundColor = [UIColor whiteColor];
-        [_activeRuleBtn setTitle:L(@"activeRule") forState:UIControlStateNormal];
-        [_activeRuleBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-        [_activeRuleBtn addTarget:self action:@selector(ruleClick) forControlEvents:UIControlEventTouchUpInside];
-    }
-    return _activeRuleBtn;
-}
-
 -(UIView *)backView{
     if (!_backView) {
         _backView = [[UIView alloc] initWithFrame:[UIScreen mainScreen].bounds];
@@ -101,18 +87,7 @@
     }
     return _backView;
 }
--(void)ruleClick{
-    [SSAIOSSNDataCollection CustomEventCollection:@"click" keyArray: [NSArray arrayWithObjects:@"clickno", nil]valueArray: [NSArray arrayWithObjects:[NSString stringWithFormat:@"620210"], nil]];
-    ActiveRuleViewController *active = [[ActiveRuleViewController alloc] init:invitaDto.actRuleURL];
-    active.view.frame =CGRectMake(0, 150, self.view.frame.size.width, [UIScreen mainScreen].bounds.size.height-150 );
-    active.webView.frame =CGRectMake(0, 0, self.view.frame.size.width, [UIScreen mainScreen].bounds.size.height-150);
-    UIButton *btn = [[UIButton alloc] initWithFrame:CGRectMake(self.view.frame.size.width-58, 150-29, 58, 58)];
-    [btn setImage:[UIImage imageNamed:@"button_closed_normal.png"] forState:UIControlStateNormal];
-    [btn addTarget:self action:@selector(hideRule) forControlEvents:UIControlEventTouchUpInside];
-    [self.backView addSubview:active.view];
-    [self.backView addSubview:btn];
-    [[UIApplication sharedApplication].keyWindow addSubview:self.backView];
-}
+
 
 -(void)hideRule{
     [_backView removeFromSuperview];

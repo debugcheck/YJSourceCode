@@ -8,23 +8,11 @@
 
 #import "GetRedPackEntryViewController.h"
 #import "InvitationService.h"
-#import "ActiveRuleViewController.h"
 @interface GetRedPackEntryViewController ()
 
 @end
 
 @implementation GetRedPackEntryViewController
-
-- (id)init
-{
-    self = [super init];
-    if (self) {
-        
-
-        // Custom initialization
-    }
-    return self;
-}
 
 -(InvitationService *)invita
 {
@@ -223,8 +211,7 @@
 }
 
 -(void)btnclick{
-    ActiveRuleViewController *active = [[ActiveRuleViewController alloc] init:_activeurl];
-    [self.navigationController pushViewController:active animated:YES];
+    // rule web
 }
 
 - (void)dealloc

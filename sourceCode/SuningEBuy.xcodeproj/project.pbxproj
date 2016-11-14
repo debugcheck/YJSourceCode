@@ -1301,7 +1301,6 @@
 		6E0D09B918F9108000C3E492 /* soundsign.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E0D09B018F9108000C3E492 /* soundsign.png */; };
 		6E0D09BD18F910B100C3E492 /* DVCircle.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D09BC18F910B100C3E492 /* DVCircle.m */; };
 		6E0D09C218F944F600C3E492 /* voicedecode.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6E0D09C118F944F600C3E492 /* voicedecode.wav */; };
-		6E16576E18D185A600D11BC5 /* ActiveRuleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E16575B18D185A600D11BC5 /* ActiveRuleViewController.m */; };
 		6E16576F18D185A600D11BC5 /* GetRedPackEntryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E16575D18D185A600D11BC5 /* GetRedPackEntryViewController.m */; };
 		6E16577018D185A600D11BC5 /* GetRedPackSuccessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E16575F18D185A600D11BC5 /* GetRedPackSuccessViewController.m */; };
 		6E16577118D185A600D11BC5 /* GetRedPackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E16576118D185A600D11BC5 /* GetRedPackViewController.m */; };
@@ -4538,8 +4537,6 @@
 		6E0D09BC18F910B100C3E492 /* DVCircle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DVCircle.m; sourceTree = "<group>"; };
 		6E0D09BE18F910DC00C3E492 /* PlayVoiceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayVoiceViewController.h; sourceTree = "<group>"; };
 		6E0D09C118F944F600C3E492 /* voicedecode.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = voicedecode.wav; sourceTree = "<group>"; };
-		6E16575A18D185A600D11BC5 /* ActiveRuleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActiveRuleViewController.h; sourceTree = "<group>"; };
-		6E16575B18D185A600D11BC5 /* ActiveRuleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActiveRuleViewController.m; sourceTree = "<group>"; };
 		6E16575C18D185A600D11BC5 /* GetRedPackEntryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetRedPackEntryViewController.h; sourceTree = "<group>"; };
 		6E16575D18D185A600D11BC5 /* GetRedPackEntryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetRedPackEntryViewController.m; sourceTree = "<group>"; };
 		6E16575E18D185A600D11BC5 /* GetRedPackSuccessViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetRedPackSuccessViewController.h; sourceTree = "<group>"; };
@@ -11418,8 +11415,6 @@
 		6E16577B18D1881900D11BC5 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				6E16575A18D185A600D11BC5 /* ActiveRuleViewController.h */,
-				6E16575B18D185A600D11BC5 /* ActiveRuleViewController.m */,
 				6E16575C18D185A600D11BC5 /* GetRedPackEntryViewController.h */,
 				6E16575D18D185A600D11BC5 /* GetRedPackEntryViewController.m */,
 				6E16575E18D185A600D11BC5 /* GetRedPackSuccessViewController.h */,
@@ -16653,7 +16648,6 @@
 				C47E5B881739668D0045AFEE /* DMOrderService.m in Sources */,
 				9C516D6317380A7400D556CA /* PurchaseBtnView.m in Sources */,
 				F0AC2C6C18D0AD6500D19EEC /* CouponTitleCell.m in Sources */,
-				6E16576E18D185A600D11BC5 /* ActiveRuleViewController.m in Sources */,
 				04DA56C317413BD60006A696 /* ShopCartItemCell.m in Sources */,
 				04D9335D17423E5600254CB8 /* AccessoryPackageListViewController.m in Sources */,
 				C405BC881742326500E2BD64 /* DMOrderDTO.m in Sources */,

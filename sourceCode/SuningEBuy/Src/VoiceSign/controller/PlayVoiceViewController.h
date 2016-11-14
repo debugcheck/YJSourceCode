@@ -16,7 +16,6 @@
 //#import "NearbySuningDTO.h"
 //#import "SuningStoreInfoService.h"
 #import "VoiceCodeActivityService.h"
-#import "ActiveRuleViewController.h"
 #import "VoiceActiveDTO.h"
 
 @interface PlayVoiceViewController : CommonViewController<VoiceDelegate,VoiceCodeActivityServiceDelegate,QYaoHttpServiceDelegate>{

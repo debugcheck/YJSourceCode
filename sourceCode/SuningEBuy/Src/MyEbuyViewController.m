@@ -35,7 +35,6 @@
 #import "EvaluationListViewController.h"
 #import "EvaluationViewController.h"
 #import "LotteryDealsViewController.h"
-#import "ActiveRuleViewController.h"
 
 #import "ServiceTrackListViewController.h"
 #import "UserFeedBackPreViewController.h"

@@ -17,7 +17,6 @@
 #import "AddressInfoDAO.h"
 #import "CampaignDetailInfoViewController.h"
 #import "SNWebViewController.h"
-#import "ActiveRuleViewController.h"
 #import "QYaoYiYaoViewCtrler.h"
 #import "VoiceSignViewController.h"
 #import "LoginViewController.h"
@@ -822,7 +821,6 @@
         return;
     }
     if (!dto.errmsg && dto.actityType) {
-        ActiveRuleViewController* webview;
         switch ([dto.actityType intValue]) {
             case 1:       //声波签到
                 [self needLogin:dto.activeTypeID activeid:dto.activeTypeID];
@@ -852,9 +850,7 @@
                 break;
             }
             case 4:
-                webview = [[ActiveRuleViewController alloc] init:dto.wapUrl];
-                webview.title =@"";
-                [self.navigationController pushViewController:webview animated:YES];
+                // rule web
                 break;
             default:
                 break;

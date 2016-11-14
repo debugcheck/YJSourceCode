@@ -10,7 +10,6 @@
 #import "InviteFriendCell.h"
 #import "UserCenter.h"
 #import "InvitationService.h"
-#import "ActiveRuleViewController.h"
 #import "GetRedPackEntryViewController.h"
 //#import "BoundPhoneViewController.h"
 //#import "ActiveEfubaoViewController.h"
@@ -537,8 +536,7 @@
 }
 
 -(void)btnclick{
-    ActiveRuleViewController *active = [[ActiveRuleViewController alloc] init:invitaDto.actRuleURL];
-    [self.navigationController pushViewController:active animated:YES];
+    // rule web
 }
 
 -(void)myredpack{

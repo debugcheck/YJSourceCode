@@ -24,7 +24,6 @@ static SystemSoundID shake_sound_male_id = 0;
     BOOL      isgetcode;            //是否获取到声波解码
     NSString  *activeid;
     NSString  *activeTypeId;
-    ActiveRuleViewController *webview;
 }
 @property (nonatomic,strong)RipplesView *ripplesV;
 @end
@@ -385,9 +384,7 @@ static SystemSoundID shake_sound_male_id = 0;
                 break;
             }
             case 4:
-                webview = [[ActiveRuleViewController alloc] init:dto.wapUrl];
-                webview.title =@"";
-                [self.navigationController pushViewController:webview animated:YES];
+                // tule web
                 break;
             default:
                 break;

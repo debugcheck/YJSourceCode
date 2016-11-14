@@ -94,36 +94,12 @@
     return _invitefriend;
 }
 
--(UIButton *)entry{
-    if (!_entry) {
-        _entry = [[UIButton alloc] initWithFrame:CGRectMake(22.5, self.getsucess.bottom+50, 130, 35)];
-        [_entry setTitle:L(@"CPACPS_CheckYouhuiQuan") forState:UIControlStateNormal];
-        [_entry setTitleColor:[UIColor colorWithRGBHex:0xffffff] forState:UIControlStateNormal];
-        [_entry.titleLabel setFont:[UIFont systemFontOfSize:15]];
-        [_entry setBackgroundImage:[UIImage imageNamed:@"button_orange_normal"] forState:UIControlStateNormal];
-        [_entry addTarget:self action:@selector(entryclick) forControlEvents:UIControlEventTouchUpInside];
-    }
-    return _entry;
-}
 
 -(void)invitefriendclick{
     NewInviteFriendViewController *invite = [[NewInviteFriendViewController alloc] init];
     [self.navigationController pushViewController:invite animated:YES];
     TT_RELEASE_SAFELY(invite);
 
-}
-
--(void)entryclick{
-    
-    //  YYYJJJJJJJ
-//    MyCouponViewController *egq = [[MyCouponViewController alloc] initWithTotalAmount:[UserCenter defaultCenter].userDiscountInfoDTO.coupon];
-//    
-//    [self.navigationController pushViewController:egq animated:YES];
-//    
-//    TT_RELEASE_SAFELY(egq);
-
-
-    
 }
 
 - (void)viewDidLoad
