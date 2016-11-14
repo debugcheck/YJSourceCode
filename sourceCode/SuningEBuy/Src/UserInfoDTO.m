@@ -10,29 +10,6 @@
 #import "HttpConstant.h"
 @implementation UserInfoDTO
 
-@synthesize userId = _userId;
-@synthesize logonId = _logonId;
-@synthesize userLevel = _userLevel;
-@synthesize userName = _userName;
-@synthesize nickName = _nickName;
-@synthesize sex = _sex;
-@synthesize birthDate = _birthDate;
-@synthesize phoneNo = _phoneNo;
-@synthesize memberCardNo = _memberCardNo;
-@synthesize yifubaoBalance = _yifubaoBalance;
-@synthesize addressArray = _addressArray;
-@synthesize hasOrderByAfterPay = _hasOrderByAfterPay;
-@synthesize eppStatuss = _eppStatuss;
-@synthesize isBindMobile = _isBindMobile;
-@synthesize emailStatus = _emailStatus;
-@synthesize snTeck = _snTeck;
-
-@synthesize accountNo = _accountNo;
-
-@synthesize internalNum = _internalNum;
-@synthesize custNum = _custNum;
-@synthesize custLevelCN = _custLevelCN;
-
 - (id)init
 {
     self = [super init];
