@@ -17,7 +17,6 @@
 @interface EmailBoundViewController : CommonViewController <UITextFieldDelegate,MemeberMergeServiceDelegate,AccountCheckCodeServiceDelegate>
 
 @property (nonatomic, strong) UITextField           *verificationTextField;
-@property (nonatomic, strong) UIButton              *firstCellButton;
 @property (nonatomic, strong) UITextField           *emailTextField;
 
 @property (nonatomic, strong) NSString              *suningAccount;
@@ -27,7 +26,7 @@
 @property (nonatomic, strong) MemeberMergeService   *memberMergeService;
 @property (nonatomic, strong) AccountCheckCodeService      *checkCodeService;
 
-@property (nonatomic, strong) Calculagraph          *calculagraph;
+//@property (nonatomic, strong) Calculagraph          *calculagraph;
 
 
 @end

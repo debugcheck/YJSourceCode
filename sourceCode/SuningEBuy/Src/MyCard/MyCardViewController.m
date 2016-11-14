@@ -43,21 +43,6 @@
     self.hasSuspendButton = YES;
 }
 
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-    
-    if (!isLoadOk) {
-        [self displayOverFlowActivityView];
-        [self.memberMergeService beginSearchMbrCardInfoHttpRequest];
-    }
-    if ([[UserCenter defaultCenter].userInfoDTO.isBindMobile isEqualToString:@"0"]) {
-        
-    }else{
-        
-    }
-}
-
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
 
 //    MobileBoundViewController *mobile = [[MobileBoundViewController alloc] init];
