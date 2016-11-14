@@ -1302,7 +1302,6 @@
 		6E0D09BD18F910B100C3E492 /* DVCircle.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D09BC18F910B100C3E492 /* DVCircle.m */; };
 		6E0D09C218F944F600C3E492 /* voicedecode.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6E0D09C118F944F600C3E492 /* voicedecode.wav */; };
 		6E16576F18D185A600D11BC5 /* GetRedPackEntryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E16575D18D185A600D11BC5 /* GetRedPackEntryViewController.m */; };
-		6E16577018D185A600D11BC5 /* GetRedPackSuccessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E16575F18D185A600D11BC5 /* GetRedPackSuccessViewController.m */; };
 		6E16577118D185A600D11BC5 /* GetRedPackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E16576118D185A600D11BC5 /* GetRedPackViewController.m */; };
 		6E16577218D185A600D11BC5 /* InvitationDTO.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E16576318D185A600D11BC5 /* InvitationDTO.m */; };
 		6E16577318D185A600D11BC5 /* InvitationService.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E16576518D185A600D11BC5 /* InvitationService.m */; };
@@ -1354,7 +1353,6 @@
 		7C1CC11919A7188800C0FCA6 /* MessageFilterCheck@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C1CC11519A7188800C0FCA6 /* MessageFilterCheck@2x.png */; };
 		7C1CC11A19A7188800C0FCA6 /* MessageFilterConfirmBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C1CC11619A7188800C0FCA6 /* MessageFilterConfirmBtn@2x.png */; };
 		7C25502B18F62FF900880313 /* QYaoYiYaoViewCtrler+Req.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C25502A18F62FF900880313 /* QYaoYiYaoViewCtrler+Req.m */; };
-		7C38750019D3D60B006654ED /* HomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C3874FB19D3D60B006654ED /* HomePageViewController.m */; };
 		7C38750119D3D60B006654ED /* LianBanZhuanTiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C3874FD19D3D60B006654ED /* LianBanZhuanTiViewController.m */; };
 		7C38750219D3D60B006654ED /* PruductList244ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C3874FF19D3D60B006654ED /* PruductList244ViewController.m */; };
 		7C38751719D3D626006654ED /* FloorHeightDict.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7C38750519D3D625006654ED /* FloorHeightDict.plist */; };
@@ -2341,11 +2339,7 @@
 		F2D45AC119540BFD0037DB1D /* pop-1.png in Resources */ = {isa = PBXBuildFile; fileRef = F2D45ABB19540BFD0037DB1D /* pop-1.png */; };
 		F2D45AC219540BFD0037DB1D /* pop.png in Resources */ = {isa = PBXBuildFile; fileRef = F2D45ABC19540BFD0037DB1D /* pop.png */; };
 		F2D45AC319540BFD0037DB1D /* user_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = F2D45ABD19540BFD0037DB1D /* user_icon.png */; };
-		F2FE3C9819D26BDA00CFA9DA /* NewGetRedPackEntryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2FE3C9319D26BDA00CFA9DA /* NewGetRedPackEntryViewController.m */; };
-		F2FE3C9919D26BDA00CFA9DA /* NewGetRedPackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2FE3C9519D26BDA00CFA9DA /* NewGetRedPackViewController.m */; };
-		F2FE3C9A19D26BDB00CFA9DA /* NewInviteFriendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2FE3C9719D26BDA00CFA9DA /* NewInviteFriendViewController.m */; };
 		F2FE3C9F19D26BE900CFA9DA /* NewGetRedPackEntryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F2FE3C9C19D26BE900CFA9DA /* NewGetRedPackEntryCell.m */; };
-		F2FE3CA019D26BE900CFA9DA /* NewInviteFriendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F2FE3C9E19D26BE900CFA9DA /* NewInviteFriendCell.m */; };
 		F2FE3CA619D26C2700CFA9DA /* baner_xinrenhongbao.png in Resources */ = {isa = PBXBuildFile; fileRef = F2FE3CA119D26C2700CFA9DA /* baner_xinrenhongbao.png */; };
 		F2FE3CA719D26C2700CFA9DA /* dangmian_.png in Resources */ = {isa = PBXBuildFile; fileRef = F2FE3CA219D26C2700CFA9DA /* dangmian_.png */; };
 		F2FE3CA819D26C2700CFA9DA /* hongbao_.png in Resources */ = {isa = PBXBuildFile; fileRef = F2FE3CA319D26C2700CFA9DA /* hongbao_.png */; };
@@ -4539,8 +4533,6 @@
 		6E0D09C118F944F600C3E492 /* voicedecode.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = voicedecode.wav; sourceTree = "<group>"; };
 		6E16575C18D185A600D11BC5 /* GetRedPackEntryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetRedPackEntryViewController.h; sourceTree = "<group>"; };
 		6E16575D18D185A600D11BC5 /* GetRedPackEntryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetRedPackEntryViewController.m; sourceTree = "<group>"; };
-		6E16575E18D185A600D11BC5 /* GetRedPackSuccessViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetRedPackSuccessViewController.h; sourceTree = "<group>"; };
-		6E16575F18D185A600D11BC5 /* GetRedPackSuccessViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetRedPackSuccessViewController.m; sourceTree = "<group>"; };
 		6E16576018D185A600D11BC5 /* GetRedPackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetRedPackViewController.h; sourceTree = "<group>"; };
 		6E16576118D185A600D11BC5 /* GetRedPackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetRedPackViewController.m; sourceTree = "<group>"; };
 		6E16576218D185A600D11BC5 /* InvitationDTO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InvitationDTO.h; sourceTree = "<group>"; };
@@ -4613,8 +4605,6 @@
 		7C1CC11619A7188800C0FCA6 /* MessageFilterConfirmBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "MessageFilterConfirmBtn@2x.png"; path = "SuningEBuy/Resources/Image/MessageFilterConfirmBtn@2x.png"; sourceTree = SOURCE_ROOT; };
 		7C25502918F62FF900880313 /* QYaoYiYaoViewCtrler+Req.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "QYaoYiYaoViewCtrler+Req.h"; sourceTree = "<group>"; };
 		7C25502A18F62FF900880313 /* QYaoYiYaoViewCtrler+Req.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "QYaoYiYaoViewCtrler+Req.m"; sourceTree = "<group>"; };
-		7C3874FA19D3D60B006654ED /* HomePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomePageViewController.h; sourceTree = "<group>"; };
-		7C3874FB19D3D60B006654ED /* HomePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomePageViewController.m; sourceTree = "<group>"; };
 		7C3874FC19D3D60B006654ED /* LianBanZhuanTiViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LianBanZhuanTiViewController.h; sourceTree = "<group>"; };
 		7C3874FD19D3D60B006654ED /* LianBanZhuanTiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LianBanZhuanTiViewController.m; sourceTree = "<group>"; };
 		7C3874FE19D3D60B006654ED /* PruductList244ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PruductList244ViewController.h; sourceTree = "<group>"; };
@@ -6141,16 +6131,8 @@
 		F2D45ABB19540BFD0037DB1D /* pop-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "pop-1.png"; path = "../../Src/pop-1.png"; sourceTree = "<group>"; };
 		F2D45ABC19540BFD0037DB1D /* pop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pop.png; path = ../../Src/pop.png; sourceTree = "<group>"; };
 		F2D45ABD19540BFD0037DB1D /* user_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = user_icon.png; path = ../../Src/user_icon.png; sourceTree = "<group>"; };
-		F2FE3C9219D26BDA00CFA9DA /* NewGetRedPackEntryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewGetRedPackEntryViewController.h; sourceTree = "<group>"; };
-		F2FE3C9319D26BDA00CFA9DA /* NewGetRedPackEntryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewGetRedPackEntryViewController.m; sourceTree = "<group>"; };
-		F2FE3C9419D26BDA00CFA9DA /* NewGetRedPackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewGetRedPackViewController.h; sourceTree = "<group>"; };
-		F2FE3C9519D26BDA00CFA9DA /* NewGetRedPackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewGetRedPackViewController.m; sourceTree = "<group>"; };
-		F2FE3C9619D26BDA00CFA9DA /* NewInviteFriendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewInviteFriendViewController.h; sourceTree = "<group>"; };
-		F2FE3C9719D26BDA00CFA9DA /* NewInviteFriendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewInviteFriendViewController.m; sourceTree = "<group>"; };
 		F2FE3C9B19D26BE900CFA9DA /* NewGetRedPackEntryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewGetRedPackEntryCell.h; sourceTree = "<group>"; };
 		F2FE3C9C19D26BE900CFA9DA /* NewGetRedPackEntryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewGetRedPackEntryCell.m; sourceTree = "<group>"; };
-		F2FE3C9D19D26BE900CFA9DA /* NewInviteFriendCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewInviteFriendCell.h; sourceTree = "<group>"; };
-		F2FE3C9E19D26BE900CFA9DA /* NewInviteFriendCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewInviteFriendCell.m; sourceTree = "<group>"; };
 		F2FE3CA119D26C2700CFA9DA /* baner_xinrenhongbao.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = baner_xinrenhongbao.png; sourceTree = "<group>"; };
 		F2FE3CA219D26C2700CFA9DA /* dangmian_.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dangmian_.png; sourceTree = "<group>"; };
 		F2FE3CA319D26C2700CFA9DA /* hongbao_.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hongbao_.png; sourceTree = "<group>"; };
@@ -11386,7 +11368,6 @@
 		6E16575918D185A500D11BC5 /* CPA&CPS */ = {
 			isa = PBXGroup;
 			children = (
-				F2FE3C9119D26BAB00CFA9DA /* NewController */,
 				6E16577B18D1881900D11BC5 /* Controller */,
 				6E16577A18D1880E00D11BC5 /* VIew */,
 				6E16576218D185A600D11BC5 /* InvitationDTO.h */,
@@ -11402,8 +11383,6 @@
 			children = (
 				F2FE3C9B19D26BE900CFA9DA /* NewGetRedPackEntryCell.h */,
 				F2FE3C9C19D26BE900CFA9DA /* NewGetRedPackEntryCell.m */,
-				F2FE3C9D19D26BE900CFA9DA /* NewInviteFriendCell.h */,
-				F2FE3C9E19D26BE900CFA9DA /* NewInviteFriendCell.m */,
 				6E16576618D185A600D11BC5 /* InviteFriendCell.h */,
 				6E16576718D185A600D11BC5 /* InviteFriendCell.m */,
 				6E16576A18D185A600D11BC5 /* InviteFriendView.h */,
@@ -11417,8 +11396,6 @@
 			children = (
 				6E16575C18D185A600D11BC5 /* GetRedPackEntryViewController.h */,
 				6E16575D18D185A600D11BC5 /* GetRedPackEntryViewController.m */,
-				6E16575E18D185A600D11BC5 /* GetRedPackSuccessViewController.h */,
-				6E16575F18D185A600D11BC5 /* GetRedPackSuccessViewController.m */,
 				6E16576018D185A600D11BC5 /* GetRedPackViewController.h */,
 				6E16576118D185A600D11BC5 /* GetRedPackViewController.m */,
 				6E16576C18D185A600D11BC5 /* InviteFriendViewController.h */,
@@ -11646,8 +11623,6 @@
 			children = (
 				BC0FBD3019D3EF9F008FDE63 /* SalePromotionViewController.h */,
 				BC0FBD3119D3EF9F008FDE63 /* SalePromotionViewController.m */,
-				7C3874FA19D3D60B006654ED /* HomePageViewController.h */,
-				7C3874FB19D3D60B006654ED /* HomePageViewController.m */,
 				7C3874FC19D3D60B006654ED /* LianBanZhuanTiViewController.h */,
 				7C3874FD19D3D60B006654ED /* LianBanZhuanTiViewController.m */,
 				7C3874FE19D3D60B006654ED /* PruductList244ViewController.h */,
@@ -14139,19 +14114,6 @@
 			name = resources;
 			sourceTree = "<group>";
 		};
-		F2FE3C9119D26BAB00CFA9DA /* NewController */ = {
-			isa = PBXGroup;
-			children = (
-				F2FE3C9219D26BDA00CFA9DA /* NewGetRedPackEntryViewController.h */,
-				F2FE3C9319D26BDA00CFA9DA /* NewGetRedPackEntryViewController.m */,
-				F2FE3C9419D26BDA00CFA9DA /* NewGetRedPackViewController.h */,
-				F2FE3C9519D26BDA00CFA9DA /* NewGetRedPackViewController.m */,
-				F2FE3C9619D26BDA00CFA9DA /* NewInviteFriendViewController.h */,
-				F2FE3C9719D26BDA00CFA9DA /* NewInviteFriendViewController.m */,
-			);
-			name = NewController;
-			sourceTree = "<group>";
-		};
 		F62F10BF1868368700484508 /* NProDetail233 */ = {
 			isa = PBXGroup;
 			children = (
@@ -16209,7 +16171,6 @@
 				04A50E56160C8448007C4CA2 /* ShareContentViewController.m in Sources */,
 				423E7E8A160AC1A900781C8B /* ActiveMyIntegerViewController.m in Sources */,
 				423E7E8E160AEBBA00781C8B /* ActivateIntegralDTO.m in Sources */,
-				F2FE3C9819D26BDA00CFA9DA /* NewGetRedPackEntryViewController.m in Sources */,
 				BF6E92291A0DB40900CC8507 /* InsendTimeDTO.m in Sources */,
 				4224FACF160C572B00A4028A /* AchievementExchangeDTO.m in Sources */,
 				4224FAD2160C640200A4028A /* MyIntegralExchangeViewController.m in Sources */,
@@ -16228,7 +16189,6 @@
 				88B56E82160FF41D00726A63 /* MobilePayHelpViewController.m in Sources */,
 				7C1BFFF91A07167E0009C31B /* NearbySpotStoreListView.m in Sources */,
 				88B56E83160FF41D00726A63 /* MobilePayQueryViewController.m in Sources */,
-				F2FE3C9A19D26BDB00CFA9DA /* NewInviteFriendViewController.m in Sources */,
 				88B56E85160FF41D00726A63 /* MobilePayViewController.mm in Sources */,
 				88B56E87160FF41D00726A63 /* VirtualProductViewController.m in Sources */,
 				85AEFD6D19A6D2D400F7E37B /* CampaignDetailInfoView.m in Sources */,
@@ -16306,7 +16266,6 @@
 				84C551661611B6CA008B8B00 /* OrderSubmitRootViewController.m in Sources */,
 				84C551781611B7A9008B8B00 /* hangBanItemCell.m in Sources */,
 				84C551791611B7A9008B8B00 /* dengJiRenItemCell.m in Sources */,
-				7C38750019D3D60B006654ED /* HomePageViewController.m in Sources */,
 				84C5517A1611B7A9008B8B00 /* yuDingRenItemCell.m in Sources */,
 				84C5517B1611B7A9008B8B00 /* xingChengDanItemCell.m in Sources */,
 				84C5517C1611B7A9008B8B00 /* baoXianItemCell.m in Sources */,
@@ -16347,7 +16306,6 @@
 				0496B5481616D03D0065756F /* PaymentModeViewController.mm in Sources */,
 				0496B54E1616D0820065756F /* GiftCouponService.m in Sources */,
 				429A17371616D8FA003FA38D /* UserDiscountService.m in Sources */,
-				F2FE3C9919D26BDA00CFA9DA /* NewGetRedPackViewController.m in Sources */,
 				429A17381616D8FA003FA38D /* MobilePayService.m in Sources */,
 				429A17391616D8FA003FA38D /* MobilePayOrderListService.m in Sources */,
 				049EE764184359EF00129F57 /* OSMsgDTO.m in Sources */,
@@ -16439,7 +16397,6 @@
 				04CD88CF164C157800654467 /* GlobalDataCenter.m in Sources */,
 				04CD88D6164C3E3B00654467 /* RegistHandselCouponCommand.m in Sources */,
 				42E4032F164BD2500046E667 /* MyIntegerUnActiveViewController.m in Sources */,
-				6E16577018D185A600D11BC5 /* GetRedPackSuccessViewController.m in Sources */,
 				0414FC4C16563EE200F4B3AA /* Command.m in Sources */,
 				0414FC4F16563EE200F4B3AA /* CheckUpdateCommand.m in Sources */,
 				0495F2541659C25000796259 /* PasswdUtil.m in Sources */,
@@ -16858,7 +16815,6 @@
 				85AEFD3419A6D14500F7E37B /* NearbySuningMainViewController.m in Sources */,
 				BF0AED7D17C7EE0300FF691C /* EvaluationBsicDTO.m in Sources */,
 				6106AA0417C6FB210070E641 /* RuleCopyTextView.m in Sources */,
-				F2FE3CA019D26BE900CFA9DA /* NewInviteFriendCell.m in Sources */,
 				041B3E4A180D5DDF00ECACC8 /* ShopCartLogic.m in Sources */,
 				7CF606B8199C260C00F40972 /* NBLocationAddrsListView.m in Sources */,
 				0472CC0F17CBA9F50022852F /* EGOPhotoCaptionView.m in Sources */,

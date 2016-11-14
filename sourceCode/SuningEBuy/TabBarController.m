@@ -10,7 +10,6 @@
 #import "AllCategoryViewController.h"
 #import "UserCenter.h"
 
-#import "HomePageViewController.h" // 首页
 #import "ShopCartV2ViewController.h"
 
 #import <objc/runtime.h>
@@ -60,23 +59,7 @@
         _firstIn = YES;
         //启动专题列表请求
         sourceTitle = L(@"APPDelegate_Activity");
-        UITabBarItem *item1 = [[UITabBarItem alloc] init];
-        item1.tag = 1;
-        
-        if (IOS7_OR_LATER)
-        {
-            [item1 setTitle:L(@"home")];
-            [item1 setImage:[UIImage imageNamed:@"icon_homePage244_default.png"]];
-            [item1 setSelectedImage:[[UIImage imageNamed:@"icon_homePage244_selected.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
-            [item1 setTitleTextAttributes:@{UITextAttributeTextColor: [UIColor redColor]}
-                                 forState:UIControlStateSelected];
-        }
-        else
-        {
-            [item1 setFinishedSelectedImage:[UIImage imageNamed:@"tabbar_home_selected.png"]
-                withFinishedUnselectedImage:[UIImage imageNamed:@"tabbar_home_unselect.png"]];
-        }
-        
+                
         UITabBarItem *item2 = [[UITabBarItem alloc] init];
         item2.tag = 2;
         
@@ -85,7 +68,7 @@
             [item2 setTitle:L(@"search")];
             [item2 setImage:[UIImage imageNamed:@"icon_search244_default.png"]];
             [item2 setSelectedImage:[[UIImage imageNamed:@"icon_search244_selected.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
-            [item2 setTitleTextAttributes:@{UITextAttributeTextColor: HEX_COLOR(0xff6a00)}
+            [item2 setTitleTextAttributes:@{UITextAttributeTextColor: [UIColor redColor]}
                                  forState:UIControlStateSelected];
         }
         else
@@ -101,7 +84,7 @@
             [item3 setTitle:L(@"Categories")];
             [item3 setImage:[UIImage imageNamed:@"icon_category244_default.png"]];
             [item3 setSelectedImage:[[UIImage imageNamed:@"icon_category244_selected.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
-            [item3 setTitleTextAttributes:@{UITextAttributeTextColor: HEX_COLOR(0xff6a00)}
+            [item3 setTitleTextAttributes:@{UITextAttributeTextColor: [UIColor redColor]}
                                  forState:UIControlStateSelected];
         }
         else
@@ -119,7 +102,7 @@
             [item4 setTitle:L(@"shopCart")];
             [item4 setImage:[UIImage imageNamed:@"icon_shopCart244_default.png"]];
             [item4 setSelectedImage:[[UIImage imageNamed:@"icon_shopCart244_selected.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
-            [item4 setTitleTextAttributes:@{UITextAttributeTextColor: HEX_COLOR(0xff6a00)}
+            [item4 setTitleTextAttributes:@{UITextAttributeTextColor: [UIColor redColor]}
                                  forState:UIControlStateSelected];
         }
         else
@@ -138,7 +121,7 @@
             [item5 setTitle:L(@"myEbuy")];
             [item5 setImage:[UIImage imageNamed:@"icon_myYigou244_default.png"]];
             [item5 setSelectedImage:[[UIImage imageNamed:@"icon_myYigou244_selected.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
-            [item5 setTitleTextAttributes:@{UITextAttributeTextColor: HEX_COLOR(0xff6a00)}
+            [item5 setTitleTextAttributes:@{UITextAttributeTextColor: [UIColor redColor]}
                                  forState:UIControlStateSelected];
         }
         else
@@ -147,13 +130,6 @@
                 withFinishedUnselectedImage:[UIImage imageNamed:@"tabbar_myaccount_unselect.png"]];
         }
 
-
-            HomePageViewController *homeController = [[HomePageViewController alloc] init];
-            homeController.tabBarItem = item1;
-            AuthManagerNavViewController *homeNavController = [[AuthManagerNavViewController alloc] initWithRootViewController:homeController];
-            __gNavController0 = homeNavController; // XZoscar 2014-06-18 add
-            
-            TT_RELEASE_SAFELY(homeController);
         
         
         NewSearchViewController *searchVC = [[NewSearchViewController alloc] init];
@@ -195,7 +171,7 @@
         MyEbuyLaunchViewVC.tabBarItem = item5;
         AuthManagerNavViewController *myEbuyNavController = [[AuthManagerNavViewController alloc] initWithRootViewController:MyEbuyLaunchViewVC];
         
-        self.viewControllers = [NSArray arrayWithObjects:homeNavController,searchNavController,cateNavController,gouwucheNavController,myEbuyNavController, nil];
+        self.viewControllers = [NSArray arrayWithObjects:searchNavController,cateNavController,gouwucheNavController,myEbuyNavController, nil];
         
         self.delegate = self;
         

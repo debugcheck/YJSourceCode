@@ -37,7 +37,6 @@
 #import "BBSideBarViewController.h"
 #import "LotteryPayPlugin.h"
 #import "SearchListViewController.h"
-#import "HomePageViewController.h"
 #import "MyEbuyViewController.h"
 
 #import "ProductDetailViewController.h"

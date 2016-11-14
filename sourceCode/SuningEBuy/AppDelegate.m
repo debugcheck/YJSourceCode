@@ -29,7 +29,6 @@
 
 #import "SNCache.h"
 #import "HomeScrollViewController.h"
-#import "HomePageViewController.h"
 
 #import "SNRouter.h"
 #import "SNSwitch.h"

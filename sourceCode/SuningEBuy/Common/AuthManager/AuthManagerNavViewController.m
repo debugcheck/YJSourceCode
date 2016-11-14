@@ -35,7 +35,6 @@
 #import "SKQRCodeReadController.h"
 #import "UserConsultantViewController.h"
 #import "IWantconsultViewController.h"
-#import "NewGetRedPackEntryViewController.h"
 
 //彩票相关类
 #import "LotteryHallViewController.h"
@@ -58,14 +57,12 @@
 #import "LotteryRuleViewController.h"
 #import "JASidePanelController.h"
 #import "SNGraphics.h"
-
+#import "UIColor+Helper.h"
 #import "AllOrderListViewController.h"
 #import "AddressInfoListViewController.h"
 #import "EvaluationViewController.h"
 
 #import "NewSearchViewController.h"
-#import "NewGetRedPackViewController.h"
-#import "NewInviteFriendViewController.h"
 // TV扫描支付需要登录，XZoscar add,2014-05-04
 #import "PaymentModeViewController.h"
 
@@ -117,13 +114,10 @@ static NSArray *lotteryClassArray = nil;
                                // [UserFeedBackController class],
                                [EvaluationViewController class],
                                //[UserFeedBackNewViewController class],
-                               [NewInviteFriendViewController class],
-                               [NewGetRedPackViewController class],
                                [PaymentModeViewController  class], // TV扫码支付需要登录
                                //[MyCardViewController class],
                                //[ConsultationViewController class],
                                [IWantconsultViewController class],
-                               [NewGetRedPackEntryViewController class],
                                [VoiceSignViewController class],
                                NSClassFromString(@"MyIntegralExchangeViewController"),
                                nil];

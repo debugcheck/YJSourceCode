@@ -36,8 +36,6 @@
 #import "EvaluationViewController.h"
 #import "NewOrderSnxpressViewController.h"
 #import "ServiceDetailViewController.h"
-#import "NewInviteFriendViewController.h"
-#import "NewGetRedPackEntryViewController.h"
 #import "AddressInfoListViewController.h"
 #import "QYaoYiYaoViewCtrler.h"
 #import "PaymentModeViewController.h"
@@ -1654,21 +1652,21 @@
 //1040
 - (void)routeCPACPS:(SNRouterObject *)obj
 {
-    NewInviteFriendViewController *vc = [[NewInviteFriendViewController alloc] init];
-    vc.hidesBottomBarWhenPushed = YES;
-    obj.targetController = vc;
-    obj.defaultTabIndex = kMyEbuyTabIndex;
+//    NewInviteFriendViewController *vc = [[NewInviteFriendViewController alloc] init];
+//    vc.hidesBottomBarWhenPushed = YES;
+//    obj.targetController = vc;
+//    obj.defaultTabIndex = kMyEbuyTabIndex;
 }
 
 //1041
 - (void)routeCPACPSReward:(SNRouterObject *)obj
 {
-    NewGetRedPackEntryViewController *vc  = [[NewGetRedPackEntryViewController alloc] init];
-    //    vc.activeurl =invitaDto.actRuleURL;
-    //    vc.activetitle = invitaDto.actTitle;
-    //    vc.activerule =invitaDto.actContent;
-    obj.targetController = vc;
-    obj.defaultTabIndex = kMyEbuyTabIndex;
+//    NewGetRedPackEntryViewController *vc  = [[NewGetRedPackEntryViewController alloc] init];
+//    //    vc.activeurl =invitaDto.actRuleURL;
+//    //    vc.activetitle = invitaDto.actTitle;
+//    //    vc.activerule =invitaDto.actContent;
+//    obj.targetController = vc;
+//    obj.defaultTabIndex = kMyEbuyTabIndex;
 }
 
 //1043

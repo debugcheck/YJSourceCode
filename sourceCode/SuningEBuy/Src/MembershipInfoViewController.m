@@ -255,10 +255,7 @@
                 {
                     if (isGetRedPack)
                     {//对暗号领取新人红包
-                        [self SNDataCollection:@"740611"];
-                        NewGetRedPackViewController *getred = [[NewGetRedPackViewController alloc] init];
-                        [self.navigationController pushViewController:getred animated:YES
-                         ];
+                        
                         break;
                     }
                     else
@@ -466,11 +463,7 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
 //查看奖励－邀请好友奖励
 -(void)gotoinviteFriend{
     
-    self.navigationController.navigationBarHidden = YES;
-    [SSAIOSSNDataCollection CustomEventCollection:@"click" keyArray: [NSArray arrayWithObjects:@"clickno", nil]valueArray: [NSArray arrayWithObjects:[NSString stringWithFormat:@"620201"], nil]];
-    NewInviteFriendViewController *invitef = [[NewInviteFriendViewController alloc] init];
-    [self.navigationController pushViewController:invitef animated:YES];
-    TT_RELEASE_SAFELY(invitef);
+
     
 }
 

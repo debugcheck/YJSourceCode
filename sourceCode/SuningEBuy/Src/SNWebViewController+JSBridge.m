@@ -15,7 +15,6 @@
 #import "ShopCartV2ViewController.h"
 //#import "BoundPhoneViewController.h"
 //#import "ActiveEfubaoViewController.h"// 激活易租宝
-#import "NewInviteFriendViewController.h"
 //#import "EfubaoUnBoundEmailViewController.h"
 const char SNWebRightButtonKey;
 
@@ -261,8 +260,8 @@ const char SNWebRightButtonKey;
     //碎屏险跳转cpa gjf
     [self.jsBridge registerHandler:@"gotoCPA" handler:^(id data,WVJBResponseCallback responseCallbace){
         @strongify(self);
-        NewInviteFriendViewController *invite = [[NewInviteFriendViewController alloc] init];
-        [self.navigationController pushViewController:invite animated:YES];
+        
+        // 邀请分享YJJJJ
     }];
     
     //易付宝未激活激活页面跳转 gjf

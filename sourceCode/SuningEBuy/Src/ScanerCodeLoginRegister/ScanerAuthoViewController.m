@@ -10,9 +10,8 @@
 #import "ScanerCodeActionService.h"
 #import "AppDelegate.h"
 #import "LoginViewController.h"
-
+#import "UserCenter.h"
 #import "SuningMainClick.h"
-#import "HomePageViewController.h"
 
 
 @interface ScanerAuthoViewController () <ScanerCodeActionServiceDelegate>
@@ -99,11 +98,11 @@
             
             TabBarController *tabBarCtrler = APP_DELEGATE.tabBarViewController;
             UINavigationController *navCtrler = (UINavigationController *)tabBarCtrler.viewControllers[0];
-            HomePageViewController *homeCtrler = (HomePageViewController *)navCtrler.topViewController;
-            if (nil!=homeCtrler
-                && [homeCtrler respondsToSelector:@selector(readerController)]) {
-//                [homeCtrler.readerController beginReader];YJManager
-            }
+//            HomePageViewController *homeCtrler = (HomePageViewController *)navCtrler.topViewController;
+//            if (nil!=homeCtrler
+//                && [homeCtrler respondsToSelector:@selector(readerController)]) {
+////                [homeCtrler.readerController beginReader];YJManager
+//            }
             
             [weakSelf removeOverFlowActivityView];
         }];

@@ -11,8 +11,6 @@
 #import "MyEBuyViewCell.h"
 #import "MyCardViewController.h"
 #import "AddressInfoListViewController.h"
-#import "NewGetRedPackViewController.h"
-#import "NewInviteFriendViewController.h"
 #import "MyIntegralExchangeViewController.h"
 #import "CardDetailBaseDTO.h"
 #import "CardWbSerVice.h"

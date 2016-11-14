@@ -67,4 +67,7 @@
 #import "DefaultKeyWordManager.h"
 #import "NSDictionary+Additions.h"
 
+
+#import "UserCenter.h"
+
 #endif

@@ -63,10 +63,7 @@
 #define SIZEFONT     20
 #define KSPACE 50
 #define KY     39.5
-#import "NewInviteFriendViewController.h"
-#import "NewGetRedPackViewController.h"
 #import <SSA_IOS/SSAIOSSNDataCollection.h>
-#import "GetRedPackSuccessViewController.h"
 #import "SuNingSellDao.h"
 
 @interface MyEbuyViewController()<UINavigationControllerDelegate,UserDiscountServiceDelegate,EGOImageViewDelegate,OrderCenterServiceDelegate,InvitationServiceDelegate,cardServiceDelegate,CardWbSerViceDelegate,OrdersNumberServiceDelegate,NewEvalutionServiceDelegate>
@@ -1369,12 +1366,6 @@
 //查看奖励－邀请好友奖励
 -(void)gotoinviteFriend{
     
-    [SSAIOSSNDataCollection CustomEventCollection:@"click" keyArray: [NSArray arrayWithObjects:@"clickno", nil]valueArray: [NSArray arrayWithObjects:[NSString stringWithFormat:@"620201"], nil]];
-    NewInviteFriendViewController *invitef = [[NewInviteFriendViewController alloc] init];
-    invitef.hidesBottomBarWhenPushed = YES;
-    
-    [self.navigationController pushViewController:invitef animated:YES];
-    TT_RELEASE_SAFELY(invitef);
 
 }
 

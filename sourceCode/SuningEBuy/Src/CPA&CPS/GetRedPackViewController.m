@@ -9,7 +9,6 @@
 #import "GetRedPackViewController.h"
 #import "LoginViewController.h"
 #import "DataValidate.h"
-#import "GetRedPackSuccessViewController.h"
 @interface GetRedPackViewController ()
 
 @end
@@ -105,8 +104,8 @@
         [defaults setObject:_getredpack.text forKey:name];
         BBAlertView *alertView = [[BBAlertView alloc] initWithTitle:nil message:L(@"CPACPS_LingquSuccess") delegate:self cancelButtonTitle:nil otherButtonTitles:L(@"Ok")];
         [alertView setConfirmBlock:^{
-            GetRedPackSuccessViewController *getred = [[GetRedPackSuccessViewController alloc] init];
-            [self.navigationController pushViewController:getred animated:YES];
+//            GetRedPackSuccessViewController *getred = [[GetRedPackSuccessViewController alloc] init];
+//            [self.navigationController pushViewController:getred animated:YES];
         }];
         [alertView show];
         TT_RELEASE_SAFELY(alertView);
