@@ -27,10 +27,6 @@
 //绑定btn
 @property (nonatomic, strong) UIButton              *activeBtn;
 
-//提示
-@property (nonatomic, strong) UIImageView           *tipView;
-@property (nonatomic, strong) UILabel               *tipLabel;
-
 @property (nonatomic, strong) MemeberMergeService   *memberMergeService;
 
 @end

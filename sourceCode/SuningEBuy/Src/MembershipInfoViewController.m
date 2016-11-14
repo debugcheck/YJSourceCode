@@ -46,9 +46,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    if (section ==2) {
-        return iswdy;
-    }
+
     return 2;
 }
 
@@ -57,35 +55,10 @@
     return 40;
 }
 
-- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
-{
-    NSMutableArray* array = [NSMutableArray arrayWithObjects:@"个人信息",@"账号管理",nil];
-    if (iswdy)
-    {
-        [array addObject:@"会员社区"];
-    }
-    UIView *v = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 40)];
-    v.backgroundColor = [UIColor clearColor];
-    UILabel* lab = [[UILabel alloc]initWithFrame:CGRectMake(15, 15, 320, 25)];
-    lab.text = array[section];
-    lab.font = [UIFont boldSystemFontOfSize:13];
-    lab.textColor = [UIColor colorWithRGBHex:0xa2a2a2];
-    lab.backgroundColor = [UIColor clearColor];
-    [v addSubview:lab];
-    return v;
-    
-}
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    if (iswdy > 0)
-    {
-        return 3;
-    }
-    else
-    {
-        return 2;
-    }
+    return 2;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -176,45 +149,6 @@
             cell.textLabel.text = @"收货信息管理";
         }
     }
-    else if(indexPath.section == 2)
-    {
-        UIImageView *icon = [[UIImageView alloc] initWithFrame:CGRectMake(273-10, 13, 25, 12)];
-        icon.image = [UIImage imageNamed:@"myegouhot.png"];
-        [cell.contentView addSubview:icon];
-        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(15, 10, 200, 20)];
-        label.font = cell.textLabel.font;
-        
-        label.font = [UIFont boldSystemFontOfSize:15];
-        label.backgroundColor = [UIColor clearColor];
-        label.textColor = [UIColor light_Black_Color];
-        [cell.contentView addSubview:label];
-        cell.textLabel.text=@"";
-        switch (indexPath.row)
-        {
-                
-            case 0:
-            {
-                if (isGetRedPack)
-                {
-                    label.text = [SNSwitch lingquhongbao244];
-                }
-                else
-                {
-                    label.text =[SNSwitch yaoqinghaoyou244];
-                }
-                break;
-                
-            }
-            case 1:
-            {
-                label.text =[SNSwitch yaoqinghaoyou244];
-            }
-                break;
-            default:
-                break;
-        }
-
-    }
     return cell;
 }
 
@@ -239,43 +173,6 @@
             [self SNDataCollection:@"740603"];
             [self gotoMyCard];
         }
-        else if(indexPath.row ==1)
-        {
-            [self SNDataCollection:@"740608"];
-            [self gotoAddressInfo];
-        }
-    }
-    else
-    {
-        if (iswdy!=0)
-        {
-            switch (indexPath.row)
-            {
-                case 0:
-                {
-                    if (isGetRedPack)
-                    {//对暗号领取新人红包
-                        
-                        break;
-                    }
-                    else
-                    {//查看奖励－邀请好友奖励
-                        [self SNDataCollection:@"620201"];
-                        [self gotoinviteFriend];
-                    }
-                    break;
-                }
-                case 1:{//查看奖励－邀请好友奖励
-                    [self SNDataCollection:@"620201"];
-                    [self gotoinviteFriend];
-                }
-                    break;
-                default:
-                    break;
-            }
-            
-        }
-
     }
 }
 
@@ -460,20 +357,6 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
     
 }
 
-//查看奖励－邀请好友奖励
--(void)gotoinviteFriend{
-    
-
-    
-}
-
-//地址管理
-- (void)gotoAddressInfo
-{
-    AddressInfoListViewController *vc = [AddressInfoListViewController controller];
-    vc.cellType = FromEbuy;
-    [self.navigationController pushViewController:vc animated:YES];
-}
 
 //电子会员卡
 - (void)gotoMyCard

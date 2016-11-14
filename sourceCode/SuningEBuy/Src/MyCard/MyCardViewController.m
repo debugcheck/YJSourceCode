@@ -22,11 +22,6 @@
 
 @implementation MyCardViewController
 
-- (void)dealloc
-{
-    SERVICE_RELEASE_SAFELY(_memberMergeService);
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
-}
 
 - (id)init
 {
@@ -35,23 +30,12 @@
         isLoadOk = NO;
         self.title = L(@"Electronic membership card");
         self.pageTitle = [NSString stringWithFormat:@"%@-%@",L(@"Member_LoginAndRegister"),self.title];
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(addNotice) name:MERGE_SUCCESS_ACTION object:nil];
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(addBoundPhoneOK) name:@"LOGINED_BOUND_PHONE" object:nil];
         
         self.hidesBottomBarWhenPushed = YES;
     }
     return self;
 }
 
-- (void)addBoundPhoneOK
-{
-    [self presentSheet:L(@"MyEBuy_BindSuccess")];
-}
-
-- (void)addNotice
-{
-    [self presentSheet:L(@"MyEBuy_BindSuccess")];
-}
 
 - (void)loadView
 {
@@ -87,8 +71,6 @@
     [self.view addSubview:self.shopCardLabel];
     [self.view addSubview:self.activeBtn];
     
-   // [self.view addSubview:self.tipView];
-    [self.view addSubview:self.tipLabel];
 }
 
 
@@ -260,34 +242,6 @@
  
     [self beginSendGetBindMbrCardViewHttp];
 
-}
-
-- (UIImageView *)tipView
-{
-    if (!_tipView) {
-        _tipView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"my_card_tip_image.png"]];
-        _tipView.backgroundColor = [UIColor clearColor];
-        if (iPhone5) {
-            _tipView.frame = CGRectMake(27, self.cardBack.bottom + 36, 17, 17);
-        }else{
-            _tipView.frame = CGRectMake(27, self.cardBack.bottom + 6, 17, 17);
-        }
-    }
-    return _tipView;
-}
-
-- (UILabel *)tipLabel
-{
-    if (!_tipLabel) {
-        _tipLabel = [[UILabel alloc] init];
-        _tipLabel.backgroundColor = [UIColor clearColor];
-        _tipLabel.font = [UIFont boldSystemFontOfSize:14.0];
-        _tipLabel.numberOfLines = 0;
-        _tipLabel.textColor = [UIColor dark_Gray_Color];
-        _tipLabel.text = [NSString stringWithFormat:@"%@",L(@"MyEBuy_ShowElectronicCardOrReceiveStoreCard")];;
-        _tipLabel.frame = CGRectMake(20, 295, 280, 40);
-    }
-    return _tipLabel;
 }
 
 
