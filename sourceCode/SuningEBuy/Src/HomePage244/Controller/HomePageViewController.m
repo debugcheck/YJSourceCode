@@ -9,16 +9,6 @@
 #import "HomePageViewController.h"
 #import "NewGetRedPackViewController.h"
 
-@interface HomePageViewController () {
-    //是否请求推荐数据
-    BOOL                willRequestRecommendData;
-}
-
-@property (nonatomic,strong) UIImageView        *recommendIconUpImageView;
-@property (nonatomic,strong) UIImageView        *recommendIconDownImageView;
-
-@end
-
 @implementation HomePageViewController
 
 -(void)loginOK{
@@ -26,5 +16,6 @@
     getredpack.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:getredpack animated:YES];
 }
+
 
 @end
