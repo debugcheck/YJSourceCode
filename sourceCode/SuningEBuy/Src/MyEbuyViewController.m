@@ -45,7 +45,6 @@
 #import "SNWebViewController.h"
 #import "SNSwitch.h"
 
-#import "MyCardViewController.h"
 #import "UITableViewCell+BgView.h"
 
 #import "JASidePanelController.h"
@@ -1345,9 +1344,7 @@
 //电子会员卡
 - (void)gotoMyCard
 {
-//#warning 电子会员 MyCardViewController
-    MyCardViewController *mycard = [[MyCardViewController alloc] init];
-    [self.navigationController pushViewController:mycard animated:YES];
+
 }
 
 //我的商旅

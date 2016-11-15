@@ -55,12 +55,6 @@
     return 40;
 }
 
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-    return 2;
-}
-
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (indexPath.section == 0)
@@ -164,14 +158,6 @@
         {
             [self SNDataCollection:@"740502"];
             [self gotoIntegral];
-        }
-    }
-    else if (indexPath.section == 1)
-    {
-        if (indexPath.row == 0)
-        {
-            [self SNDataCollection:@"740603"];
-            [self gotoMyCard];
         }
     }
 }
@@ -355,14 +341,6 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
     }
 
     
-}
-
-
-//电子会员卡
-- (void)gotoMyCard
-{
-    MyCardViewController *mycard = [[MyCardViewController alloc] init];
-    [self.navigationController pushViewController:mycard animated:YES];
 }
 
 -(void)SNDataCollection:(NSString*)aStr

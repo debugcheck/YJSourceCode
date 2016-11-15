@@ -66,7 +66,6 @@
 // TV扫描支付需要登录，XZoscar add,2014-05-04
 #import "PaymentModeViewController.h"
 
-#import "MyCardViewController.h"
 //声波签到
 #import "VoiceSignViewController.h"
 //因只需要一个array就可以了，故使用一个static变量

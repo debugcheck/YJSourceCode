@@ -2213,21 +2213,12 @@
 		C4EBA1AC1715C1490057C155 /* SecondCategoryMarkView.m in Sources */ = {isa = PBXBuildFile; fileRef = C4EBA1AB1715C1490057C155 /* SecondCategoryMarkView.m */; };
 		C4EBA1B31715CC4E0057C155 /* V2SecCategoryDTO.m in Sources */ = {isa = PBXBuildFile; fileRef = C4EBA1B21715CC4E0057C155 /* V2SecCategoryDTO.m */; };
 		C4EFCA3218360B6B00D0944A /* my_card_tip_image.png in Resources */ = {isa = PBXBuildFile; fileRef = C4EFCA2C18360B6B00D0944A /* my_card_tip_image.png */; };
-		C4EFCA8F18360C2600D0944A /* MyCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4EFCA8E18360C2600D0944A /* MyCardViewController.m */; };
-		C4EFCAAD18360C6600D0944A /* AccountCertainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4EFCA9218360C6600D0944A /* AccountCertainViewController.m */; };
 		C4EFCAAE18360C6600D0944A /* AccountCheckCodeService.m in Sources */ = {isa = PBXBuildFile; fileRef = C4EFCA9418360C6600D0944A /* AccountCheckCodeService.m */; };
-		C4EFCAAF18360C6600D0944A /* AccountListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C4EFCA9618360C6600D0944A /* AccountListCell.m */; };
-		C4EFCAB018360C6600D0944A /* AccountListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4EFCA9818360C6600D0944A /* AccountListViewController.m */; };
 		C4EFCAB118360C6600D0944A /* AccountMergerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4EFCA9A18360C6600D0944A /* AccountMergerViewController.m */; };
-		C4EFCAB218360C6600D0944A /* AccountMergeSuccessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4EFCA9C18360C6600D0944A /* AccountMergeSuccessViewController.m */; };
 		C4EFCAB318360C6600D0944A /* DataValidate.m in Sources */ = {isa = PBXBuildFile; fileRef = C4EFCA9E18360C6600D0944A /* DataValidate.m */; };
-		C4EFCAB418360C6600D0944A /* EmailBoundViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4EFCAA018360C6600D0944A /* EmailBoundViewController.m */; };
 		C4EFCAB518360C6600D0944A /* MemeberMergeService.m in Sources */ = {isa = PBXBuildFile; fileRef = C4EFCAA218360C6600D0944A /* MemeberMergeService.m */; };
 		C4EFCAB618360C6600D0944A /* MergeNewAccountDTO.m in Sources */ = {isa = PBXBuildFile; fileRef = C4EFCAA418360C6600D0944A /* MergeNewAccountDTO.m */; };
-		C4EFCAB718360C6600D0944A /* MergerSecondCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C4EFCAA618360C6600D0944A /* MergerSecondCell.m */; };
-		C4EFCAB818360C6600D0944A /* MobileBoundViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4EFCAA818360C6600D0944A /* MobileBoundViewController.m */; };
 		C4EFCAB918360C6600D0944A /* RegisterFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4EFCAAA18360C6600D0944A /* RegisterFirstViewController.m */; };
-		C4EFCABA18360C6600D0944A /* YigouAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4EFCAAC18360C6600D0944A /* YigouAccountViewController.m */; };
 		C4F87EAC18A8AFD50043225D /* familydown.png in Resources */ = {isa = PBXBuildFile; fileRef = C4F87EAA18A8AFD50043225D /* familydown.png */; };
 		C4F87EAD18A8AFD50043225D /* familydown@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C4F87EAB18A8AFD50043225D /* familydown@2x.png */; };
 		C4F87EB118A8B2450043225D /* ebuyhead.png in Resources */ = {isa = PBXBuildFile; fileRef = C4F87EAF18A8B2450043225D /* ebuyhead.png */; };
@@ -5930,36 +5921,18 @@
 		C4EBA1B11715CC4D0057C155 /* V2SecCategoryDTO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = V2SecCategoryDTO.h; sourceTree = "<group>"; };
 		C4EBA1B21715CC4E0057C155 /* V2SecCategoryDTO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = V2SecCategoryDTO.m; sourceTree = "<group>"; };
 		C4EFCA2C18360B6B00D0944A /* my_card_tip_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = my_card_tip_image.png; sourceTree = "<group>"; };
-		C4EFCA8D18360C2600D0944A /* MyCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCardViewController.h; sourceTree = "<group>"; };
-		C4EFCA8E18360C2600D0944A /* MyCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCardViewController.m; sourceTree = "<group>"; };
-		C4EFCA9118360C6600D0944A /* AccountCertainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountCertainViewController.h; sourceTree = "<group>"; };
-		C4EFCA9218360C6600D0944A /* AccountCertainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountCertainViewController.m; sourceTree = "<group>"; };
 		C4EFCA9318360C6600D0944A /* AccountCheckCodeService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountCheckCodeService.h; sourceTree = "<group>"; };
 		C4EFCA9418360C6600D0944A /* AccountCheckCodeService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountCheckCodeService.m; sourceTree = "<group>"; };
-		C4EFCA9518360C6600D0944A /* AccountListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountListCell.h; sourceTree = "<group>"; };
-		C4EFCA9618360C6600D0944A /* AccountListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountListCell.m; sourceTree = "<group>"; };
-		C4EFCA9718360C6600D0944A /* AccountListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountListViewController.h; sourceTree = "<group>"; };
-		C4EFCA9818360C6600D0944A /* AccountListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountListViewController.m; sourceTree = "<group>"; };
 		C4EFCA9918360C6600D0944A /* AccountMergerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountMergerViewController.h; sourceTree = "<group>"; };
 		C4EFCA9A18360C6600D0944A /* AccountMergerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountMergerViewController.m; sourceTree = "<group>"; };
-		C4EFCA9B18360C6600D0944A /* AccountMergeSuccessViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountMergeSuccessViewController.h; sourceTree = "<group>"; };
-		C4EFCA9C18360C6600D0944A /* AccountMergeSuccessViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountMergeSuccessViewController.m; sourceTree = "<group>"; };
 		C4EFCA9D18360C6600D0944A /* DataValidate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataValidate.h; sourceTree = "<group>"; };
 		C4EFCA9E18360C6600D0944A /* DataValidate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataValidate.m; sourceTree = "<group>"; };
-		C4EFCA9F18360C6600D0944A /* EmailBoundViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmailBoundViewController.h; sourceTree = "<group>"; };
-		C4EFCAA018360C6600D0944A /* EmailBoundViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmailBoundViewController.m; sourceTree = "<group>"; };
 		C4EFCAA118360C6600D0944A /* MemeberMergeService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemeberMergeService.h; sourceTree = "<group>"; };
 		C4EFCAA218360C6600D0944A /* MemeberMergeService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemeberMergeService.m; sourceTree = "<group>"; };
 		C4EFCAA318360C6600D0944A /* MergeNewAccountDTO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MergeNewAccountDTO.h; sourceTree = "<group>"; };
 		C4EFCAA418360C6600D0944A /* MergeNewAccountDTO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MergeNewAccountDTO.m; sourceTree = "<group>"; };
-		C4EFCAA518360C6600D0944A /* MergerSecondCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MergerSecondCell.h; sourceTree = "<group>"; };
-		C4EFCAA618360C6600D0944A /* MergerSecondCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MergerSecondCell.m; sourceTree = "<group>"; };
-		C4EFCAA718360C6600D0944A /* MobileBoundViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobileBoundViewController.h; sourceTree = "<group>"; };
-		C4EFCAA818360C6600D0944A /* MobileBoundViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MobileBoundViewController.m; sourceTree = "<group>"; };
 		C4EFCAA918360C6600D0944A /* RegisterFirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterFirstViewController.h; sourceTree = "<group>"; };
 		C4EFCAAA18360C6600D0944A /* RegisterFirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterFirstViewController.m; sourceTree = "<group>"; };
-		C4EFCAAB18360C6600D0944A /* YigouAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YigouAccountViewController.h; sourceTree = "<group>"; };
-		C4EFCAAC18360C6600D0944A /* YigouAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YigouAccountViewController.m; sourceTree = "<group>"; };
 		C4F87EAA18A8AFD50043225D /* familydown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = familydown.png; sourceTree = "<group>"; };
 		C4F87EAB18A8AFD50043225D /* familydown@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "familydown@2x.png"; sourceTree = "<group>"; };
 		C4F87EAF18A8B2450043225D /* ebuyhead.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ebuyhead.png; sourceTree = "<group>"; };
@@ -8032,7 +8005,6 @@
 		04BD93B615DC887A00BA623C /* MyEBuy */ = {
 			isa = PBXGroup;
 			children = (
-				C4EFCA8C18360C2600D0944A /* MyCard */,
 				424AD17F1609B87800A46B1D /* MyInteger */,
 				6C86017315F6E63F00F6C217 /* OrderCenter */,
 				425D360015F441EB0037E6CE /* MyEfubao */,
@@ -13722,46 +13694,21 @@
 			path = LinkLab;
 			sourceTree = "<group>";
 		};
-		C4EFCA8C18360C2600D0944A /* MyCard */ = {
-			isa = PBXGroup;
-			children = (
-				C4EFCA8D18360C2600D0944A /* MyCardViewController.h */,
-				C4EFCA8E18360C2600D0944A /* MyCardViewController.m */,
-			);
-			path = MyCard;
-			sourceTree = "<group>";
-		};
 		C4EFCA9018360C6600D0944A /* MemeberMerge */ = {
 			isa = PBXGroup;
 			children = (
-				C4EFCA9118360C6600D0944A /* AccountCertainViewController.h */,
-				C4EFCA9218360C6600D0944A /* AccountCertainViewController.m */,
 				C4EFCA9318360C6600D0944A /* AccountCheckCodeService.h */,
 				C4EFCA9418360C6600D0944A /* AccountCheckCodeService.m */,
-				C4EFCA9518360C6600D0944A /* AccountListCell.h */,
-				C4EFCA9618360C6600D0944A /* AccountListCell.m */,
-				C4EFCA9718360C6600D0944A /* AccountListViewController.h */,
-				C4EFCA9818360C6600D0944A /* AccountListViewController.m */,
 				C4EFCA9918360C6600D0944A /* AccountMergerViewController.h */,
 				C4EFCA9A18360C6600D0944A /* AccountMergerViewController.m */,
-				C4EFCA9B18360C6600D0944A /* AccountMergeSuccessViewController.h */,
-				C4EFCA9C18360C6600D0944A /* AccountMergeSuccessViewController.m */,
 				C4EFCA9D18360C6600D0944A /* DataValidate.h */,
 				C4EFCA9E18360C6600D0944A /* DataValidate.m */,
-				C4EFCA9F18360C6600D0944A /* EmailBoundViewController.h */,
-				C4EFCAA018360C6600D0944A /* EmailBoundViewController.m */,
 				C4EFCAA118360C6600D0944A /* MemeberMergeService.h */,
 				C4EFCAA218360C6600D0944A /* MemeberMergeService.m */,
 				C4EFCAA318360C6600D0944A /* MergeNewAccountDTO.h */,
 				C4EFCAA418360C6600D0944A /* MergeNewAccountDTO.m */,
-				C4EFCAA518360C6600D0944A /* MergerSecondCell.h */,
-				C4EFCAA618360C6600D0944A /* MergerSecondCell.m */,
-				C4EFCAA718360C6600D0944A /* MobileBoundViewController.h */,
-				C4EFCAA818360C6600D0944A /* MobileBoundViewController.m */,
 				C4EFCAA918360C6600D0944A /* RegisterFirstViewController.h */,
 				C4EFCAAA18360C6600D0944A /* RegisterFirstViewController.m */,
-				C4EFCAAB18360C6600D0944A /* YigouAccountViewController.h */,
-				C4EFCAAC18360C6600D0944A /* YigouAccountViewController.m */,
 			);
 			path = MemeberMerge;
 			sourceTree = "<group>";
@@ -16900,14 +16847,9 @@
 				85AEFD3719A6D17C00F7E37B /* AllCitySuningViewController.m in Sources */,
 				D8E8EC501A15D91500A2B532 /* SNCommentShareService.m in Sources */,
 				F633637A1835E13200ADFAE0 /* NewSnxpressDTO.m in Sources */,
-				C4EFCA8F18360C2600D0944A /* MyCardViewController.m in Sources */,
-				C4EFCAAD18360C6600D0944A /* AccountCertainViewController.m in Sources */,
 				C4EFCAAE18360C6600D0944A /* AccountCheckCodeService.m in Sources */,
 				F67B977D19187AA70069C93F /* OrderDetailDto.m in Sources */,
-				C4EFCAAF18360C6600D0944A /* AccountListCell.m in Sources */,
-				C4EFCAB018360C6600D0944A /* AccountListViewController.m in Sources */,
 				C4EFCAB118360C6600D0944A /* AccountMergerViewController.m in Sources */,
-				C4EFCAB218360C6600D0944A /* AccountMergeSuccessViewController.m in Sources */,
 				57C54CFA19C6C85800299858 /* SNLocalWebViewController.m in Sources */,
 				9C677D1218CEEFF300DA4E79 /* AutoLoginWithWaitViewCommand.m in Sources */,
 				04841CB71869E3CE00576A32 /* ChooseCouponViewController.m in Sources */,
@@ -16915,16 +16857,12 @@
 				5D04640918B310B500B43A25 /* BusinessCell.m in Sources */,
 				9CF7E4BC19A6DB060063AEB6 /* FilterPopupViewController.m in Sources */,
 				C4EFCAB318360C6600D0944A /* DataValidate.m in Sources */,
-				C4EFCAB418360C6600D0944A /* EmailBoundViewController.m in Sources */,
 				5D0463FA18AE189000B43A25 /* HotelOrderListHeadCell.m in Sources */,
 				C4EFCAB518360C6600D0944A /* MemeberMergeService.m in Sources */,
 				C4EFCAB618360C6600D0944A /* MergeNewAccountDTO.m in Sources */,
-				C4EFCAB718360C6600D0944A /* MergerSecondCell.m in Sources */,
 				D8A1A77F1A1050EA0026558F /* SNSInputImagesView.m in Sources */,
-				C4EFCAB818360C6600D0944A /* MobileBoundViewController.m in Sources */,
 				C4EFCAB918360C6600D0944A /* RegisterFirstViewController.m in Sources */,
 				7C38751C19D3D626006654ED /* LianBanFloorDTO.m in Sources */,
-				C4EFCABA18360C6600D0944A /* YigouAccountViewController.m in Sources */,
 				F63363991836157E00ADFAE0 /* IPInfoDTO.m in Sources */,
 				F6148CBE183DF3DA00B9FE45 /* OrderSelectDownViewController.m in Sources */,
 				C4D451B31845924D00811437 /* SNProtocolView.m in Sources */,

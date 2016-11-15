@@ -8,7 +8,6 @@
 
 #import "RegisterFirstViewController.h"
 #import "UITableViewCell+BgView.h"
-#import "AccountMergeSuccessViewController.h"
 #import "PasswordVerifyUtil.h"
 #import "DataValidate.h"
 #import "SNGraphics.h"
@@ -255,9 +254,7 @@
         }else{
             [UserCenter defaultCenter].suningUsername = self.phoneNumTextField.text;
             [UserCenter defaultCenter].suningPassword = self.passwordTextField.text;
-            AccountMergeSuccessViewController *success = [[AccountMergeSuccessViewController alloc] init];
-            success.memberInfoDto = service.memberInfoDto;
-            [self.navigationController pushViewController:success animated:YES];
+            // AccountMergeSuccessViewController YJJJJJ
         }
     }else{
         [self presentSheet:IsStrEmpty(service.errorMsg)?L(@"ASI_CONNECTION_FAILURE_ERROR"):service.errorMsg posY:60];

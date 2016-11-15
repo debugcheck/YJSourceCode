@@ -9,7 +9,6 @@
 #import "CommonViewController.h"
 #import "SNSwitch.h"
 #import "MyEBuyViewCell.h"
-#import "MyCardViewController.h"
 #import "AddressInfoListViewController.h"
 #import "MyIntegralExchangeViewController.h"
 #import "CardDetailBaseDTO.h"

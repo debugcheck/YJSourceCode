@@ -7,9 +7,7 @@
 //
 
 #import "AccountMergerViewController.h"
-#import "AccountListViewController.h"
 #import "DataValidate.h"
-#import "MobileBoundViewController.h"
 #import "SNGraphics.h"
 #import "UITableViewCell+BgView.h"
 
@@ -253,8 +251,7 @@
                 break;
             case eMailAccountValidateOwnerVerifyMailCode:
             {
-                MobileBoundViewController *mobile = [[MobileBoundViewController alloc] init];
-                [self.navigationController pushViewController:mobile animated:YES];
+                // MobileBoundViewController
             }
                 break;
             case eMergeMbrCardSendCellphoneCode:
@@ -294,11 +291,7 @@
         if (IsArrEmpty(service.cardNoList)) {
             [self presentSheet:L(@"UCNoAssociationMemberCardAccount") posY:60];
         }else{
-            [UserCenter defaultCenter].bindPhoneNum = self.phoneTextField.text;
-            AccountListViewController *list = [[AccountListViewController alloc] init];
-            list.suningAccount = service.suningAccount;
-            list.accoutList = service.cardNoList;
-            [self.navigationController pushViewController:list animated:YES];            
+            // AccountListViewController YJJJJ            
         }
     }else{
         [self presentSheet:IsStrEmpty(service.errorMsg)?L(@"ASI_CONNECTION_FAILURE_ERROR"):service.errorMsg posY:60];

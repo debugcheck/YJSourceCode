@@ -32,7 +32,6 @@
 #import "PurchaseProductListViewController.h"
 #import "CheckInViewController.h"
 #import "MyEbuyViewController.h"
-#import "MyCardViewController.h"
 #import "EvaluationViewController.h"
 #import "NewOrderSnxpressViewController.h"
 #import "ServiceDetailViewController.h"
@@ -1463,9 +1462,9 @@
 //1030
 - (void)routeMyMemberCard:(SNRouterObject *)obj
 {
-    MyCardViewController *mycard = [[MyCardViewController alloc] init];
-    obj.targetController = mycard;
-    obj.defaultTabIndex = kMyEbuyTabIndex;
+//    MyCardViewController *mycard = [[MyCardViewController alloc] init];
+//    obj.targetController = mycard;
+//    obj.defaultTabIndex = kMyEbuyTabIndex;
 }
 
 //1032
