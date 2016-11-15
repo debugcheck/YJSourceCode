@@ -9,7 +9,6 @@
 #import "MyIntegerUnActiveViewController.h"
 //#import "BoundPhoneViewController.h"
 #import "ActiveMyIntegerViewController.h"
-#import "InternalRuleHelpViewController.h"
 
 @implementation MyIntegerUnActiveViewController
 
@@ -61,23 +60,7 @@
 
 - (void)goToInternalRules
 {    
-    InternalRuleHelpViewController *vc = [[InternalRuleHelpViewController alloc]init];
-    
-    [self.navigationController pushViewController:vc animated:YES];
-    
-    TT_RELEASE_SAFELY(vc);
 }
-
-- (void)dealloc {
-    
-    TT_RELEASE_SAFELY(_myTableView);
-    TT_RELEASE_SAFELY(_alertString);
-    TT_RELEASE_SAFELY(_activeView);
-    TT_RELEASE_SAFELY(_descLabel);
-    TT_RELEASE_SAFELY(_activateButton);
-    TT_RELEASE_SAFELY(_errorMsg);
-}
-
 
 
 - (void)loadView {

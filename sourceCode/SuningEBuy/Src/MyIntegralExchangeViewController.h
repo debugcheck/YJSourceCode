@@ -12,7 +12,6 @@
 #import "UITextField+LeftPadding.h"
 #import "TPKeyboardAvoidingTableView.h"
 #import "MyIntegralService.h"
-#import "QYaoYiYaoScoreViewCtrler.h"
 #import "QYaoYiYaoViewCtrler.h"
 #import "CustomSegment.h"
 
@@ -20,7 +19,7 @@
 
 - (id)init;
 
-- (void)initialButtonItems;
+
 
 
 @end

@@ -10,7 +10,6 @@
 #import "AchievementExchangeDTO.h"
 #import "DetailAchievementCell.h"
 #import "DetailAchievementIdCell.h"
-#import "InternalRuleHelpViewController.h"
 #import "NewIntegralView/NewIntegralView.h"
 #import "integralDetailTableViewCell.h"
 
@@ -25,8 +24,6 @@
 
 //云钻明细
 @property (nonatomic,strong) UIView                     *achDetailsView;
-//加载更多
-@property (nonatomic,strong) UIView                     *loadMoreView;
 //云钻余额
 @property (nonatomic,strong) SNUITableViewCell          *totalAchCellView;
 //用于展示
@@ -52,28 +49,6 @@
 @end
 
 @implementation MyIntegralExchangeViewController
-
-@synthesize achDetailsView = _achDetailsView;
-
-@synthesize loadMoreView = _loadMoreView;
-
-@synthesize totalAchCellView = _totalAchCellView;
-
-@synthesize service = _service;
-
-@synthesize achList = _achList;
-
-- (void)dealloc {
-    TT_RELEASE_SAFELY(_achDetailsView);
-    TT_RELEASE_SAFELY(_loadMoreView);
-    TT_RELEASE_SAFELY(_totalAchCellView);
-    TT_RELEASE_SAFELY(_tpTableView);
-    SERVICE_RELEASE_SAFELY(_service);
-    TT_RELEASE_SAFELY(_achList);
-    TT_RELEASE_SAFELY(_integralHeaderView);
-    TT_RELEASE_SAFELY(_noDetailDescLabel);
-    TT_RELEASE_SAFELY(_noDetailIconImageView);
-}
 
 - (id)init {
     
@@ -122,8 +97,6 @@
     
     self.hasSuspendButton = YES;
     
-    [self initialButtonItems];
-    
 }
 
 
@@ -151,32 +124,6 @@
     }
 }
 
-- (void)viewWillDisappear:(BOOL)animated{
-    
-    [super viewWillDisappear:animated];
-    
-}
-
-
-- (void)initialButtonItems
-{
-    self.navigationItem.rightBarButtonItem = [self rightBtnItemWithTitle:L(@"MyEBuy_Rules")];
-}
-
-- (void)righBarClick
-{
-    [self goToInternalRules];
-}
-
-- (void) goToInternalRules{
-    
-    InternalRuleHelpViewController *vc = [[InternalRuleHelpViewController alloc]init];
-    
-    [self.navigationController pushViewController:vc animated:YES];
-    
-    TT_RELEASE_SAFELY(vc);
-    
-}
 
 #pragma mark - Http Delegate Methods
 #pragma mark   Http数据请求的回调方法
@@ -365,7 +312,6 @@
         {
             cell = [[SNUITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID];
             
-            [cell.contentView addSubview:self.loadMoreView];
         }
         return cell;
     }
@@ -658,41 +604,6 @@
 
 
 
-//加载更多的视图
--(UIView *)loadMoreView{
-    
-    if (_loadMoreView == nil) {
-        
-        _loadMoreView =  [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 30) ];
-        
-        _loadMoreView.backgroundColor = [UIColor clearColor];//f2f2f2
-        
-        UIButton  *_loadMoreBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        
-        _loadMoreBtn.frame = CGRectMake(0, 0, 320, 30);
-        
-        [_loadMoreBtn setBackgroundColor:[UIColor clearColor]];
-        
-        [_loadMoreBtn setTitle:L(@"loadMore") forState:UIControlStateNormal];
-        
-        [_loadMoreBtn.titleLabel setFont:[UIFont systemFontOfSize:16.0]];
-        
-        [_loadMoreBtn.titleLabel setTextAlignment:UITextAlignmentCenter];
-        
-        [_loadMoreBtn setTitleColor:[UIColor grayColor ] forState:UIControlStateNormal];
-        
-        [_loadMoreBtn addTarget:self action:@selector(loadMoreData) forControlEvents:UIControlEventTouchUpInside];
-        
-        [_loadMoreView addSubview:_loadMoreBtn];
-        
-        TT_RELEASE_SAFELY(_loadMoreBtn);
-        
-    }
-    
-    return _loadMoreView;
-    
-}
-
 //获取标签的宽度
 -(CGFloat)xgetWidth:(UILabel *)label{
     
@@ -819,11 +730,6 @@
     
     if (isGetIntegral)
     {
-        QYaoYiYaoScoreViewCtrler *ctrler = nil;
-        
-        ctrler = [[QYaoYiYaoScoreViewCtrler alloc] initWithNibName:@"QYaoYiYaoScoreViewCtrler" bundle:nil];
-        
-        [self.navigationController pushViewController:ctrler animated:YES];
     }else{
         
         QYaoYiYaoViewCtrler *ctrler = [[QYaoYiYaoViewCtrler alloc] initXibWithType:1];

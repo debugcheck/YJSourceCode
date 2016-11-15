@@ -575,8 +575,6 @@
 		11FE58CE1897A71F00478D11 /* login_user_highLight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 11FE58CD1897A71F00478D11 /* login_user_highLight@2x.png */; };
 		11FF96D718B1A98000946425 /* GBPayTableviewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 11FF96D618B1A98000946425 /* GBPayTableviewCell.m */; };
 		1896CCFA192F5217002ECDCE /* QYaoYiYaoViewCtrler_score.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1896CCF9192F5217002ECDCE /* QYaoYiYaoViewCtrler_score.xib */; };
-		1896CCFF192F5632002ECDCE /* QYaoYiYaoScoreViewCtrler.m in Sources */ = {isa = PBXBuildFile; fileRef = 1896CCFD192F5632002ECDCE /* QYaoYiYaoScoreViewCtrler.m */; };
-		1896CD00192F5632002ECDCE /* QYaoYiYaoScoreViewCtrler.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1896CCFE192F5632002ECDCE /* QYaoYiYaoScoreViewCtrler.xib */; };
 		18D6F7A01936213400E7829E /* y1_shake_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 18D6F7961936213400E7829E /* y1_shake_bg.png */; };
 		18D6F7A11936213400E7829E /* y1_shake_middle.png in Resources */ = {isa = PBXBuildFile; fileRef = 18D6F7971936213400E7829E /* y1_shake_middle.png */; };
 		18D6F7A31936213400E7829E /* y1_shake_led_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 18D6F7991936213400E7829E /* y1_shake_led_0.png */; };
@@ -1925,7 +1923,6 @@
 		9CB63F7D19ADBF23006139E5 /* searchList_ListViewMode@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CB63F7819ADBF23006139E5 /* searchList_ListViewMode@2x.png */; };
 		9CB63F7E19ADBF23006139E5 /* searchList_NetWork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CB63F7919ADBF23006139E5 /* searchList_NetWork@2x.png */; };
 		9CB63F8019ADC618006139E5 /* searchList_FilterViewTopBack@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CB63F7F19ADC618006139E5 /* searchList_FilterViewTopBack@2x.png */; };
-		9CB6966F16D3830B005204D9 /* InternalRuleHelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CB6966E16D3830B005204D9 /* InternalRuleHelpViewController.m */; };
 		9CB7064119D552AC0066D27F /* search_preorder@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CB7064019D552AC0066D27F /* search_preorder@2x.png */; };
 		9CB8062D16131E8F00D01CAC /* ProductDetailSubmitService.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CB8062C16131E8F00D01CAC /* ProductDetailSubmitService.m */; };
 		9CBCD4581A0C5CCB00EF76FC /* Search_Zeng@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CBCD4571A0C5CCB00EF76FC /* Search_Zeng@2x.png */; };
@@ -3453,9 +3450,6 @@
 		11FF96D518B1A98000946425 /* GBPayTableviewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBPayTableviewCell.h; sourceTree = "<group>"; };
 		11FF96D618B1A98000946425 /* GBPayTableviewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBPayTableviewCell.m; sourceTree = "<group>"; };
 		1896CCF9192F5217002ECDCE /* QYaoYiYaoViewCtrler_score.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QYaoYiYaoViewCtrler_score.xib; sourceTree = "<group>"; };
-		1896CCFC192F5632002ECDCE /* QYaoYiYaoScoreViewCtrler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QYaoYiYaoScoreViewCtrler.h; sourceTree = "<group>"; };
-		1896CCFD192F5632002ECDCE /* QYaoYiYaoScoreViewCtrler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QYaoYiYaoScoreViewCtrler.m; sourceTree = "<group>"; };
-		1896CCFE192F5632002ECDCE /* QYaoYiYaoScoreViewCtrler.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QYaoYiYaoScoreViewCtrler.xib; sourceTree = "<group>"; };
 		18D6F7961936213400E7829E /* y1_shake_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = y1_shake_bg.png; sourceTree = "<group>"; };
 		18D6F7971936213400E7829E /* y1_shake_middle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = y1_shake_middle.png; sourceTree = "<group>"; };
 		18D6F7991936213400E7829E /* y1_shake_led_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = y1_shake_led_0.png; sourceTree = "<group>"; };
@@ -5512,8 +5506,6 @@
 		9CB63F7819ADBF23006139E5 /* searchList_ListViewMode@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "searchList_ListViewMode@2x.png"; sourceTree = "<group>"; };
 		9CB63F7919ADBF23006139E5 /* searchList_NetWork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "searchList_NetWork@2x.png"; sourceTree = "<group>"; };
 		9CB63F7F19ADC618006139E5 /* searchList_FilterViewTopBack@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "searchList_FilterViewTopBack@2x.png"; sourceTree = "<group>"; };
-		9CB6966D16D3830B005204D9 /* InternalRuleHelpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InternalRuleHelpViewController.h; sourceTree = "<group>"; };
-		9CB6966E16D3830B005204D9 /* InternalRuleHelpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InternalRuleHelpViewController.m; sourceTree = "<group>"; };
 		9CB7064019D552AC0066D27F /* search_preorder@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "search_preorder@2x.png"; sourceTree = "<group>"; };
 		9CB8062B16131E8F00D01CAC /* ProductDetailSubmitService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductDetailSubmitService.h; sourceTree = "<group>"; };
 		9CB8062C16131E8F00D01CAC /* ProductDetailSubmitService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductDetailSubmitService.m; sourceTree = "<group>"; };
@@ -9445,8 +9437,6 @@
 				42A6EF6B1610343E000B1235 /* View */,
 				423E7E88160AC1A800781C8B /* ActiveMyIntegerViewController.h */,
 				423E7E89160AC1A900781C8B /* ActiveMyIntegerViewController.m */,
-				9CB6966D16D3830B005204D9 /* InternalRuleHelpViewController.h */,
-				9CB6966E16D3830B005204D9 /* InternalRuleHelpViewController.m */,
 				42E4032E164BD2500046E667 /* MyIntegerUnActiveViewController.h */,
 				42E4032D164BD2500046E667 /* MyIntegerUnActiveViewController.m */,
 				4224FAD0160C640100A4028A /* MyIntegralExchangeViewController.h */,
@@ -11572,9 +11562,6 @@
 				7CA3526D18F397D800CF7D64 /* QYaoMoreRuleView.h */,
 				7CA3526E18F397D800CF7D64 /* QYaoMoreRuleView.m */,
 				7CA3526F18F397D800CF7D64 /* QYaoMoreRuleView.xib */,
-				1896CCFC192F5632002ECDCE /* QYaoYiYaoScoreViewCtrler.h */,
-				1896CCFD192F5632002ECDCE /* QYaoYiYaoScoreViewCtrler.m */,
-				1896CCFE192F5632002ECDCE /* QYaoYiYaoScoreViewCtrler.xib */,
 				18E8050E19357FB5000AEEA1 /* QYaoYiYaoResultView.xib */,
 			);
 			path = View;
@@ -14554,7 +14541,6 @@
 				F684459A1897A30C001AAAE3 /* order_shaidanAddPic@2x.png in Resources */,
 				04B48A341877271C00B368BB /* sn_network_error@2x.png in Resources */,
 				04BF6D5A15FE554000997EC2 /* grayButton@2x.png in Resources */,
-				1896CD00192F5632002ECDCE /* QYaoYiYaoScoreViewCtrler.xib in Resources */,
 				04BF6D5B15FE554000997EC2 /* grayButton.png in Resources */,
 				04BF6D6115FE56CF00997EC2 /* grayButton1@2x.png in Resources */,
 				7CF60683199C260C00F40972 /* nb_publicIcon_3@2x.png in Resources */,
@@ -16386,7 +16372,6 @@
 				04E6BD8916BBC9360039001A /* DefineConstant.m in Sources */,
 				0427E27316D2969800A3E37B /* EppValidateCodeService.m in Sources */,
 				110AC29A18A9CC6100798E1E /* ShopCartTotalPriceCell.m in Sources */,
-				9CB6966F16D3830B005204D9 /* InternalRuleHelpViewController.m in Sources */,
 				04D761FC16D5CEC100BCBA9F /* NSObject+BoardManage.m in Sources */,
 				04D7620016D6568800BCBA9F /* BoardingPersonUtil.m in Sources */,
 				61636BEB16DB7DFE00D86B55 /* GBDetailViewController.m in Sources */,
@@ -16484,7 +16469,6 @@
 				6CD5EF9516F816A400E87265 /* AttachedPictureCtrlView.m in Sources */,
 				BF6E92261A0D1F2600CC8507 /* ReceiveZiyingInfoCell.m in Sources */,
 				6CD5EF9616F816A400E87265 /* AttachedPictureView.m in Sources */,
-				1896CCFF192F5632002ECDCE /* QYaoYiYaoScoreViewCtrler.m in Sources */,
 				7C38751919D3D626006654ED /* HomeModuleDTO.m in Sources */,
 				6CD5EF9716F816A400E87265 /* contractibleImageView.m in Sources */,
 				6373203A18B2C293009CE469 /* PlanePayModelCell.m in Sources */,

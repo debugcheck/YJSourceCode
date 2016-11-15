@@ -40,7 +40,6 @@
 #import "PaymentModeViewController.h"
 #import "ScanerAuthoViewController.h"
 #import "CheckUpdateCommand.h"
-#import "QYaoYiYaoScoreViewCtrler.h"
 #import "SNInformationViewController.h"
 #import "MyIntegralExchangeViewController.h"
 #import <SSA_IOS/SSAIOSSNDataCollection.h>
@@ -1707,9 +1706,9 @@
 //1047
 - (void)routeIntegalPlayground:(SNRouterObject *)obj
 {
-    QYaoYiYaoScoreViewCtrler *ctrler = [[QYaoYiYaoScoreViewCtrler alloc] init];
-    obj.targetController = ctrler;
-    obj.defaultTabIndex = kHomeTabIndex;
+//    QYaoYiYaoScoreViewCtrler *ctrler = [[QYaoYiYaoScoreViewCtrler alloc] init];
+//    obj.targetController = ctrler;
+//    obj.defaultTabIndex = kHomeTabIndex;
 }
 
 //1048
