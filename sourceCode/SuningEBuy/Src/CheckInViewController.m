@@ -14,7 +14,6 @@
 #import "SNWebViewController.h"
 #import "DJGroupRuleView.h"
 #import <SSA_IOS/SSAIOSSNDataCollection.h>
-#import "QYaoYiYaoViewCtrler.h"
 
 
 @interface CheckInViewController () <CICalendarViewDelegate, EGOImageButtonDelegate>
@@ -399,10 +398,7 @@
 */
 
 - (void)goToYaoYiYao {
-    // 云钻摇易摇
-    [SSAIOSSNDataCollection CustomEventCollection:@"click" keyArray: [NSArray arrayWithObjects:@"clickno", nil]valueArray: [NSArray arrayWithObjects:[NSString stringWithFormat:@"531601"], nil]];
-    QYaoYiYaoViewCtrler *ctrler = [[QYaoYiYaoViewCtrler alloc] initXibWithType:1];
-    [self.navigationController pushViewController:ctrler animated:YES];
+
 }
 
 #pragma mark -

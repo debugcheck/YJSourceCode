@@ -12,10 +12,9 @@
 #import "UITextField+LeftPadding.h"
 #import "TPKeyboardAvoidingTableView.h"
 #import "MyIntegralService.h"
-#import "QYaoYiYaoViewCtrler.h"
 #import "CustomSegment.h"
 
-@interface MyIntegralExchangeViewController : PageRefreshTableViewController<MyIntegralServiceeDelegate,QYaoYiYaoViewCtrlerDelegate,CustomSegmentDelegate>
+@interface MyIntegralExchangeViewController : PageRefreshTableViewController<MyIntegralServiceeDelegate,CustomSegmentDelegate>
 
 - (id)init;
 

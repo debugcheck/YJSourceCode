@@ -36,7 +36,6 @@
 #import "NewOrderSnxpressViewController.h"
 #import "ServiceDetailViewController.h"
 #import "AddressInfoListViewController.h"
-#import "QYaoYiYaoViewCtrler.h"
 #import "PaymentModeViewController.h"
 #import "ScanerAuthoViewController.h"
 #import "CheckUpdateCommand.h"
@@ -1697,10 +1696,10 @@
 - (void)routeYaoYiYaoFromPromotion:(SNRouterObject *)obj
 {
     // 大促摇易摇
-    QYaoYiYaoViewCtrler *ctrler = [[QYaoYiYaoViewCtrler alloc] initXibWithType:2];
-    ctrler.activeTypeId = @"80d5c8b0d4e04b1596b92aaf3b5b4534";
-    obj.targetController = ctrler;
-    obj.defaultTabIndex = kHomeTabIndex;
+//    QYaoYiYaoViewCtrler *ctrler = [[QYaoYiYaoViewCtrler alloc] initXibWithType:2];
+//    ctrler.activeTypeId = @"80d5c8b0d4e04b1596b92aaf3b5b4534";
+//    obj.targetController = ctrler;
+//    obj.defaultTabIndex = kHomeTabIndex;
 }
 
 //1047
@@ -1715,9 +1714,9 @@
 - (void)routeYaoYiYaoFromIntegalPlayground:(SNRouterObject *)obj
 {
     // 云钻摇易摇
-    QYaoYiYaoViewCtrler *ctrler = [[QYaoYiYaoViewCtrler alloc] initXibWithType:1];
-    obj.targetController = ctrler;
-    obj.defaultTabIndex = kHomeTabIndex;
+//    QYaoYiYaoViewCtrler *ctrler = [[QYaoYiYaoViewCtrler alloc] initXibWithType:1];
+//    obj.targetController = ctrler;
+//    obj.defaultTabIndex = kHomeTabIndex;
 }
 
 //1050 联版专题

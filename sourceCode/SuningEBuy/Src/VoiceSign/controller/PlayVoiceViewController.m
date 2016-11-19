@@ -10,7 +10,6 @@
 #import "OHAttributedLabel.h"
 #import "NSAttributedString+Attributes.h"
 #import "VoiceSignViewController.h"
-#import "QYaoYiYaoViewCtrler.h"
 #import "VoiceDetailShareViewController.h"
 #import <AudioToolbox/AudioToolbox.h>
 #import "VoiceSignDTO.h"
@@ -405,11 +404,7 @@ static SystemSoundID shake_sound_male_id = 0;
             
             QYaoQueryDTO *bean = (QYaoQueryDTO *)obj;
             // 云钻摇易摇
-            QYaoYiYaoViewCtrler *ctrler = [[QYaoYiYaoViewCtrler alloc] initXibWithType:1];
-            ctrler.activeQueryBean = bean;
-            ctrler.activeTypeId = activeid;
-            ctrler.ctrlerType   = kQYaoViewCtrlerShengBo;
-            [self.navigationController pushViewController:ctrler animated:YES];
+
         }
         else if (obj.cmd == CC_YaoYiYaoActiveShakeJiang){
             

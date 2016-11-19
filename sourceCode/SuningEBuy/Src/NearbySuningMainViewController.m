@@ -17,7 +17,6 @@
 #import "AddressInfoDAO.h"
 #import "CampaignDetailInfoViewController.h"
 #import "SNWebViewController.h"
-#import "QYaoYiYaoViewCtrler.h"
 #import "VoiceSignViewController.h"
 #import "LoginViewController.h"
 #import "dvSoundDecoder.h"
@@ -868,12 +867,7 @@
         if (obj.cmd == CC_YaoYiYaoActiveQuery) {
             QYaoQueryDTO *bean = (QYaoQueryDTO *)obj;
             // 云钻摇易摇
-            QYaoYiYaoViewCtrler *ctrler = [[QYaoYiYaoViewCtrler alloc] initXibWithType:1];
-            ctrler.activeQueryBean = bean;
-            ctrler.activeTypeId = activeid;
-            ctrler.ctrlerType   = kQYaoViewCtrlerShengBo;
-            [self.navigationController pushViewController:ctrler animated:YES];
-            
+                        
         }else if (obj.cmd == CC_YaoYiYaoActiveShakeJiang){
             QYaoChouJiangDTO *bean = (QYaoChouJiangDTO *)obj;
             VoiceSignViewController *voicesign = [[VoiceSignViewController alloc] initWithdto:[self presevoicedto:bean]];

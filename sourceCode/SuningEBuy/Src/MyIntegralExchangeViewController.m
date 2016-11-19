@@ -731,13 +731,7 @@
     if (isGetIntegral)
     {
     }else{
-        
-        QYaoYiYaoViewCtrler *ctrler = [[QYaoYiYaoViewCtrler alloc] initXibWithType:1];
-        
-        ctrler.delegate             = self;
-        
-        [self.navigationController pushViewController:ctrler animated:YES];
-        
+                
     }
 }
 
