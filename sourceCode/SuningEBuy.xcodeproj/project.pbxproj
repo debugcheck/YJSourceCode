@@ -522,7 +522,6 @@
 		0960E8A81A11D03300A86197 /* ego-icon-yijianfankui.png in Resources */ = {isa = PBXBuildFile; fileRef = 0960E8981A11D03300A86197 /* ego-icon-yijianfankui.png */; };
 		0960E8A91A11D03300A86197 /* ego-icon-yuyue.png in Resources */ = {isa = PBXBuildFile; fileRef = 0960E8991A11D03300A86197 /* ego-icon-yuyue.png */; };
 		0960E8AD1A11D07200A86197 /* MyEBuyViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0960E8AC1A11D07200A86197 /* MyEBuyViewCell.m */; };
-		0960E8B01A11D08800A86197 /* MembershipInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0960E8AF1A11D08800A86197 /* MembershipInfoViewController.m */; };
 		0960E8B81A121ED200A86197 /* button-shezhi.png in Resources */ = {isa = PBXBuildFile; fileRef = 0960E8B71A121ED200A86197 /* button-shezhi.png */; };
 		0961C4A71A1AD52100E4362E /* ego-icon-zixun.png in Resources */ = {isa = PBXBuildFile; fileRef = 0961C4A61A1AD52100E4362E /* ego-icon-zixun.png */; };
 		097EF6A819C823C300E2081C /* PerformanceStatistics.m in Sources */ = {isa = PBXBuildFile; fileRef = 097EF6A719C823C300E2081C /* PerformanceStatistics.m */; };
@@ -646,7 +645,6 @@
 		4224FACB160C47B600A4028A /* public_blue_leftBarButtonItem.png in Resources */ = {isa = PBXBuildFile; fileRef = 4224FAC9160C47B600A4028A /* public_blue_leftBarButtonItem.png */; };
 		4224FACC160C47B600A4028A /* public_blue_leftBarButtonItem.@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4224FACA160C47B600A4028A /* public_blue_leftBarButtonItem.@2x.png */; };
 		4224FACF160C572B00A4028A /* AchievementExchangeDTO.m in Sources */ = {isa = PBXBuildFile; fileRef = 4224FACE160C572A00A4028A /* AchievementExchangeDTO.m */; };
-		4224FAD2160C640200A4028A /* MyIntegralExchangeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4224FAD1160C640100A4028A /* MyIntegralExchangeViewController.m */; };
 		4224FAD5160C697000A4028A /* DetailAchievementCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4224FAD4160C696F00A4028A /* DetailAchievementCell.m */; };
 		4224FAD8160C6D8C00A4028A /* DetailAchievementIdCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4224FAD7160C6D8B00A4028A /* DetailAchievementIdCell.m */; };
 		422E11F216DCB8CE009FFBCD /* GBListPrametersDTO.m in Sources */ = {isa = PBXBuildFile; fileRef = 422E11F116DCB8CE009FFBCD /* GBListPrametersDTO.m */; };
@@ -3376,8 +3374,6 @@
 		0960E8991A11D03300A86197 /* ego-icon-yuyue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ego-icon-yuyue.png"; path = "MyEbuyNew/ego-icon-yuyue.png"; sourceTree = "<group>"; };
 		0960E8AB1A11D07200A86197 /* MyEBuyViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyEBuyViewCell.h; sourceTree = "<group>"; };
 		0960E8AC1A11D07200A86197 /* MyEBuyViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyEBuyViewCell.m; sourceTree = "<group>"; };
-		0960E8AE1A11D08800A86197 /* MembershipInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MembershipInfoViewController.h; sourceTree = "<group>"; };
-		0960E8AF1A11D08800A86197 /* MembershipInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MembershipInfoViewController.m; sourceTree = "<group>"; };
 		0960E8B71A121ED200A86197 /* button-shezhi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "button-shezhi.png"; path = "MyEbuyNew/button-shezhi.png"; sourceTree = "<group>"; };
 		0961C4A61A1AD52100E4362E /* ego-icon-zixun.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ego-icon-zixun.png"; path = "MyEbuyNew/ego-icon-zixun.png"; sourceTree = "<group>"; };
 		097EF6A619C823C300E2081C /* PerformanceStatistics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PerformanceStatistics.h; sourceTree = SOURCE_ROOT; };
@@ -3538,8 +3534,6 @@
 		4224FACA160C47B600A4028A /* public_blue_leftBarButtonItem.@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "public_blue_leftBarButtonItem.@2x.png"; sourceTree = "<group>"; };
 		4224FACD160C572A00A4028A /* AchievementExchangeDTO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AchievementExchangeDTO.h; sourceTree = "<group>"; };
 		4224FACE160C572A00A4028A /* AchievementExchangeDTO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AchievementExchangeDTO.m; sourceTree = "<group>"; };
-		4224FAD0160C640100A4028A /* MyIntegralExchangeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyIntegralExchangeViewController.h; sourceTree = "<group>"; };
-		4224FAD1160C640100A4028A /* MyIntegralExchangeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyIntegralExchangeViewController.m; sourceTree = "<group>"; };
 		4224FAD3160C696F00A4028A /* DetailAchievementCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailAchievementCell.h; sourceTree = "<group>"; };
 		4224FAD4160C696F00A4028A /* DetailAchievementCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailAchievementCell.m; sourceTree = "<group>"; };
 		4224FAD6160C6D8A00A4028A /* DetailAchievementIdCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailAchievementIdCell.h; sourceTree = "<group>"; };
@@ -9420,8 +9414,6 @@
 				423E7E89160AC1A900781C8B /* ActiveMyIntegerViewController.m */,
 				42E4032E164BD2500046E667 /* MyIntegerUnActiveViewController.h */,
 				42E4032D164BD2500046E667 /* MyIntegerUnActiveViewController.m */,
-				4224FAD0160C640100A4028A /* MyIntegralExchangeViewController.h */,
-				4224FAD1160C640100A4028A /* MyIntegralExchangeViewController.m */,
 			);
 			name = MyInteger;
 			sourceTree = "<group>";
@@ -9486,8 +9478,6 @@
 				04BEC48715DCD16800455261 /* MyEbuyViewController.m */,
 				610113581758516C00E818DA /* EditNickNameService.h */,
 				610113591758516C00E818DA /* EditNickNameService.m */,
-				0960E8AE1A11D08800A86197 /* MembershipInfoViewController.h */,
-				0960E8AF1A11D08800A86197 /* MembershipInfoViewController.m */,
 			);
 			name = MyEbuy;
 			sourceTree = "<group>";
@@ -15781,7 +15771,6 @@
 				5D6B99CC15E7941100B7A88D /* InnerProductDTO.m in Sources */,
 				049EE76D18439D6D00129F57 /* OSChatViewController.m in Sources */,
 				5D6B99D315E7941C00B7A88D /* EightBannerADService.m in Sources */,
-				0960E8B01A11D08800A86197 /* MembershipInfoViewController.m in Sources */,
 				5D6B99D415E7941C00B7A88D /* HomeTopScrollAdDTO.m in Sources */,
 				BF67E3E11A10D8AA007F91FD /* ReceiveProductInfoViewController.m in Sources */,
 				BCC3A03219FE62FE00D76FFD /* GuessYouLikeCell.m in Sources */,
@@ -16060,7 +16049,6 @@
 				423E7E8E160AEBBA00781C8B /* ActivateIntegralDTO.m in Sources */,
 				BF6E92291A0DB40900CC8507 /* InsendTimeDTO.m in Sources */,
 				4224FACF160C572B00A4028A /* AchievementExchangeDTO.m in Sources */,
-				4224FAD2160C640200A4028A /* MyIntegralExchangeViewController.m in Sources */,
 				4224FAD5160C697000A4028A /* DetailAchievementCell.m in Sources */,
 				4224FAD8160C6D8C00A4028A /* DetailAchievementIdCell.m in Sources */,
 				04A50E6A160CDD48007C4CA2 /* AppHelperViewController.m in Sources */,

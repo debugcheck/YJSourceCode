@@ -40,7 +40,6 @@
 #import "ScanerAuthoViewController.h"
 #import "CheckUpdateCommand.h"
 #import "SNInformationViewController.h"
-#import "MyIntegralExchangeViewController.h"
 #import <SSA_IOS/SSAIOSSNDataCollection.h>
 #import "SNWebViewController.h"
 #import "HomePage244/Controller/LianBanZhuanTiViewController.h"
@@ -1435,9 +1434,9 @@
 //1027
 - (void)routeMyIntegal:(SNRouterObject *)obj
 {
-    MyIntegralExchangeViewController *vc = [[MyIntegralExchangeViewController alloc] init];
-    obj.targetController = vc;
-    obj.defaultTabIndex = kMyEbuyTabIndex;
+//    MyIntegralExchangeViewController *vc = [[MyIntegralExchangeViewController alloc] init];
+//    obj.targetController = vc;
+//    obj.defaultTabIndex = kMyEbuyTabIndex;
 }
 
 ////1028  YYYYYYJJJJ

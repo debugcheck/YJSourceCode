@@ -25,7 +25,6 @@
 #import "FormattersValidators.h"
 #import "MyEBuyViewCell.h"
 //#import "AfterSaleViewController.h"
-#import "MembershipInfoViewController.h"
 
 @class MyEbuyViewController;
 

@@ -22,7 +22,6 @@
 #import "ActiveMyIntegerViewController.h"
 
 #import "BussinessTravelOrderCenterViewController.h"
-#import "MyIntegralExchangeViewController.h"
 
 #import "MyTicketListViewController.h"
 #import "MyIntegerUnActiveViewController.h"
@@ -1329,13 +1328,6 @@
 //我的云钻
 - (void)gotoIntegral{
     
-    MyIntegralExchangeViewController *nextViewController = [[MyIntegralExchangeViewController alloc] init];
-    
-    [self.navigationController pushViewController:nextViewController animated:YES];
-    
-    //NewIntegralViewController *nextViewController = [[NewIntegralViewController alloc] init];
-    
-    //[self.navigationController pushViewController:nextViewController animated:YES];
 }
 
 
@@ -1689,43 +1681,7 @@
     }
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-
-    switch (indexPath.section) {
-            
-        case 0:
-        {
-            switch (indexPath.row)
-            {
-                case 0:
-                {
-                    if ([self isLogin])
-                    {
-                        MembershipInfoViewController* vc = [[MembershipInfoViewController alloc] init];
-                        vc.hidesBottomBarWhenPushed = YES;
-                        [self.navigationController pushViewController:vc animated:YES];
-                    }
-
-                }
-                    break;
-                case 1:
-                {
-                                        
-                }
-                    break;
-                    
-                default:
-                    break;
-            }
-            
-        }
-            break;
-        case 1:
-        {
-        }
-            break;
-        }
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
 }
 #pragma --
 #pragma mark -- cardServiceDelegate
@@ -2183,9 +2139,7 @@
 {//进入会员资料
     if ([self isLogin])
     {
-        MembershipInfoViewController* vc = [[MembershipInfoViewController alloc] init];
-        vc.hidesBottomBarWhenPushed = YES;
-        [self.navigationController pushViewController:vc animated:YES];
+       
     }
     
 }
