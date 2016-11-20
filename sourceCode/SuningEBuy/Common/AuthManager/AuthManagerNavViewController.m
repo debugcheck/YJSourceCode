@@ -58,7 +58,6 @@
 #import "JASidePanelController.h"
 #import "SNGraphics.h"
 #import "UIColor+Helper.h"
-#import "AllOrderListViewController.h"
 #import "AddressInfoListViewController.h"
 
 #import "NewSearchViewController.h"
@@ -106,7 +105,6 @@ static NSArray *lotteryClassArray = nil;
                                [SKQRCodeReadController class],
                                [UserConsultantViewController class],
                                [GBPayViewController class],
-                               [AllOrderListViewController class],
                                //[BrowsingHistoryViewController class],
                                //[AddressInfoListViewController class],
                                // [UserFeedBackController class],

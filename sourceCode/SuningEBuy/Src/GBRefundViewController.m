@@ -12,7 +12,6 @@
 
 #import "OrderDetailCell.h"
 #import "OrderDetailBtnCell.h"
-#import "AllOrderListViewController.h"
 #import "SNSwitch.h"
 #import "BBSideBarViewController.h"
 
@@ -433,120 +432,9 @@
 
 - (void)refund:(GBCancelOrderService *)service
           info:(NSDictionary *)dicinfo
-        Result:(BOOL)isSuccess{
-    
-    [self removeOverFlowActivityView];
-    if (isSuccess) {
-        
-        BBAlertView *alert1 =[ [BBAlertView alloc]initWithTitle:L(@"GBRefundSuccess") message:L(@"GBRefundInfo") delegate:nil cancelButtonTitle:L(@"Confirm") otherButtonTitles:nil];
-        [alert1 setCancelBlock:^{
-            
-/*            NSArray *array = self.navigationController.viewControllers;
-            if (2 <= [array count]) {
-                
-//                UIViewController *v = (UIViewController *)[array objectAtIndex:1];
-                
-                for(UIViewController *v in array)
-                {
-                    if ([v isKindOfClass:[AllOrderListViewController class]]) {
-                        
-                        AllOrderListViewController *orderListVC = (AllOrderListViewController*)v;
-                        
-                        if([SNSwitch isOpenShopOrderList] == YES)
-                        {
-//                            orderListVC = [[AllOrderListViewController alloc]initWithData:@"A" WithSelect:eTuanGouOrderList];
-                            
-                            orderListVC.selectRow = eTuanGouOrderList;
-                            
-                        }
-                        else
-                        {
-//                            orderListVC = [[AllOrderListViewController alloc]initWithData:@"A" WithSelect:eCaiPiaoOrderList];
-                            
-                            orderListVC.selectRow = eCaiPiaoOrderList;
-                            
-                        }
+        Result:(BOOL)isSuccess{}
 
-                        [orderListVC.groupBuyVC refreshData];
-                        
-                        
-                        [self.navigationController popToViewController:v animated:YES];
-                    }
-                    
-                }
-                
-            }
-            else{
-                
-                [self.navigationController popToRootViewControllerAnimated:YES];
-            }
-            
-//            AllOrderListViewController *orderListVC = nil;
-//            
-//            if([SNSwitch isOpenShopOrderList] == YES)
-//            {
-//                orderListVC = [[AllOrderListViewController alloc]initWithData:@"A" WithSelect:eTuanGouOrderList];
-//
-//                orderListVC.selectRow = eTuanGouOrderList;
-//
-//            }
-//            else
-//            {
-//                orderListVC = [[AllOrderListViewController alloc]initWithData:@"A" WithSelect:eCaiPiaoOrderList];
-//
-//                orderListVC.selectRow = eCaiPiaoOrderList;
-//
-//            }
-//
-//            orderListVC.hidesBottomBarWhenPushed = YES;
-//            orderListVC.bottomCell.backBtn.hidden = YES;
-//                        
-//            [self.navigationController popToViewController:orderListVC animated:YES];
-            
-//            [self.navigationController pushViewController:orderListVC animated:YES];
 
-            
-//            GBOrderListViewController *orderListVC = [[GBOrderListViewController alloc] init];
-//            [self.navigationController pushViewController:orderListVC animated:YES];
-            */
-            
-            AllOrderListViewController *orderListVC = nil;
-            
-//            if([SNSwitch isOpenShopOrderList] == YES)
-//            {
-//                orderListVC = [[AllOrderListViewController alloc]initWithData:@"A" WithSelect:eTuanGouOrderList];
-//                
-//                orderListVC.selectRow = eTuanGouOrderList;
-//                
-//            }
-//            else
-//            {
-                orderListVC = [[AllOrderListViewController alloc]init];
-                
-                
-//            }
-            
-            orderListVC.hidesBottomBarWhenPushed = YES;
-            
-            [BBSideBarViewController backToEbuyAnimated:NO];
-            
-            [[AppDelegate currentAppDelegate].tabBarViewController setSelectedIndex:4];
-            
-            UINavigationController *vc = [[AppDelegate currentAppDelegate].tabBarViewController.viewControllers safeObjectAtIndex:4];
-            
-            [vc popToRootViewControllerAnimated:NO];
-            [vc pushViewController:orderListVC  animated:NO];
-
-        }];
-        
-        [alert1 show];
-        
-    }
-    else{
-        
-        [self presentSheet:service.errorMsg posY:50];
-    }
-}
 -(void)okAction:(UIButton *)btn{
     
     

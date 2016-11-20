@@ -20,7 +20,6 @@
 #import "SNActivityViewController.h"
 #import "ProductDetailViewController.h"
 #import "BBSideBarViewController.h"
-#import "AllOrderListViewController.h"
 #import "SearchListViewController.h"
 #import "AdModel2ViewController.h"
 #import "AdModel3ViewController.h"
@@ -668,12 +667,12 @@
     };
 }
 
-//29, 1031
+//29, 1031 所有订单
 - (void)routeOrderAll:(SNRouterObject *)obj
 {
-    AllOrderListViewController *orderListVC = [[AllOrderListViewController alloc]init];
-    obj.targetController = orderListVC;
-    obj.defaultTabIndex = kMyEbuyTabIndex;
+//    AllOrderListViewController *orderListVC = [[AllOrderListViewController alloc]init];
+//    obj.targetController = orderListVC;
+//    obj.defaultTabIndex = kMyEbuyTabIndex;
 }
 
 //30，可详细定制搜索的内容
@@ -1463,13 +1462,13 @@
 //    obj.defaultTabIndex = kMyEbuyTabIndex;
 }
 
-//1032
+//1032 所有订单
 - (void)routeOrderToBePaid:(SNRouterObject *)obj
 {
-    AllOrderListViewController *orderListVC = [[AllOrderListViewController alloc]init];
-
-    obj.targetController = orderListVC;
-    obj.defaultTabIndex = kMyEbuyTabIndex;
+//    AllOrderListViewController *orderListVC = [[AllOrderListViewController alloc]init];
+//
+//    obj.targetController = orderListVC;
+//    obj.defaultTabIndex = kMyEbuyTabIndex;
 }
 
 //1033
@@ -1499,14 +1498,14 @@
     obj.defaultTabIndex = kMyEbuyTabIndex;
 }
 
-//1034
+//1034 所有订单
 - (void)routeOrderUponReceipt:(SNRouterObject *)obj
 {
-    AllOrderListViewController *orderListVC = [[AllOrderListViewController alloc]init];
-    
-    
-    obj.targetController = orderListVC;
-    obj.defaultTabIndex = kMyEbuyTabIndex;
+//    AllOrderListViewController *orderListVC = [[AllOrderListViewController alloc]init];
+//    
+//    
+//    obj.targetController = orderListVC;
+//    obj.defaultTabIndex = kMyEbuyTabIndex;
 }
 
 //1035 物流详情

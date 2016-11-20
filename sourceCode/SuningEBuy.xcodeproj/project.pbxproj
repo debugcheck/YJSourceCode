@@ -2359,7 +2359,6 @@
 		F634F34D1797DCEF002931D8 /* AdModel4Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = F634F34C1797DCEF002931D8 /* AdModel4Cell.m */; };
 		F634F3501797E10F002931D8 /* AdModel6Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = F634F34F1797E10F002931D8 /* AdModel6Cell.m */; };
 		F63B1E2218AB41DD008EE98F /* OrderNum@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F63B1E2118AB41DD008EE98F /* OrderNum@2x.png */; };
-		F63B300F189742C20096DFFB /* AllOrderListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F63B300E189742C20096DFFB /* AllOrderListViewController.m */; };
 		F63D34E11809533B00CE9B05 /* SellerListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F63D34E01809533A00CE9B05 /* SellerListViewController.m */; };
 		F63D7F9A18A86A76000651EE /* AllOrderDetailCommonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F63D7F9918A86A76000651EE /* AllOrderDetailCommonViewController.m */; };
 		F63D7FA118A871FE000651EE /* OrderDetailBottomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F63D7FA018A871FE000651EE /* OrderDetailBottomCell.m */; };
@@ -6145,8 +6144,6 @@
 		F634F34E1797E10F002931D8 /* AdModel6Cell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdModel6Cell.h; sourceTree = "<group>"; };
 		F634F34F1797E10F002931D8 /* AdModel6Cell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdModel6Cell.m; sourceTree = "<group>"; };
 		F63B1E2118AB41DD008EE98F /* OrderNum@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "OrderNum@2x.png"; sourceTree = "<group>"; };
-		F63B300D189742C20096DFFB /* AllOrderListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllOrderListViewController.h; sourceTree = "<group>"; };
-		F63B300E189742C20096DFFB /* AllOrderListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllOrderListViewController.m; sourceTree = "<group>"; };
 		F63D34DF1809533900CE9B05 /* SellerListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SellerListViewController.h; sourceTree = "<group>"; };
 		F63D34E01809533A00CE9B05 /* SellerListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SellerListViewController.m; sourceTree = "<group>"; };
 		F63D7F9818A86A76000651EE /* AllOrderDetailCommonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllOrderDetailCommonViewController.h; sourceTree = "<group>"; };
@@ -14228,8 +14225,6 @@
 				6C903FE515F8A14A000EED8B /* OrderDetailViewController.m */,
 				F6C1CC7A1894A3C200629228 /* ProOrderListViewController.h */,
 				F6C1CC7B1894A3C200629228 /* ProOrderListViewController.m */,
-				F63B300D189742C20096DFFB /* AllOrderListViewController.h */,
-				F63B300E189742C20096DFFB /* AllOrderListViewController.m */,
 				F63D7F9818A86A76000651EE /* AllOrderDetailCommonViewController.h */,
 				F63D7F9918A86A76000651EE /* AllOrderDetailCommonViewController.m */,
 				F64302D318AD167200A31E1E /* AllOrderListPageFreshViewController.h */,
@@ -15664,7 +15659,6 @@
 				04BD938415DC7DA900BA623C /* AppDelegate.m in Sources */,
 				04BD940415DC8D2B00BA623C /* SNReaderViewController.m in Sources */,
 				7C38751819D3D626006654ED /* HomeFloorDTO.m in Sources */,
-				F63B300F189742C20096DFFB /* AllOrderListViewController.m in Sources */,
 				04BD941915DC8E1E00BA623C /* SFHFKeychainUtils.m in Sources */,
 				04BD941A15DC8E1E00BA623C /* WBAuthorize.m in Sources */,
 				F00C52E618D6A64F000BF82A /* OrderDetailView.m in Sources */,

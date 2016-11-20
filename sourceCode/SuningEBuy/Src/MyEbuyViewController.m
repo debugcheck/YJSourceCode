@@ -47,9 +47,6 @@
 
 #import "JASidePanelController.h"
 
-
-#import "AllOrderListViewController.h"
-
 #import "HotelOrderListViewController.h"
 #import "UIImage-Extensions.h"
 
@@ -307,7 +304,6 @@
             [self queryUserImage];
         }
         [self ordersNumber];
-        [self getEvalutionNumber];
     }
 
     if (self.userImageView1.image == nil)
@@ -560,22 +556,6 @@
         [[PerformanceStatistics sharePerformanceStatistics].arrayData addObject:temp];
     }
     [self.orderNumberService beginGetOrdersNumberInfo:@"" catalogId:@""];
-}
-
-//待评价请求
--(void)getEvalutionNumber
-{
-    if (KPerformance)
-    {
-        PerformanceStatisticsData* temp = [[PerformanceStatisticsData alloc] init];
-        temp.startTime = [NSDate date];
-        temp.functionId = @"4";
-        temp.interfaceId = @"404";
-        temp.taskId = @"1004";
-        temp.count = 3;
-        [[PerformanceStatistics sharePerformanceStatistics].arrayData addObject:temp];
-    }
-    [self.evalutionNumberService getEvalutionListHttp:1];
 }
 
 //是否登录
@@ -944,25 +924,6 @@
     
     [self presentModalViewController:nav animated:YES];
     
-}
-
-#pragma mark buttonaction
-//待支付
--(void)waitePayBtnAction{
-    
-    AllOrderListViewController *orderListVC = [[AllOrderListViewController alloc]init];
-    
-    
-    [self.navigationController pushViewController:orderListVC animated:YES];
-    TT_RELEASE_SAFELY(orderListVC);
-}
-
-//待收货
--(void)waiteReceiveBtnAction{
-//    AllOrderListViewController *orderListVC = [[AllOrderListViewController alloc]initWithData:@"C000"];
-    AllOrderListViewController *orderListVC = [[AllOrderListViewController alloc]init];//@"C000" WithSelect:eProductOrderList];
-    [self.navigationController pushViewController:orderListVC animated:YES];
-    TT_RELEASE_SAFELY(orderListVC);
 }
 
 /*
