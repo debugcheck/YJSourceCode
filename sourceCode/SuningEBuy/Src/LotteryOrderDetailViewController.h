@@ -10,7 +10,6 @@
 #import "LotteryOrderDetailDto.h"
 #import "LotteryOrderDetailService.h"
 #import "ArrangeListViewController.h"
-#import "SevenStarsListViewController.h"
 #import "PageRefreshTableViewController.h"
 #import "LotteryHallService.h"
 #import "CouponService.h"

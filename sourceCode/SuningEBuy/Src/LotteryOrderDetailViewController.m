@@ -17,8 +17,6 @@
 #import "OrderDetailLotteryNumberView.h"
 #import "LotteryDataModel.h"
 #import "ArrangeBallViewController.h"
-#import "SevenLeListViewController.h"
-#import "SevenStarsListViewController.h"
 #import "LoginViewController.h"
 #import "AuthManagerNavViewController.h"
 
@@ -44,27 +42,8 @@
 @implementation LotteryOrderDetailViewController
 
 
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{    
 
-    SevenLeListViewController *controller = [[SevenLeListViewController alloc]initWIthTitle:L(@"Seven Le Lottery") andLotteryTimes:@"2" andEndTime:@"2016-10-12"];
-    controller.multiple = 1;
-    controller.periods = 1;
-    controller.isStopBuyWhenWin = NO;
-    controller.isFromOrder = YES;
-    controller.lotteryHallDto = nil;
-    
-    [self.navigationController pushViewController:controller animated:YES];
-    
-    
-//    SevenStarsListViewController *controller = [[SevenStarsListViewController alloc]initWithLotteryTimes:tempDto.nowpid andEndTime:tempDto.nowendtime];
-//    controller.lotteryhallDto = tempDto;
-//    controller.multiNo = @"1";
-//    controller.periods = @"1";
-//    controller.isBuyWhenWin = NO;
-//    controller.isFromOrder = YES;
-//    [controller decodeSubmitCodes:[_orderService getCcodes]];
-//    
-//    [self.navigationController pushViewController:controller animated:YES];
     
 //    ArrangeListViewController *controller = [[ArrangeListViewController alloc] initWithLotteryHallDto:tempDto andLotteryOrderListDto:dto isFromOrder:YES];
 //    TT_RELEASE_SAFELY(dto);

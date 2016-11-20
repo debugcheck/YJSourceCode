@@ -13,7 +13,6 @@
 #import "LotterySelectBottomView.h"
 #import "SubmitLotteryDto.h"
 #import "ComputeLotteryNumber.h"
-#import "LotteryRuleViewController.h"
 #import "LotteryMotionControl.h"
 
 @interface LottertSelectViewController(){
@@ -150,19 +149,6 @@
 }
 
 - (void)showGameRule:(id)sender{
-    
-    LotteryRuleViewController *controller = [[LotteryRuleViewController alloc] init];
-    
-    controller.lotteryType = lotteryType_;
-    
-    UIBarButtonItem *barButtonItem = [[UIBarButtonItem alloc] init];
-    barButtonItem.title = L(@"returnTo_myEuy");
-    self.navigationItem.backBarButtonItem = barButtonItem;
-    
-    [self.navigationController pushViewController:controller animated:YES];
-    
-    TT_RELEASE_SAFELY(controller);
-    
 }
 
 - (void)backForePage {

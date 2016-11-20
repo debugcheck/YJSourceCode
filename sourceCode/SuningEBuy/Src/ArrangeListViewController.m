@@ -8,7 +8,6 @@
 
 #import "ArrangeListViewController.h"
 #import "LotteryListCell.h"
-#import "LotteryProtocolViewController.h"
 #import "ArrangeBallViewController.h"
 #import "LotteryPayPlugin.h"
 
@@ -527,11 +526,6 @@
 
 -(void)presentModalProtocolView
 {
-    LotteryProtocolViewController *controller = [[LotteryProtocolViewController alloc] initWithNameData:self.submitLotteryDto.productName];
-    
-    [self.navigationController pushViewController:controller animated:YES];
-    
-    TT_RELEASE_SAFELY(controller);
 }
 
 #pragma mark - ArrangeBallViewControllerDelegate

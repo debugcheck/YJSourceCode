@@ -114,8 +114,6 @@
 		044B415517C38D7400D9ED67 /* SNSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = 044B415417C38D7400D9ED67 /* SNSwitch.m */; };
 		044C6C901988F96F00B9F5D9 /* WebViewJavascriptBridge.js in Resources */ = {isa = PBXBuildFile; fileRef = 044C6C8E1988F96F00B9F5D9 /* WebViewJavascriptBridge.js */; };
 		044C6C911988F96F00B9F5D9 /* WebViewJavascriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 044C6C8F1988F96F00B9F5D9 /* WebViewJavascriptBridge.m */; };
-		0454637A1602CFDF00475A8F /* LotteryProtocolViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0454634C1602CFDF00475A8F /* LotteryProtocolViewController.m */; };
-		0454637B1602CFDF00475A8F /* LotteryRuleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0454634D1602CFDF00475A8F /* LotteryRuleViewController.m */; };
 		0454637C1602CFDF00475A8F /* LottertSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0454634E1602CFDF00475A8F /* LottertSelectViewController.m */; };
 		0454637E1602CFDF00475A8F /* LotteryListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 045463501602CFDF00475A8F /* LotteryListViewController.m */; };
 		0454637F1602CFDF00475A8F /* LotteryPayRequestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 045463511602CFDF00475A8F /* LotteryPayRequestModel.m */; };
@@ -1172,7 +1170,6 @@
 		6AF3AD0D174CCC06000EB86C /* ScanHistoryProductCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AF3AD0C174CCC05000EB86C /* ScanHistoryProductCell.m */; };
 		6AF9735D18AB1361001824C7 /* CategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AF9735C18AB1361001824C7 /* CategoryCell.m */; };
 		6AF9736118AB19A0001824C7 /* CategoryBaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AF9736018AB19A0001824C7 /* CategoryBaseCell.m */; };
-		6C0D579915F4AFAC00EAEFF5 /* NoticeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C0D579815F4AFAC00EAEFF5 /* NoticeViewController.m */; };
 		6C0D579D15F4AFB600EAEFF5 /* NoticeItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C0D579C15F4AFB600EAEFF5 /* NoticeItemCell.m */; };
 		6C11698216E454970028C6B9 /* GBOrderDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C11698116E454970028C6B9 /* GBOrderDetailViewController.m */; };
 		6C1941C915F75A4D00C3B456 /* OrderListItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C1941C815F75A4D00C3B456 /* OrderListItemCell.m */; };
@@ -1837,8 +1834,6 @@
 		9C3AF13D18BF1F6C00A3C681 /* SearchSegment_downArrowRed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C3AF13918BF1F6C00A3C681 /* SearchSegment_downArrowRed@2x.png */; };
 		9C3AF13E18BF1F6C00A3C681 /* SearchSegment_upArrowGray@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C3AF13A18BF1F6C00A3C681 /* SearchSegment_upArrowGray@2x.png */; };
 		9C3AF13F18BF1F6C00A3C681 /* SearchSegment_upArrowRed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C3AF13B18BF1F6C00A3C681 /* SearchSegment_upArrowRed@2x.png */; };
-		9C415A84176332BF00405FDE /* SevenStarsSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C415A81176332BF00405FDE /* SevenStarsSelectViewController.m */; };
-		9C415A85176332BF00405FDE /* SevenStarsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C415A83176332BF00405FDE /* SevenStarsListViewController.m */; };
 		9C415A8C1763330400405FDE /* SevenStarsChooseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C415A871763330400405FDE /* SevenStarsChooseView.m */; };
 		9C415A8D1763330400405FDE /* SevenStarsBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C415A891763330400405FDE /* SevenStarsBottomView.m */; };
 		9C415A8E1763330400405FDE /* SevenStarsListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C415A8B1763330400405FDE /* SevenStarsListCell.m */; };
@@ -1853,8 +1848,6 @@
 		9C415AB41763458300405FDE /* SevenLeSelectBallView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C415AAE1763458300405FDE /* SevenLeSelectBallView.m */; };
 		9C415AB51763458300405FDE /* SevenLeBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C415AB01763458300405FDE /* SevenLeBottomView.m */; };
 		9C415AB61763458300405FDE /* ChooseSevenLeListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C415AB21763458300405FDE /* ChooseSevenLeListCell.m */; };
-		9C415ABB1763459400405FDE /* SevenLeSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C415AB81763459400405FDE /* SevenLeSelectViewController.m */; };
-		9C415ABC1763459400405FDE /* SevenLeListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C415ABA1763459400405FDE /* SevenLeListViewController.m */; };
 		9C415ABF176395A000405FDE /* LotteryRuleTopSelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C415ABE1763959E00405FDE /* LotteryRuleTopSelectView.m */; };
 		9C415AC7176395FD00405FDE /* GameRule.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C415AC0176395FD00405FDE /* GameRule.plist */; };
 		9C415AC8176395FD00405FDE /* GameRuleBigLottery.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C415AC1176395FD00405FDE /* GameRuleBigLottery.plist */; };
@@ -2594,8 +2587,6 @@
 		044C6C8D1988F96F00B9F5D9 /* WebViewJavascriptBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewJavascriptBridge.h; sourceTree = "<group>"; };
 		044C6C8E1988F96F00B9F5D9 /* WebViewJavascriptBridge.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = WebViewJavascriptBridge.js; sourceTree = "<group>"; };
 		044C6C8F1988F96F00B9F5D9 /* WebViewJavascriptBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewJavascriptBridge.m; sourceTree = "<group>"; };
-		0454634C1602CFDF00475A8F /* LotteryProtocolViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LotteryProtocolViewController.m; sourceTree = "<group>"; };
-		0454634D1602CFDF00475A8F /* LotteryRuleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LotteryRuleViewController.m; sourceTree = "<group>"; };
 		0454634E1602CFDF00475A8F /* LottertSelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LottertSelectViewController.m; sourceTree = "<group>"; };
 		045463501602CFDF00475A8F /* LotteryListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LotteryListViewController.m; sourceTree = "<group>"; };
 		045463511602CFDF00475A8F /* LotteryPayRequestModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LotteryPayRequestModel.m; sourceTree = "<group>"; };
@@ -2611,7 +2602,6 @@
 		0454635B1602CFDF00475A8F /* LotteryFootView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LotteryFootView.m; sourceTree = "<group>"; };
 		0454635C1602CFDF00475A8F /* LotteryListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LotteryListViewController.h; sourceTree = "<group>"; };
 		0454635D1602CFDF00475A8F /* LotteryProtocolCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LotteryProtocolCell.h; sourceTree = "<group>"; };
-		0454635E1602CFDF00475A8F /* LotteryProtocolViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LotteryProtocolViewController.h; sourceTree = "<group>"; };
 		0454635F1602CFDF00475A8F /* SubmitLotteryDto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubmitLotteryDto.h; sourceTree = "<group>"; };
 		045463601602CFDF00475A8F /* SubmitLotteryDto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubmitLotteryDto.m; sourceTree = "<group>"; };
 		045463631602CFDF00475A8F /* ChooseDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChooseDate.h; sourceTree = "<group>"; };
@@ -2627,7 +2617,6 @@
 		0454636F1602CFDF00475A8F /* LotteryPayCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LotteryPayCell.h; sourceTree = "<group>"; };
 		045463701602CFDF00475A8F /* LotteryPayCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LotteryPayCell.m; sourceTree = "<group>"; };
 		045463721602CFDF00475A8F /* LotteryProtocol.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = LotteryProtocol.plist; sourceTree = "<group>"; };
-		045463731602CFDF00475A8F /* LotteryRuleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LotteryRuleViewController.h; sourceTree = "<group>"; };
 		045463741602CFDF00475A8F /* LotterySelectBallView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LotterySelectBallView.h; sourceTree = "<group>"; };
 		045463751602CFDF00475A8F /* LotterySelectBallView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LotterySelectBallView.m; sourceTree = "<group>"; };
 		045463761602CFDF00475A8F /* LotterySelectBottomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LotterySelectBottomView.h; sourceTree = "<group>"; };
@@ -4300,8 +4289,6 @@
 		6AF9735C18AB1361001824C7 /* CategoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryCell.m; sourceTree = "<group>"; };
 		6AF9735F18AB19A0001824C7 /* CategoryBaseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryBaseCell.h; sourceTree = "<group>"; };
 		6AF9736018AB19A0001824C7 /* CategoryBaseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryBaseCell.m; sourceTree = "<group>"; };
-		6C0D579715F4AFAC00EAEFF5 /* NoticeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoticeViewController.h; sourceTree = "<group>"; };
-		6C0D579815F4AFAC00EAEFF5 /* NoticeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoticeViewController.m; sourceTree = "<group>"; };
 		6C0D579B15F4AFB600EAEFF5 /* NoticeItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoticeItemCell.h; sourceTree = "<group>"; };
 		6C0D579C15F4AFB600EAEFF5 /* NoticeItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoticeItemCell.m; sourceTree = "<group>"; };
 		6C11698016E454960028C6B9 /* GBOrderDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBOrderDetailViewController.h; sourceTree = "<group>"; };
@@ -5353,10 +5340,6 @@
 		9C3AF13918BF1F6C00A3C681 /* SearchSegment_downArrowRed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SearchSegment_downArrowRed@2x.png"; sourceTree = "<group>"; };
 		9C3AF13A18BF1F6C00A3C681 /* SearchSegment_upArrowGray@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SearchSegment_upArrowGray@2x.png"; sourceTree = "<group>"; };
 		9C3AF13B18BF1F6C00A3C681 /* SearchSegment_upArrowRed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SearchSegment_upArrowRed@2x.png"; sourceTree = "<group>"; };
-		9C415A80176332BF00405FDE /* SevenStarsSelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SevenStarsSelectViewController.h; sourceTree = "<group>"; };
-		9C415A81176332BF00405FDE /* SevenStarsSelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SevenStarsSelectViewController.m; sourceTree = "<group>"; };
-		9C415A82176332BF00405FDE /* SevenStarsListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SevenStarsListViewController.h; sourceTree = "<group>"; };
-		9C415A83176332BF00405FDE /* SevenStarsListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SevenStarsListViewController.m; sourceTree = "<group>"; };
 		9C415A861763330400405FDE /* SevenStarsChooseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SevenStarsChooseView.h; sourceTree = "<group>"; };
 		9C415A871763330400405FDE /* SevenStarsChooseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SevenStarsChooseView.m; sourceTree = "<group>"; };
 		9C415A881763330400405FDE /* SevenStarsBottomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SevenStarsBottomView.h; sourceTree = "<group>"; };
@@ -5385,10 +5368,6 @@
 		9C415AB01763458300405FDE /* SevenLeBottomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SevenLeBottomView.m; sourceTree = "<group>"; };
 		9C415AB11763458300405FDE /* ChooseSevenLeListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChooseSevenLeListCell.h; sourceTree = "<group>"; };
 		9C415AB21763458300405FDE /* ChooseSevenLeListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChooseSevenLeListCell.m; sourceTree = "<group>"; };
-		9C415AB71763459400405FDE /* SevenLeSelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SevenLeSelectViewController.h; sourceTree = "<group>"; };
-		9C415AB81763459400405FDE /* SevenLeSelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SevenLeSelectViewController.m; sourceTree = "<group>"; };
-		9C415AB91763459400405FDE /* SevenLeListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SevenLeListViewController.h; sourceTree = "<group>"; };
-		9C415ABA1763459400405FDE /* SevenLeListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SevenLeListViewController.m; sourceTree = "<group>"; };
 		9C415ABD1763959D00405FDE /* LotteryRuleTopSelectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LotteryRuleTopSelectView.h; sourceTree = "<group>"; };
 		9C415ABE1763959E00405FDE /* LotteryRuleTopSelectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LotteryRuleTopSelectView.m; sourceTree = "<group>"; };
 		9C415AC0176395FD00405FDE /* GameRule.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = GameRule.plist; sourceTree = "<group>"; };
@@ -9032,8 +9011,6 @@
 				045463591602CFDF00475A8F /* ComputeLotteryNumber.m */,
 				0454635C1602CFDF00475A8F /* LotteryListViewController.h */,
 				045463501602CFDF00475A8F /* LotteryListViewController.m */,
-				0454635E1602CFDF00475A8F /* LotteryProtocolViewController.h */,
-				0454634C1602CFDF00475A8F /* LotteryProtocolViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -9073,8 +9050,6 @@
 			children = (
 				0454636A1602CFDF00475A8F /* LottertSelectViewController.h */,
 				0454634E1602CFDF00475A8F /* LottertSelectViewController.m */,
-				045463731602CFDF00475A8F /* LotteryRuleViewController.h */,
-				0454634D1602CFDF00475A8F /* LotteryRuleViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -10208,8 +10183,6 @@
 			children = (
 				610D24A817641D7000009706 /* HistoryLotteryCodeViewController.h */,
 				610D24A917641D7000009706 /* HistoryLotteryCodeViewController.m */,
-				6C0D579715F4AFAC00EAEFF5 /* NoticeViewController.h */,
-				6C0D579815F4AFAC00EAEFF5 /* NoticeViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -13041,20 +13014,8 @@
 			isa = PBXGroup;
 			children = (
 				9C415A7F176332A500405FDE /* View */,
-				9C415A7E1763329E00405FDE /* Controller */,
 			);
 			name = SevenStars;
-			sourceTree = "<group>";
-		};
-		9C415A7E1763329E00405FDE /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				9C415A80176332BF00405FDE /* SevenStarsSelectViewController.h */,
-				9C415A81176332BF00405FDE /* SevenStarsSelectViewController.m */,
-				9C415A82176332BF00405FDE /* SevenStarsListViewController.h */,
-				9C415A83176332BF00405FDE /* SevenStarsListViewController.m */,
-			);
-			name = Controller;
 			sourceTree = "<group>";
 		};
 		9C415A7F176332A500405FDE /* View */ = {
@@ -13119,20 +13080,8 @@
 			isa = PBXGroup;
 			children = (
 				9C415AAA1763456F00405FDE /* View */,
-				9C415AA91763456700405FDE /* Controller */,
 			);
 			name = SevenLe;
-			sourceTree = "<group>";
-		};
-		9C415AA91763456700405FDE /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				9C415AB71763459400405FDE /* SevenLeSelectViewController.h */,
-				9C415AB81763459400405FDE /* SevenLeSelectViewController.m */,
-				9C415AB91763459400405FDE /* SevenLeListViewController.h */,
-				9C415ABA1763459400405FDE /* SevenLeListViewController.m */,
-			);
-			name = Controller;
 			sourceTree = "<group>";
 		};
 		9C415AAA1763456F00405FDE /* View */ = {
@@ -15841,7 +15790,6 @@
 				04DF05FA15F50C7B0071152B /* CityPickViewController.m in Sources */,
 				04DF05FD15F50C940071152B /* FilterPickViewController.m in Sources */,
 				04DF060015F50CA70071152B /* FilterPickSecondViewController.m in Sources */,
-				6C0D579915F4AFAC00EAEFF5 /* NoticeViewController.m in Sources */,
 				6C0D579D15F4AFB600EAEFF5 /* NoticeItemCell.m in Sources */,
 				63532B2118ABF4F800CA9000 /* BoardingItemCell.m in Sources */,
 				04DF061515F527730071152B /* PickCommonViewController.m in Sources */,
@@ -15922,9 +15870,7 @@
 				04127A9E1602328400E37608 /* ProductParamInfoCell.m in Sources */,
 				D8BC57001A10D4A70046BED2 /* ZYQAssetPickerController.m in Sources */,
 				04127A9F1602328400E37608 /* productInfoDescribeCell.m in Sources */,
-				0454637A1602CFDF00475A8F /* LotteryProtocolViewController.m in Sources */,
 				04841CB31869A21500576A32 /* NOrderContactCell.m in Sources */,
-				0454637B1602CFDF00475A8F /* LotteryRuleViewController.m in Sources */,
 				0454637C1602CFDF00475A8F /* LottertSelectViewController.m in Sources */,
 				BF84E2C2193399CC004282A6 /* ReceiveInfoShopRemarkCell.m in Sources */,
 				0454637E1602CFDF00475A8F /* LotteryListViewController.m in Sources */,
@@ -16466,8 +16412,6 @@
 				7CE3F8CD19DA617900CF765F /* NBYDaShangViewController.m in Sources */,
 				9C5CB4F8175F58D0003460F0 /* Welfare3DListCell.m in Sources */,
 				9C5CB4FB175F59AA003460F0 /* LotteryListFootView.m in Sources */,
-				9C415A84176332BF00405FDE /* SevenStarsSelectViewController.m in Sources */,
-				9C415A85176332BF00405FDE /* SevenStarsListViewController.m in Sources */,
 				D87935ED1A1363F600B801B9 /* HDZoomingView.m in Sources */,
 				9C415A8C1763330400405FDE /* SevenStarsChooseView.m in Sources */,
 				9C415A8D1763330400405FDE /* SevenStarsBottomView.m in Sources */,
@@ -16487,8 +16431,6 @@
 				9C415AB41763458300405FDE /* SevenLeSelectBallView.m in Sources */,
 				9C415AB51763458300405FDE /* SevenLeBottomView.m in Sources */,
 				9C415AB61763458300405FDE /* ChooseSevenLeListCell.m in Sources */,
-				9C415ABB1763459400405FDE /* SevenLeSelectViewController.m in Sources */,
-				9C415ABC1763459400405FDE /* SevenLeListViewController.m in Sources */,
 				F6C1CC8D1894F1A300629228 /* NProOrderLastCell.m in Sources */,
 				04841CBA1869E3E700576A32 /* AddCouponViewController.m in Sources */,
 				9C415ABF176395A000405FDE /* LotteryRuleTopSelectView.m in Sources */,

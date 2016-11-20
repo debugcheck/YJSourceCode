@@ -39,20 +39,13 @@
 #import "LotteryHallViewController.h"
 #import "Welfare3DSelectViewController.h"
 #import "Welfare3DListViewController.h"
-#import "SevenLeListViewController.h"
-#import "SevenLeSelectViewController.h"
 #import "ArrangeListViewController.h"
 #import "ArrangeBallViewController.h"
-#import "SevenStarsListViewController.h"
-#import "SevenStarsSelectViewController.h"
-#import "NoticeViewController.h"
 #import "HistoryLotteryCodeViewController.h"
 #import "LotteryOrderDetailViewController.h"
 #import "LotteryDealsViewController.h"
 #import "LotteryListViewController.h"
-#import "LotteryProtocolViewController.h"
 #import "LottertSelectViewController.h"
-#import "LotteryRuleViewController.h"
 #import "JASidePanelController.h"
 #import "SNGraphics.h"
 #import "UIColor+Helper.h"
@@ -119,20 +112,17 @@ static NSArray *lotteryClassArray = nil;
                               [LotteryHallViewController class],
                               [Welfare3DListViewController class],
                               [Welfare3DSelectViewController class],
-                              [SevenLeListViewController class],
-                              [SevenLeSelectViewController class],
+                
                               [ArrangeBallViewController class],
                               [ArrangeListViewController class],
-                              [SevenStarsListViewController class],
-                              [SevenStarsSelectViewController class],
-                              [NoticeViewController class],
+                              
                               [HistoryLotteryCodeViewController class],
                               [LotteryOrderDetailViewController class],
                               [LotteryDealsViewController class],
                               [LotteryListViewController class],
-                              [LotteryProtocolViewController class],
+                              
                               [LottertSelectViewController class],
-                              [LotteryRuleViewController class],
+                              
                               nil];
     }
 }

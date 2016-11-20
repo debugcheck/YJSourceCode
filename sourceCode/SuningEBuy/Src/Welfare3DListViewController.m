@@ -13,7 +13,6 @@
 #import "LotteryDataModel.h"
 #import "LottertSelectViewController.h"
 #import "ComputeLotteryNumber.h"
-#import "LotteryProtocolViewController.h"
 #import "LotteryHallViewController.h"
 #import "Welfare3DSelectViewController.h"
 #import "LotteryPayPlugin.h"
@@ -1172,13 +1171,7 @@
 #pragma mark - LotteryProtocolCellDelegate
 
 - (void)presentModalProtocolView{
-    
-    LotteryProtocolViewController *controller = [[LotteryProtocolViewController alloc] initWithNameData:_titleString];
-    
-    [self.navigationController pushViewController:controller animated:YES];
-    
-    TT_RELEASE_SAFELY(controller);
-    
+        
 }
 
 #pragma mark -CouponServiceDelegate

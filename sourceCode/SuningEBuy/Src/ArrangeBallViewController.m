@@ -9,7 +9,6 @@
 #import "ArrangeBallViewController.h"
 #import "ArrangeListViewController.h"
 #import <AudioToolbox/AudioServices.h>
-#import "LotteryRuleViewController.h"
 #import "LotteryDataModel.h"
 #import "LotteryHallViewController.h"
 
@@ -117,17 +116,6 @@
 
 - (void)showRule:(id)sender
 {
-    LotteryRuleViewController *controller = [[LotteryRuleViewController alloc] init];
-    
-    controller.lotteryType = [_arrangeBallSelectView getSelectionBallNumber].type;
-    
-    UIBarButtonItem *barButtonItem = [[UIBarButtonItem alloc] init];
-    barButtonItem.title = L(@"returnTo_myEuy");
-    self.navigationItem.backBarButtonItem = barButtonItem;
-    
-    [self.navigationController pushViewController:controller animated:YES];
-    
-    TT_RELEASE_SAFELY(controller);
 }
 
 - (void)viewWillAppear:(BOOL)animated

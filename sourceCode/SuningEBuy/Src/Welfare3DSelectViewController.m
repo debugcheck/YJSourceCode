@@ -9,7 +9,6 @@
 #import "Welfare3DSelectViewController.h"
 #import "LotteryDataModel.h"
 #import <AudioToolbox/AudioServices.h>
-#import "LotteryRuleViewController.h"
 #import "ComputeLotteryNumber.h"
 
 @interface Welfare3DSelectViewController(){
@@ -133,19 +132,6 @@
 
 
 - (void)showGameRule:(id)sender{
-    
-    LotteryRuleViewController *controller = [[LotteryRuleViewController alloc] init];
-    
-    controller.lotteryType = welfare3D;
-    
-    UIBarButtonItem *barButtonItem = [[UIBarButtonItem alloc] init];
-    barButtonItem.title = L(@"Back");
-    self.navigationItem.backBarButtonItem = barButtonItem;
-    
-    
-    [self.navigationController pushViewController:controller animated:YES];
-    
-    TT_RELEASE_SAFELY(controller);
     
 }
 

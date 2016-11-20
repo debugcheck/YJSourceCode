@@ -10,14 +10,11 @@
 #import "LotteryHallDto.h"
 #include "LotteryItemCell.h"
 #import "NoticeAndOrderCell.h"
-#import "NoticeViewController.h"
 #import "LotteryDealsViewController.h"
 #import "LotteryOrderDetailViewController.h"
 #import "LottertSelectViewController.h"
 #import "Welfare3DSelectViewController.h"
-#import "SevenStarsSelectViewController.h"
 #import "ArrangeBallViewController.h"
-#import "SevenLeSelectViewController.h"
 #import "MoreLotteryTypeCell.h"
 #import "SNSwitch.h"
 
@@ -388,16 +385,7 @@
         
         LotteryHallDto *dto = [self.lotteryCatArray objectAtIndex:index];
         
-        SevenStarsSelectViewController *sevenStars = [[SevenStarsSelectViewController alloc]init];
-        
-        sevenStars.lotteryHallDto = dto;
-        
-        sevenStars.hidesBottomBarWhenPushed = YES;
-        
-        [self.navigationController pushViewController:sevenStars animated:YES];
-        
-        TT_RELEASE_SAFELY(sevenStars);
-        
+               
     }
     //排列三
     else if([self.lotteryCatArray count]>4 && index == 4)
@@ -450,14 +438,6 @@
             return;
         }
         
-        SevenLeSelectViewController *sevenLe = [[SevenLeSelectViewController alloc] init];
-        
-        sevenLe.lotteryHallDto = dto;
-        
-        sevenLe.hidesBottomBarWhenPushed = YES;
-        
-        [self.navigationController pushViewController:sevenLe animated:YES];
-        
         
     }
     //开奖公告
@@ -469,12 +449,6 @@
             [self presentSheet:L(@"LOPleaseRefreshPage")];
             return;
         }
-        
-        NoticeViewController *ctrl = [[NoticeViewController alloc]init];
-        
-        ctrl.allLotteryArray = self.lotteryAllArray;
-        
-        [self.navigationController pushViewController:ctrl animated:YES];
         
         
     }

@@ -13,7 +13,6 @@
 #import "LotteryDataModel.h"
 #import "LottertSelectViewController.h"
 #import "ComputeLotteryNumber.h"
-#import "LotteryProtocolViewController.h"
 #import "LotteryHallViewController.h"
 #import "LotteryPayPlugin.h"
 
@@ -1203,11 +1202,6 @@
 
 - (void)presentModalProtocolView{
     
-    LotteryProtocolViewController *controller = [[LotteryProtocolViewController alloc] initWithNameData:_titleString];
-    
-    [self.navigationController pushViewController:controller animated:YES];
-    
-    TT_RELEASE_SAFELY(controller);
     
 }
 
