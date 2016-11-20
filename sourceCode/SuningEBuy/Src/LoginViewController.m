@@ -43,19 +43,6 @@
 
 @implementation LoginViewController
 
-@synthesize service = _service;
-
-@synthesize nextNavigationController = _nextNavigationController;
-@synthesize nextController = _nextController;
-
-@synthesize loginDelegate = _loginDelegate;
-@synthesize loginDidOkSelector = _loginDidOkSelector;
-@synthesize loginDidCancelSelector = _loginDidCancelSelector;
-
-@synthesize loginHistoryView = _loginHistoryView;
-@synthesize vipLable = _vipLable;
-@synthesize vipLable1 = _vipLable1;
-
 
 - (void)dealloc {
     
