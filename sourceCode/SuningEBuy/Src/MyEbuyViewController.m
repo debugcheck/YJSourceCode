@@ -32,7 +32,6 @@
 #import "AddressInfoListViewController.h"
 
 #import "EvaluationListViewController.h"
-#import "EvaluationViewController.h"
 #import "LotteryDealsViewController.h"
 
 #import "ServiceTrackListViewController.h"
@@ -121,7 +120,6 @@
 
 @property (nonatomic,strong) UIButton *waiteReceiveBtn;//待收货
 
-@property (nonatomic,strong) UIButton *waiteCommentBtn;
 
 @property (nonatomic,strong) UIButton *returnBtn;
 
@@ -150,9 +148,6 @@
 @property (nonatomic, strong) UIImageView *ReceiptNumber;//待收货
 @property (nonatomic, strong) UILabel     *receiptNumberLabel;//待收货
 
-@property (nonatomic, strong) UILabel    *commentNumberLabel;//待评价
-@property (nonatomic, strong) UIImageView *commentNumber;//待评价
-
 @property (nonatomic, strong) UILabel     *returnNumberLabel;//待退货
 @property (nonatomic, strong) UIImageView *returnNumber;//待退货
 
@@ -160,7 +155,6 @@
 @property (nonatomic, strong) NSString    *jifengLab;//云钻
 @property (nonatomic, strong) NSString    *quanLab;//云钻
 
-@property (nonatomic, copy) NSString  *evalutionNumber;//待评价数量
 @property (nonatomic, assign)BOOL isLogined;//待评价数量
 
 @property (nonatomic,strong) UIButton *userImageBtn;//按钮
@@ -293,7 +287,6 @@
     self.orderNumber.waitDeliveryCounts = @"";
     self.orderNumber.waitPayCounts = @"";
     self.orderNumber.ordersInReturnCounts = @"";
-    self.evalutionNumber = @"";
     
     isPressedActiveBtn = NO;
     
@@ -330,33 +323,8 @@
     self.orderNumber.waitDeliveryCounts = @"";
     self.orderNumber.waitPayCounts = @"";
     self.orderNumber.ordersInReturnCounts = @"";
-    self.evalutionNumber = @"";
 
     [self.tpTableView reloadData];
-    
-    //[self.navigationController.navigationBar setHidden:NO];
-}
-
-- (void)viewDidDisappear:(BOOL)animated
-{
-    [super viewDidDisappear:YES];
-}
-
-
-
-#pragma mark -自定义控件
-- (UILabel *)commentNumberLabel
-{
-    if (!_commentNumberLabel) {
-        _commentNumberLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 15, 15)];
-        _commentNumberLabel.backgroundColor = [UIColor clearColor];
-        _commentNumberLabel.textColor = [UIColor whiteColor];
-        _commentNumberLabel.textAlignment = NSTextAlignmentCenter;
-        _commentNumberLabel.text = @"";
-        _commentNumberLabel.adjustsFontSizeToFitWidth = YES;
-        _commentNumberLabel.font = [UIFont boldSystemFontOfSize:10.0f];
-    }
-    return  _commentNumberLabel;
 }
 
 - (UILabel *)returnNumberLabel
@@ -372,17 +340,6 @@
     }
     return  _returnNumberLabel;
 }
-
-- (UIImageView *)commentNumber
-{//待评价
-    if (!_commentNumber) {
-        _commentNumber = [[UIImageView alloc] initWithFrame:CGRectMake(45, 5, 15, 15)];
-        _commentNumber.backgroundColor = [UIColor clearColor];
-        [_commentNumber setImage:[UIImage imageNamed:@"productDetail_carNumber.png"]];
-    }
-    return _commentNumber;
-}
-
 
 - (UILabel *)payNumberLabel
 {
@@ -499,40 +456,6 @@
     }
     
     return _waiteReceiveBtn;
-}
-
-//待评价
--(UIButton*)waiteCommentBtn{
-    
-    if (!_waiteCommentBtn) {
-        
-        _waiteCommentBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        
-        // UIImage *settingImage = [UIImage imageNamed:@"New_SettingBtn.png"];
-        
-        _waiteCommentBtn.backgroundColor = [UIColor whiteColor];
-         [_waiteCommentBtn addTarget:self action:@selector(waiteCommentBtnAction) forControlEvents:UIControlEventTouchUpInside];
-        
-//        _waiteCommentBtn.titleLabel.font = [UIFont boldSystemFontOfSize:15];
-//        
-//        [_waiteCommentBtn setTitle:L(@"MyEBuy_WaitingForEvaluate") forState:UIControlStateNormal];
-        
-        [_waiteCommentBtn setTitleColor:[UIColor light_Black_Color] forState:UIControlStateNormal];
-        _waiteCommentBtn.frame = CGRectMake(161, 0, 79, 48.5);
-        
-        _waiteCommentBtn.tag = 1002;
-        UIImageView* v = [[UIImageView alloc] initWithFrame:CGRectMake(25,5, 30, 30)];
-        v.image = [UIImage imageNamed:@"dingdan-icon-daipingjia.png"];
-        UILabel* lab = [[UILabel alloc] initWithFrame:CGRectMake(20, 25, 40, 23.4)];
-        lab.text = L(@"MyEBuy_WaitingForEvaluate");
-        lab.backgroundColor = [UIColor clearColor];
-        lab.font = [UIFont boldSystemFontOfSize:12];
-        [_waiteCommentBtn addSubview:lab];
-        [_waiteCommentBtn addSubview:v];
-
-    }
-    
-    return _waiteCommentBtn;
 }
 
 //注册监听中心
@@ -667,7 +590,6 @@
     
     self.payNumberLabel.text = @"";
     self.receiptNumberLabel.text = @"";
-    self.commentNumberLabel.text = @"";
     self.returnNumberLabel.text = @"";
     LoginViewController *loginViewController = [[LoginViewController alloc] init];
 
@@ -801,7 +723,6 @@
     self.orderNumber.waitDeliveryCounts = @"";
     self.orderNumber.waitPayCounts = @"";
     self.orderNumber.ordersInReturnCounts = @"";
-    self.evalutionNumber = @"";
     [self.tpTableView reloadData];
 }
 
@@ -1044,13 +965,6 @@
     TT_RELEASE_SAFELY(orderListVC);
 }
 
-//待评论
--(void)waiteCommentBtnAction{
-    
-    [self gotoEvalution];
-}
-
-
 /*
 //设置订单数量提示信息
 - (void)setOrderNumberImage:(id)sender
@@ -1186,20 +1100,6 @@
     ServiceTrackListViewController *nextViewController = [[ServiceTrackListViewController alloc] init];
     [self.navigationController pushViewController:nextViewController animated:YES];
     TT_RELEASE_SAFELY(nextViewController);
-}
-
-
-//评价晒单
-- (void)gotoEvalution
-{
-    
-//    ProductDisOrderSubmitViewController *orderCenterVC = [[ProductDisOrderSubmitViewController alloc]init];
-    EvaluationViewController *orderCenterVC = [[EvaluationViewController alloc]init];
-   
-
-    [self.navigationController pushViewController:orderCenterVC animated:YES];
-    
-    TT_RELEASE_SAFELY(orderCenterVC);
 }
 
 //激活易付宝
@@ -1589,8 +1489,6 @@
     
     [v addSubview:self.waiteReceiveBtn];
     
-    [v addSubview:self.waiteCommentBtn];
-    
     [v addSubview:self.returnBtn];
     
     [self.payNumber addSubview:self.payNumberLabel];
@@ -1598,9 +1496,6 @@
     [self.waiteReceiveBtn addSubview:self.ReceiptNumber];
     
     [self.ReceiptNumber addSubview:self.receiptNumberLabel];
-    [self.waiteCommentBtn addSubview:self.commentNumber];
-    
-    [self.commentNumber addSubview:self.commentNumberLabel];
     
     
     [self.returnNumber addSubview:self.returnNumberLabel];
@@ -1629,17 +1524,6 @@
         }
         
         
-        if (IsStrEmpty(self.evalutionNumber) || [self.evalutionNumber isEqualToString:@"0"]) {
-            self.commentNumberLabel.hidden = YES;
-            self.commentNumber.hidden = YES;
-        }
-        else
-        {
-            self.commentNumber.hidden = NO;
-            self.commentNumberLabel.hidden = NO;
-            self.commentNumberLabel.text = self.evalutionNumber;
-        }
-        
         if (IsStrEmpty(self.orderNumber.ordersInReturnCounts)||[self.orderNumber.ordersInReturnCounts isEqualToString:@"0"])
         {
             self.returnNumber.hidden = YES;
@@ -1658,8 +1542,6 @@
         self.receiptNumberLabel.hidden = YES;
         self.payNumber.hidden = YES;
         self.payNumberLabel.hidden = YES;
-        self.commentNumberLabel.hidden = YES;
-        self.commentNumber.hidden = YES;
         self.returnNumber.hidden = YES;
         self.returnNumberLabel.hidden = YES;
         
@@ -1822,45 +1704,6 @@
         [self presentSheet:errorMsg posY:60];
     }
 }
-
-//待评价返回数据
-- (void)getEvalutionListCompletedWithResult:(BOOL)isSucced isLastPage:(BOOL)isLastPages errorCode:(NSString *)errorCode List:(NSArray *)array number:(NSString *)evalutionNumber
-{
-    if (isSucced)
-    {
-        if (KPerformance)
-        {
-            if ([PerformanceStatistics sharePerformanceStatistics].arrayData.count > 0)
-            {
-
-                [PerformanceStatistics sharePerformanceStatistics].countStatus += 1;
-
-                if ([PerformanceStatistics sharePerformanceStatistics].countStatus == [PerformanceStatistics sharePerformanceStatistics].arrayData.count)
-                {
-                    PerformanceStatisticsData* temp = [[PerformanceStatistics sharePerformanceStatistics].arrayData safeObjectAtIndex:2];
-                    temp.endTime = [NSDate date];
-                    [[PerformanceStatistics sharePerformanceStatistics]sendData:temp];
-                    [[PerformanceStatistics sharePerformanceStatistics].arrayData removeAllObjects];
-                }
-            }
-            
-        }
-        self.evalutionNumber = self.evalutionNumberService.totalOrderItemRecords;
-        if (IsStrEmpty(self.evalutionNumber)||[self.evalutionNumber isEqualToString:@"0"])
-        {
-            self.commentNumberLabel.hidden = YES;
-            self.commentNumber.hidden = YES;
-        }
-        else
-        {
-            self.commentNumber.hidden = NO;
-            self.commentNumberLabel.hidden = NO;
-            self.commentNumberLabel.text = [NSString stringWithFormat:@"%@",self.evalutionNumberService.totalOrderItemRecords];
-        }
-    }
-    [self.tpTableView reloadData];
-}
-
 
 #pragma mark -
 #pragma mark Properties Initialization Methods

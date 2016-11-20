@@ -32,7 +32,6 @@
 #import "PurchaseProductListViewController.h"
 #import "CheckInViewController.h"
 #import "MyEbuyViewController.h"
-#import "EvaluationViewController.h"
 #import "NewOrderSnxpressViewController.h"
 #import "ServiceDetailViewController.h"
 #import "AddressInfoListViewController.h"
@@ -1587,14 +1586,14 @@
     obj.defaultTabIndex = kMyEbuyTabIndex;
 }
 
-//1036
+//1036 // 待评价
 - (void)routeOrderToBeAppraise:(SNRouterObject *)obj
 {
-    EvaluationViewController *orderCenterVC = [[EvaluationViewController alloc] init];
-    orderCenterVC.hasNav = YES;
-    orderCenterVC.hidesBottomBarWhenPushed = YES;
-    obj.targetController = orderCenterVC;
-    obj.defaultTabIndex = kMyEbuyTabIndex;
+//    EvaluationViewController *orderCenterVC = [[EvaluationViewController alloc] init];
+//    orderCenterVC.hasNav = YES;
+//    orderCenterVC.hidesBottomBarWhenPushed = YES;
+//    obj.targetController = orderCenterVC;
+//    obj.defaultTabIndex = kMyEbuyTabIndex;
 }
 
 //1037 我要晒单

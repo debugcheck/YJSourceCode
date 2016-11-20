@@ -60,7 +60,6 @@
 #import "UIColor+Helper.h"
 #import "AllOrderListViewController.h"
 #import "AddressInfoListViewController.h"
-#import "EvaluationViewController.h"
 
 #import "NewSearchViewController.h"
 // TV扫描支付需要登录，XZoscar add,2014-05-04
@@ -111,7 +110,6 @@ static NSArray *lotteryClassArray = nil;
                                //[BrowsingHistoryViewController class],
                                //[AddressInfoListViewController class],
                                // [UserFeedBackController class],
-                               [EvaluationViewController class],
                                //[UserFeedBackNewViewController class],
                                [PaymentModeViewController  class], // TV扫码支付需要登录
                                //[MyCardViewController class],
