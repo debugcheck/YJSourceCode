@@ -115,8 +115,6 @@
 
 @property (nonatomic,strong) UIButton *waitePayBtn;//待支付
 
-@property (nonatomic,strong) UIButton *waiteReceiveBtn;//待收货
-
 
 @property (nonatomic,strong) UIButton *returnBtn;
 
@@ -142,9 +140,6 @@
 @property (nonatomic, strong) UIImageView *payNumber;//待支付
 @property (nonatomic, strong) UILabel     *payNumberLabel;//待支付
 
-@property (nonatomic, strong) UIImageView *ReceiptNumber;//待收货
-@property (nonatomic, strong) UILabel     *receiptNumberLabel;//待收货
-
 @property (nonatomic, strong) UILabel     *returnNumberLabel;//待退货
 @property (nonatomic, strong) UIImageView *returnNumber;//待退货
 
@@ -165,38 +160,6 @@
 
 
 @implementation MyEbuyViewController
-//@synthesize btnAndLblView = _btnAndLblView;
-@synthesize headLbl = _headLbl;
-//@synthesize headView = _headView;
-@synthesize footView = _footView;
-@synthesize userDiscountService = _userDiscountService;
-@synthesize userInfoView = _userInfoView;
-@synthesize myIntegralLbl = _myIntegralLbl;
-@synthesize myIntegralValLbl = _myIntegralValLbl;
-@synthesize advanceLbl = _advanceLbl;
-@synthesize advanceValLbl = _advanceValLbl;
-
-@synthesize userNameLbl = _userNameLbl;
-@synthesize userNameValLbl = _userNameValLbl;
-
-@synthesize changeUserImageBtn = _changeUserImageBtn;
-
-@synthesize userImage = _userImage;
-@synthesize userImageView = _userImageView;
-
-@synthesize payNumber = _payNumber;
-@synthesize ReceiptNumber = _ReceiptNumber;
-@synthesize payNumberLabel = _payNumberLabel;
-@synthesize receiptNumberLabel = _receiptNumberLabel;
-
-@synthesize returnNumberLabel =_returnNumberLabel;
-@synthesize returnNumber = _returnNumber;
-@synthesize jifenValLbl = _jifenValLbl;
-@synthesize dengjiImageView = _dengjiImageView;
-@synthesize YuELab = _YuELab;
-@synthesize jifengLab = _jifengLab;
-@synthesize quanLab = _quanLab;
-@synthesize jifenValBt = _jifenValBt;
 
 - (id)init {
     
@@ -351,20 +314,6 @@
     return  _payNumberLabel;
 }
 
-- (UILabel *)receiptNumberLabel
-{
-    if (!_receiptNumberLabel) {
-        _receiptNumberLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 15, 15)];
-        _receiptNumberLabel.backgroundColor = [UIColor clearColor];
-        _receiptNumberLabel.textColor = [UIColor whiteColor];
-        _receiptNumberLabel.textAlignment = NSTextAlignmentCenter;
-        _receiptNumberLabel.text = @"";
-        _receiptNumberLabel.adjustsFontSizeToFitWidth = YES;
-        _receiptNumberLabel.font = [UIFont boldSystemFontOfSize:10.0f];
-    }
-    return  _receiptNumberLabel;
-}
-
 - (UIImageView *)payNumber
 {//待支付
     if (!_payNumber) {
@@ -375,15 +324,6 @@
     return _payNumber;
 }
 
-- (UIImageView *)ReceiptNumber
-{//待收货
-    if (!_ReceiptNumber) {
-        _ReceiptNumber = [[UIImageView alloc] initWithFrame:CGRectMake(45, 5, 15, 15)];
-        _ReceiptNumber.backgroundColor = [UIColor clearColor];
-        [_ReceiptNumber setImage:[UIImage imageNamed:@"productDetail_carNumber.png"]];
-    }
-    return _ReceiptNumber;
-}
 
 //待支付
 -(UIButton*)waitePayBtn{
@@ -418,40 +358,6 @@
     }
     
     return _waitePayBtn;
-}
-
-//待收货
--(UIButton*)waiteReceiveBtn{
-    
-    if (!_waiteReceiveBtn) {
-        
-        _waiteReceiveBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        
-        // UIImage *settingImage = [UIImage imageNamed:@"New_SettingBtn.png"];
-        
-        _waiteReceiveBtn.backgroundColor = [UIColor whiteColor];
-         [_waiteReceiveBtn addTarget:self action:@selector(waiteReceiveBtnAction) forControlEvents:UIControlEventTouchUpInside];
-        
-//        _waiteReceiveBtn.titleLabel.font = [UIFont boldSystemFontOfSize:15];
-//        
-//        [_waiteReceiveBtn setTitle:L(@"MyEBuy_WaitingForReceive") forState:UIControlStateNormal];
-        
-        [_waiteReceiveBtn setTitleColor:[UIColor light_Black_Color] forState:UIControlStateNormal];
-        
-        _waiteReceiveBtn.frame = CGRectMake(81, 0, 79, 48.5);
-        
-        _waiteReceiveBtn.tag = 1001;
-        UIImageView* v = [[UIImageView alloc] initWithFrame:CGRectMake(25,5, 30, 30)];
-        v.image = [UIImage imageNamed:@"dingdan-icon-daishouhuo.png"];
-        UILabel* lab = [[UILabel alloc] initWithFrame:CGRectMake(20, 25, 40, 23.4)];
-        lab.text = L(@"MyEBuy_WaitingForReceive");
-        lab.backgroundColor = [UIColor clearColor];
-        lab.font = [UIFont boldSystemFontOfSize:12];
-        [_waiteReceiveBtn addSubview:lab];
-        [_waiteReceiveBtn addSubview:v];
-    }
-    
-    return _waiteReceiveBtn;
 }
 
 //注册监听中心
@@ -569,7 +475,6 @@
 -(void)loginBtnAction{
     
     self.payNumberLabel.text = @"";
-    self.receiptNumberLabel.text = @"";
     self.returnNumberLabel.text = @"";
     LoginViewController *loginViewController = [[LoginViewController alloc] init];
 
@@ -1448,30 +1353,19 @@
     
     [v addSubview:self.waitePayBtn];
     
-    [v addSubview:self.waiteReceiveBtn];
     
     [v addSubview:self.returnBtn];
     
     [self.payNumber addSubview:self.payNumberLabel];
-    
-    [self.waiteReceiveBtn addSubview:self.ReceiptNumber];
-    
-    [self.ReceiptNumber addSubview:self.receiptNumberLabel];
-    
     
     [self.returnNumber addSubview:self.returnNumberLabel];
     
     if([self isLogin])
     {
         if (IsStrEmpty(self.orderNumber.waitDeliveryCounts) || [self.orderNumber.waitDeliveryCounts isEqualToString:@"0"]) {
-            self.ReceiptNumber.hidden = YES;
-            self.receiptNumberLabel.hidden = YES;
         }
         else
         {
-            self.ReceiptNumber.hidden = NO;
-            self.receiptNumberLabel.hidden = NO;
-            self.receiptNumberLabel.text = self.orderNumber.waitDeliveryCounts;
         }
         if (IsStrEmpty(self.orderNumber.waitPayCounts) || [self.orderNumber.waitPayCounts isEqualToString:@"0"]) {
             self.payNumber.hidden = YES;
@@ -1499,8 +1393,6 @@
     }
     else
     {
-        self.ReceiptNumber.hidden = YES;
-        self.receiptNumberLabel.hidden = YES;
         self.payNumber.hidden = YES;
         self.payNumberLabel.hidden = YES;
         self.returnNumber.hidden = YES;
@@ -1603,14 +1495,9 @@
             self.orderNumber = dto;
             if (IsStrEmpty(self.orderNumber.waitDeliveryCounts) || [self.orderNumber.waitDeliveryCounts isEqualToString:@"0"])
             {
-                self.ReceiptNumber.hidden = YES;
-                self.receiptNumberLabel.hidden = YES;
             }
             else
             {
-                self.ReceiptNumber.hidden = NO;
-                self.receiptNumberLabel.hidden = NO;
-                self.receiptNumberLabel.text = self.orderNumber.waitDeliveryCounts;
             }
             if (IsStrEmpty(self.orderNumber.waitPayCounts) || [self.orderNumber.waitPayCounts isEqualToString:@"0"])
             {
