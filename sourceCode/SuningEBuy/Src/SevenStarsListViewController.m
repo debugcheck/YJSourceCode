@@ -665,11 +665,6 @@
             }
             else
             {
-                LotteryPayPageViewController *ctrl = [[LotteryPayPageViewController alloc]initWithSubmitLotteryDTO:self.submitLotteryDto];
-                
-                [self.navigationController pushViewController:ctrl animated:YES];
-                
-                TT_RELEASE_SAFELY(ctrl);
             }
         }
     } loginCancelBlock:nil];
@@ -1004,11 +999,6 @@
         }
         else
         {
-            LotteryPayPageViewController *ctrl = [[LotteryPayPageViewController alloc]initWithSubmitLotteryDTO:self.submitLotteryDto];
-            
-            [self.navigationController pushViewController:ctrl animated:YES];
-            
-            TT_RELEASE_SAFELY(ctrl);
         }
     }
     

@@ -28,7 +28,6 @@
 #import "ReceiveInfoViewController.h"
 #import "PayServicePaymentViewController.h"
 #import "HotelOrderSubmitViewController.h"
-#import "LotteryPayPageViewController.h"
 #import "GBPayViewController.h"
 #import "GBPayByEfubaoViewController.h"
 #import "GBOrderListViewController.h"
@@ -50,7 +49,6 @@
 #import "HistoryLotteryCodeViewController.h"
 #import "LotteryOrderDetailViewController.h"
 #import "LotteryDealsViewController.h"
-#import "LotteryPayPageViewController.h"
 #import "LotteryListViewController.h"
 #import "LotteryProtocolViewController.h"
 #import "LottertSelectViewController.h"
@@ -98,7 +96,7 @@ static NSArray *lotteryClassArray = nil;
                                [ReceiveInfoViewController class],
                                [PayServicePaymentViewController class],
                                [HotelOrderSubmitViewController class],
-                               [LotteryPayPageViewController class],
+
                                [GBPayViewController class],
                                [GBPayByEfubaoViewController class],
                                [GBOrderListViewController class],
@@ -131,7 +129,6 @@ static NSArray *lotteryClassArray = nil;
                               [HistoryLotteryCodeViewController class],
                               [LotteryOrderDetailViewController class],
                               [LotteryDealsViewController class],
-                              [LotteryPayPageViewController class],
                               [LotteryListViewController class],
                               [LotteryProtocolViewController class],
                               [LottertSelectViewController class],

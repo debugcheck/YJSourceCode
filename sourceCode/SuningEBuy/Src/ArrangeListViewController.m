@@ -9,7 +9,6 @@
 #import "ArrangeListViewController.h"
 #import "LotteryListCell.h"
 #import "LotteryProtocolViewController.h"
-#import "LotteryPayPageViewController.h"
 #import "ArrangeBallViewController.h"
 #import "LotteryPayPlugin.h"
 
@@ -413,11 +412,6 @@
             }
             else
             {
-                LotteryPayPageViewController *ctrl = [[LotteryPayPageViewController alloc]initWithSubmitLotteryDTO:self.submitLotteryDto];
-                
-                [self.navigationController pushViewController:ctrl animated:YES];
-                
-                TT_RELEASE_SAFELY(ctrl);
             }
         }else{
             self.submitLotteryDto.saleType = L(@"purchasing");
@@ -565,11 +559,6 @@
         }
         else
         {
-            LotteryPayPageViewController *ctrl = [[LotteryPayPageViewController alloc]initWithSubmitLotteryDTO:self.submitLotteryDto];
-            
-            [self.navigationController pushViewController:ctrl animated:YES];
-            
-            TT_RELEASE_SAFELY(ctrl);
         }
     }
     

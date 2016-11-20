@@ -9,7 +9,6 @@
 #import "SevenLeListViewController.h"
 #import "ChooseSevenLeListCell.h"
 #import "SettlementUtil.h"
-#import "LotteryPayPageViewController.h"
 #import "SubmitLotteryDto.h"
 #import "LotteryDataModel.h"
 #import "SevenLeSelectViewController.h"
@@ -30,13 +29,10 @@
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     
-//    LotteryPayPageViewController *ctrl = [[LotteryPayPageViewController alloc]initWithSubmitLotteryDTO:self.submitLotteryDto];
-//    
-//    [self.navigationController pushViewController:ctrl animated:YES];
     
-//    LotteryProtocolViewController *controller = [[LotteryProtocolViewController alloc] initWithNameData:_titleString];
-//    
-//    [self.navigationController pushViewController:controller animated:YES];
+    LotteryProtocolViewController *controller = [[LotteryProtocolViewController alloc] initWithNameData:_titleString];
+    
+    [self.navigationController pushViewController:controller animated:YES];
     
     
     

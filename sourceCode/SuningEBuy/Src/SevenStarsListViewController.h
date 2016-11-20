@@ -17,7 +17,6 @@
 #import "LotteryListFootView.h"
 #import "LotteryOrderDetailViewController.h"
 #import "LotteryProtocolViewController.h"
-#import "LotteryPayPageViewController.h"
 #import "CouponService.h"
 
 @protocol SevenStarsListViewControllerDelegate;

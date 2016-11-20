@@ -9,7 +9,6 @@
 #import "Welfare3DListViewController.h"
 #import "UserChooseLotteryCell.h"
 #import "SettlementUtil.h"
-#import "LotteryPayPageViewController.h"
 #import "SubmitLotteryDto.h"
 #import "LotteryDataModel.h"
 #import "LottertSelectViewController.h"
@@ -820,11 +819,6 @@
             }
             else
             {
-                LotteryPayPageViewController *ctrl = [[LotteryPayPageViewController alloc]initWithSubmitLotteryDTO:self.submitLotteryDto];
-                
-                [self.navigationController pushViewController:ctrl animated:YES];
-                
-                TT_RELEASE_SAFELY(ctrl);
             }
         }
     } loginCancelBlock:nil];
@@ -1204,11 +1198,6 @@
         }
         else
         {
-            LotteryPayPageViewController *ctrl = [[LotteryPayPageViewController alloc]initWithSubmitLotteryDTO:self.submitLotteryDto];
-            
-            [self.navigationController pushViewController:ctrl animated:YES];
-            
-            TT_RELEASE_SAFELY(ctrl);
         }
     }
     

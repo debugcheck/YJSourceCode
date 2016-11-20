@@ -117,7 +117,6 @@
 		0454637A1602CFDF00475A8F /* LotteryProtocolViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0454634C1602CFDF00475A8F /* LotteryProtocolViewController.m */; };
 		0454637B1602CFDF00475A8F /* LotteryRuleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0454634D1602CFDF00475A8F /* LotteryRuleViewController.m */; };
 		0454637C1602CFDF00475A8F /* LottertSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0454634E1602CFDF00475A8F /* LottertSelectViewController.m */; };
-		0454637D1602CFDF00475A8F /* LotteryPayPageViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0454634F1602CFDF00475A8F /* LotteryPayPageViewController.mm */; };
 		0454637E1602CFDF00475A8F /* LotteryListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 045463501602CFDF00475A8F /* LotteryListViewController.m */; };
 		0454637F1602CFDF00475A8F /* LotteryPayRequestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 045463511602CFDF00475A8F /* LotteryPayRequestModel.m */; };
 		045463801602CFDF00475A8F /* LotteryProtocolCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 045463531602CFDF00475A8F /* LotteryProtocolCell.m */; };
@@ -2598,7 +2597,6 @@
 		0454634C1602CFDF00475A8F /* LotteryProtocolViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LotteryProtocolViewController.m; sourceTree = "<group>"; };
 		0454634D1602CFDF00475A8F /* LotteryRuleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LotteryRuleViewController.m; sourceTree = "<group>"; };
 		0454634E1602CFDF00475A8F /* LottertSelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LottertSelectViewController.m; sourceTree = "<group>"; };
-		0454634F1602CFDF00475A8F /* LotteryPayPageViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LotteryPayPageViewController.mm; sourceTree = "<group>"; };
 		045463501602CFDF00475A8F /* LotteryListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LotteryListViewController.m; sourceTree = "<group>"; };
 		045463511602CFDF00475A8F /* LotteryPayRequestModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LotteryPayRequestModel.m; sourceTree = "<group>"; };
 		045463521602CFDF00475A8F /* LotteryPayRequestModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LotteryPayRequestModel.h; sourceTree = "<group>"; };
@@ -2628,7 +2626,6 @@
 		0454636E1602CFDF00475A8F /* LotteryDataModel.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LotteryDataModel.mm; sourceTree = "<group>"; };
 		0454636F1602CFDF00475A8F /* LotteryPayCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LotteryPayCell.h; sourceTree = "<group>"; };
 		045463701602CFDF00475A8F /* LotteryPayCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LotteryPayCell.m; sourceTree = "<group>"; };
-		045463711602CFDF00475A8F /* LotteryPayPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LotteryPayPageViewController.h; sourceTree = "<group>"; };
 		045463721602CFDF00475A8F /* LotteryProtocol.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = LotteryProtocol.plist; sourceTree = "<group>"; };
 		045463731602CFDF00475A8F /* LotteryRuleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LotteryRuleViewController.h; sourceTree = "<group>"; };
 		045463741602CFDF00475A8F /* LotterySelectBallView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LotterySelectBallView.h; sourceTree = "<group>"; };
@@ -8997,18 +8994,8 @@
 			children = (
 				04E761B31606AF7300CF05E7 /* Model */,
 				04E761B21606AF7100CF05E7 /* View */,
-				04E761B11606AF6E00CF05E7 /* Controller */,
 			);
 			name = LotteryPay;
-			sourceTree = "<group>";
-		};
-		04E761B11606AF6E00CF05E7 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				045463711602CFDF00475A8F /* LotteryPayPageViewController.h */,
-				0454634F1602CFDF00475A8F /* LotteryPayPageViewController.mm */,
-			);
-			name = Controller;
 			sourceTree = "<group>";
 		};
 		04E761B21606AF7100CF05E7 /* View */ = {
@@ -15939,7 +15926,6 @@
 				04841CB31869A21500576A32 /* NOrderContactCell.m in Sources */,
 				0454637B1602CFDF00475A8F /* LotteryRuleViewController.m in Sources */,
 				0454637C1602CFDF00475A8F /* LottertSelectViewController.m in Sources */,
-				0454637D1602CFDF00475A8F /* LotteryPayPageViewController.mm in Sources */,
 				BF84E2C2193399CC004282A6 /* ReceiveInfoShopRemarkCell.m in Sources */,
 				0454637E1602CFDF00475A8F /* LotteryListViewController.m in Sources */,
 				0454637F1602CFDF00475A8F /* LotteryPayRequestModel.m in Sources */,
