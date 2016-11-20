@@ -11,21 +11,6 @@
 @implementation LotteryHallDto
 
 
-@synthesize date = _date;
-@synthesize gid = _gid;
-@synthesize pid = _pid;
-@synthesize gname = _gname;
-@synthesize code = _code;
-@synthesize awardtime = _awardtime;
-@synthesize ginfo = _ginfo;
-@synthesize ninfo = _ninfo;
-@synthesize etime = _etime;
-@synthesize sales = _sales;
-@synthesize pools = _pools;
-@synthesize nowpid = _nowpid;
-@synthesize nowendtime = _nowendtime;
-@synthesize nowfendtime = _nowfendtime;
-
 - (id)init {
     
     self = [super init];

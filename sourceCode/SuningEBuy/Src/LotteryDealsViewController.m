@@ -25,7 +25,7 @@
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
 
-    LotteryOrderDetailViewController *detailViewController = nil;
+    LotteryOrderDetailViewController *detailViewController = [[LotteryOrderDetailViewController alloc] init];
     detailViewController.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:detailViewController animated:YES];
 }
