@@ -26,50 +26,7 @@
 #import "MyEBuyViewCell.h"
 //#import "AfterSaleViewController.h"
 
-@class MyEbuyViewController;
-
 @interface MyEbuyViewController : CommonViewController
 
-/*!
- @abstract      获取用户优惠信息的service。
- @discussion    包括易付宝余额、易购券、云钻等。 
-                用户登出的时候设为nil。登录成功的时候，重新请求数据，刷新数据。
-  */
-@property(nonatomic, strong)OrderStatInfo    *orderStatInfo;
-
-@property (nonatomic, strong) UserDiscountService  *userDiscountService;
-
-@property (strong,nonatomic)  InvitationService *invita;
-
-@property (strong,nonatomic) NSString  *activerule;
-
-@property (nonatomic, strong) OrdersNumberService *orderNumberService;
-
-@property (nonatomic) BOOL         isLoadUserImage;
-
-@property (nonatomic) BOOL         isLoadOrderNumber;
-
-@property (nonatomic, strong) NewEvalutionService *evalutionNumberService;
-
-//@property(nonatomic, strong)OrderCenterService        *orderService;
-
-- (void)gotoOrderCenter;
-
-- (void)gotoIntegral;
-
-
-- (void)gotoTicketList;
-
-- (void)gotoSetting;
-
-//- (void)gotoMyEasilyBuy;
-
-- (void)gotoReturnGoods;
-
-- (void)goToPlaneOrderCenter;
-- (void)goToHotelOrderCenter;
-
-
-- (void)loginBtnAction;
 
 @end

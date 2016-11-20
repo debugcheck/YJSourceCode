@@ -1749,7 +1749,7 @@
         
         MyEbuyViewController *ctrl = [navController.viewControllers safeObjectAtIndex:0];
         
-        [ctrl gotoSetting];
+//        [ctrl gotoSetting];
         
     };
 }
@@ -1773,7 +1773,7 @@
         
         MyEbuyViewController *ctrl = [navController.viewControllers safeObjectAtIndex:0];
         
-        [ctrl loginBtnAction];
+//        [ctrl loginBtnAction];
         
     };
 }

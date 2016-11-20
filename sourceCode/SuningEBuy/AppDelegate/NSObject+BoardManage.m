@@ -105,7 +105,7 @@
             [ebuy.navigationController popToRootViewControllerAnimated:NO];
         }
         
-        [ebuy gotoOrderCenter];
+//        [ebuy gotoOrderCenter];
 //    }
         if (callback) {
             callback();
@@ -129,7 +129,7 @@
         [ebuy.navigationController popToRootViewControllerAnimated:NO];
     }
     
-    [ebuy gotoOrderCenter];
+//    [ebuy gotoOrderCenter];
 }
 
 
@@ -168,7 +168,7 @@
         [ebuy.navigationController popToRootViewControllerAnimated:NO];
     }
     
-    [ebuy gotoIntegral];
+//    [ebuy gotoIntegral];
 }
 
 @end

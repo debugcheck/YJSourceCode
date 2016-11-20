@@ -772,7 +772,7 @@ DEF_SINGLETON(SNApi);
                     //弹登录框
                     if (![UserCenter defaultCenter].isLogined)
                     {
-                        [[SNApi sharedInstance].myEbuyBoard loginBtnAction];
+//                        [[SNApi sharedInstance].myEbuyBoard loginBtnAction]; YJJJ
                     }
                     
                 }
