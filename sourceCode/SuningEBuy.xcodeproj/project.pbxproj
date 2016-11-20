@@ -2261,7 +2261,6 @@
 		F084E063186894D00094425C /* CategoryViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F084E062186894D00094425C /* CategoryViewCell.m */; };
 		F08B584918D31F280016956D /* RTLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = F08B584818D31F280016956D /* RTLabel.m */; };
 		F08B584D18D358CC0016956D /* ConfirmBetInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F08B584C18D358CC0016956D /* ConfirmBetInfoModel.m */; };
-		F0AC2C6318D062A200D19EEC /* ConfirmBetInfoAndCouponViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0AC2C6218D062A200D19EEC /* ConfirmBetInfoAndCouponViewController.m */; };
 		F0AC2C6618D0708200D19EEC /* BallInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F0AC2C6518D0708200D19EEC /* BallInfoCell.m */; };
 		F0AC2C6918D07E5000D19EEC /* CouponBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0AC2C6818D07E5000D19EEC /* CouponBottomView.m */; };
 		F0AC2C6C18D0AD6500D19EEC /* CouponTitleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F0AC2C6B18D0AD6500D19EEC /* CouponTitleCell.m */; };
@@ -5995,8 +5994,6 @@
 		F08B584818D31F280016956D /* RTLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTLabel.m; sourceTree = "<group>"; };
 		F08B584B18D358CC0016956D /* ConfirmBetInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfirmBetInfoModel.h; sourceTree = "<group>"; };
 		F08B584C18D358CC0016956D /* ConfirmBetInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfirmBetInfoModel.m; sourceTree = "<group>"; };
-		F0AC2C6118D062A200D19EEC /* ConfirmBetInfoAndCouponViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfirmBetInfoAndCouponViewController.h; sourceTree = "<group>"; };
-		F0AC2C6218D062A200D19EEC /* ConfirmBetInfoAndCouponViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfirmBetInfoAndCouponViewController.m; sourceTree = "<group>"; };
 		F0AC2C6418D0708200D19EEC /* BallInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BallInfoCell.h; sourceTree = "<group>"; };
 		F0AC2C6518D0708200D19EEC /* BallInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BallInfoCell.m; sourceTree = "<group>"; };
 		F0AC2C6718D07E5000D19EEC /* CouponBottomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CouponBottomView.h; sourceTree = "<group>"; };
@@ -13875,7 +13872,6 @@
 				F01197C518D1D29C00361F5B /* Service */,
 				F03AB48318CF2B020086E89A /* Model */,
 				F03AB48418CF2B0E0086E89A /* View */,
-				F03AB48518CF2B150086E89A /* Controller */,
 			);
 			name = Coupon;
 			sourceTree = "<group>";
@@ -13910,15 +13906,6 @@
 				F0AC2C7E18D0C6F800D19EEC /* CouponContectView.m */,
 			);
 			name = View;
-			sourceTree = "<group>";
-		};
-		F03AB48518CF2B150086E89A /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				F0AC2C6118D062A200D19EEC /* ConfirmBetInfoAndCouponViewController.h */,
-				F0AC2C6218D062A200D19EEC /* ConfirmBetInfoAndCouponViewController.m */,
-			);
-			name = Controller;
 			sourceTree = "<group>";
 		};
 		F2069268196BEED9001596D8 /* ProductConsultation */ = {
@@ -16079,7 +16066,6 @@
 				84DE3E09161147E300CEFF5F /* FlightInfoCell.m in Sources */,
 				84DE3E0C1611480900CEFF5F /* CompanyFilterCell.m in Sources */,
 				84DE3E0F1611482A00CEFF5F /* CompanyDTO.m in Sources */,
-				F0AC2C6318D062A200D19EEC /* ConfirmBetInfoAndCouponViewController.m in Sources */,
 				9CE5E16F197FA4FA0015407D /* SearchMtsPromotionDataService.m in Sources */,
 				9CE2BFE919CFC63C00B3646E /* SBJson4StreamWriterState.m in Sources */,
 				F0AC2C7F18D0C6F800D19EEC /* CouponContectView.m in Sources */,

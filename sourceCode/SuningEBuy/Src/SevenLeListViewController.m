@@ -17,7 +17,6 @@
 #import "LotteryProtocolViewController.h"
 #import "LotteryHallViewController.h"
 #import "LotteryPayPlugin.h"
-#import "ConfirmBetInfoAndCouponViewController.h"
 
 @interface SevenLeListViewController()
 
@@ -30,11 +29,6 @@
 
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-
-    ConfirmBetInfoAndCouponViewController *controller =  [[ConfirmBetInfoAndCouponViewController alloc]init];
-    controller.submitDto = _submitLotteryDto;
-    controller.ballInfoArray = self.ballInfoArray;
-    [self.navigationController pushViewController:controller animated:YES];
     
 //    LotteryPayPageViewController *ctrl = [[LotteryPayPageViewController alloc]initWithSubmitLotteryDTO:self.submitLotteryDto];
 //    

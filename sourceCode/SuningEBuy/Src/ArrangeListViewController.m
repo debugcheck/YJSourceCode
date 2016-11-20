@@ -12,7 +12,6 @@
 #import "LotteryPayPageViewController.h"
 #import "ArrangeBallViewController.h"
 #import "LotteryPayPlugin.h"
-#import "ConfirmBetInfoAndCouponViewController.h"
 
 #define ARRANGE_LIST_BACK_BTN_TAG 9666                     //返回按钮tag
 
@@ -555,14 +554,7 @@
     [self removeOverFlowActivityView];
     if ([infoArray count] >0)
     {
-        ConfirmBetInfoAndCouponViewController *controller =  [[ConfirmBetInfoAndCouponViewController alloc]init];
-        controller.submitDto = _submitLotteryDto;
-        controller.couponInfoArray = infoArray;
-        controller.ballInfoArray = [_lottertOrderListDto showStrArray];
-        [self.navigationController pushViewController:controller animated:YES];
-        
-        TT_RELEASE_SAFELY(controller);
-        
+               
     }
     else
     {

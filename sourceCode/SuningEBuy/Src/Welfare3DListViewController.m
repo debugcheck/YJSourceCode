@@ -18,7 +18,6 @@
 #import "LotteryHallViewController.h"
 #import "Welfare3DSelectViewController.h"
 #import "LotteryPayPlugin.h"
-#import "ConfirmBetInfoAndCouponViewController.h"
 
 @interface Welfare3DListViewController() 
 
@@ -1194,13 +1193,6 @@
     [self removeOverFlowActivityView];
     if ([infoArray count] >0)
     {
-        ConfirmBetInfoAndCouponViewController *controller =  [[ConfirmBetInfoAndCouponViewController alloc]init];
-        controller.submitDto = _submitLotteryDto;
-        controller.couponInfoArray = infoArray;
-        controller.ballInfoArray = self.ballInfoArray;
-        [self.navigationController pushViewController:controller animated:YES];
-        
-        TT_RELEASE_SAFELY(controller);
         
     }
     else
